@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Links - Emmanuel Adult Day Care</title>
+  </head>
+  <style>
+    h1, 
+    h2 {
+      font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    
+    img {
+      display: block;
+      margin-bottom: 2rem;
+      border: 2px solid gray;
+    }
+
+    a {
+        margin-bottom: 2rem;
+        display: block;
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 1.25rem;
+        color: mediumblue;
+      }
+  </style>
+  <body>
+    <h1>Links</h1>
+
+    <h2>Marketing</h2>
+    <a href="https://yourbusiness.azcentral.com/market-adult-day-care-15217.html">How to Market an Adult Day Care | Your Business</a>
+    <a href="https://smallbusiness.chron.com/market-adult-day-care-24726.html">How to Market an Adult Day Care | Chron.com</a>
+    <a href="https://www.iadvanceseniorcare.com/targeting-the-adult-day-care-market/">Targeting the adult day care market - I Advance Senior Care</a>
+    <a href="https://www.profitableventure.com/starting-an-adult-day-care/">Starting an Adult Day Care Business | ProfitableVenture</a>
+    <a href="https://stevens-tate.com/blog/articles/5-digital-marketing-tactics-for-senior-living-communities/">5 Digital Marketing Tactics For Senior Living Communities</a>
+    <a href="https://info.nextwavecare.com/blog/5-basics-of-digital-marketing-for-assisted-living-communities">5 Basics of Digital Marketing for Assisted Living Communities</a>
+    <a href="https://www.knowmad.com/blog/success-for-senior-living-communities-through-digital-marketing">How Digital Marketing Is the Strategy That Sparks Success for Senior Living Communities</a>
+    <a href="https://info.nextwavecare.com/blog/senior-living-marketing-stages-of-the-adult-childs-buyers-journey">Senior Living Marketing: Stages of the Adult Child's Buyer's Journey</a>
+    <a href="https://info.nextwavecare.com/blog/senior-living-content-marketing-aligning-to-the-buyers-journey">Senior Living Content Marketing: Aligning to The Buyer's Journey</a>
+    <a href="https://info.nextwavecare.com/blog/3-senior-care-marketing-tips">3 Senior Care Marketing Tips To Help Your Business Get Found Online</a>
+    <a href="https://www.iadvanceseniorcare.com/guiding-seniors-to-your-community/">Guiding Seniors to Your Community - I Advance Senior Care</a>
+    <a href="https://www.iadvanceseniorcare.com/the-battle-between-ratings-reviews-and-real-people-in-nursing-homes/">The battle between ratings, reviews, and real people in nursing homes - I Advance Senior Care</a>
+  
+    <h2>Content</h2>
+    <a href="https://www.nadsa.org/consumers/choosing-a-center/">Choosing a Center - NADSA: adult day servicesNADSA: adult day services</a>
+    <a href="https://www.care.com/c/stories/5413/adult-and-senior-day-care/">Adult Day Care: What It Is And How To Choose A Center - Care.com</a>
+    <a href="https://www.helpguide.org/articles/senior-housing/adult-day-care-services.htm">Adult Day Care Services - HelpGuide.org</a>
+    <a href="https://www.aarp.org/caregiving/home-care/info-2017/adult-day-care.html">The Best Adult Day Care Resources for Caregivers</a>
+    <a href="https://www.adultdaycare.org/resources/selecting-an-adult-day-care-facility/">Selecting an Adult Day Care Facility - Adult Day Care</a>
+
+  </body>
+</html>
+
