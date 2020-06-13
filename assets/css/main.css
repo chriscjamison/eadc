@@ -81,6 +81,23 @@ h1,
 .carousel-cta {
   border-radius: 14px 14px 0 14px; }
 
+.circles-large div,
+.circles-small div {
+  border-radius: 100%; }
+
+.circles-large div,
+.circles-small div {
+  border: 3px solid; }
+
+.circles-light_brown-div div div {
+  border-color: #dae5c7; }
+
+.circles-dark_brown-div div div {
+  border-color: #c2c08f; }
+
+.circles-purple-div div div {
+  border-color: #9fa1d9; }
+
 /****** SHADOWS ******/
 #header-nav-ul,
 .carousel-cta,
@@ -128,6 +145,165 @@ h1,
   background-color: #ffffff;
   border-color: #444ca0;
   text-decoration: none; }
+
+/****** BACKGROUNDS ******/
+.content-background-div {
+  width: 100%; }
+
+#background-1 {
+  background-color: #eaffff;
+  height: 935px; }
+
+.background-shield-div {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 10; }
+  .background-shield-div img {
+    width: 100%;
+    height: 100%; }
+
+.background-circles-div,
+.circles-light_brown-div,
+.circles-dark_brown-div,
+.circles-purple,
+.circles-large,
+.circles-small {
+  width: 100%;
+  height: 100%;
+  position: absolute; }
+
+.background-circles-div {
+  z-index: 3; }
+  .background-circles-div .circles-large div {
+    width: 76px;
+    height: 76px; }
+  .background-circles-div .circles-small div {
+    width: 26px;
+    height: 26px; }
+
+.circles-light_brown-div {
+  z-index: 8; }
+  .circles-light_brown-div .circles-dark_brown-large-div {
+    z-index: 8; }
+  .circles-light_brown-div .circles-dark_brown-small-div {
+    z-index: 9; }
+
+.circles-purple-div {
+  z-index: 6; }
+  .circles-purple-div .circles-purple-small-div {
+    z-index: 6; }
+  .circles-purple-div .circles-purple-large-div {
+    z-index: 7; }
+
+.circles-dark_brown-div {
+  z-index: 4; }
+  .circles-dark_brown-div .circles-dark_brown-large-div {
+    z-index: 4; }
+  .circles-dark_brown-div .circles-dark_brown-small-div {
+    z-index: 5; }
+
+.circles-light_brown-div div div,
+.circles-purple-div div div,
+.circles-dark_brown-div div div {
+  position: relative; }
+
+#circles-1 .circles-light_brown-div .circles-large div:nth-child(1) {
+  top: 5%;
+  left: 8%; }
+#circles-1 .circles-light_brown-div .circles-large div:nth-child(2) {
+  top: 12%;
+  left: 55%; }
+#circles-1 .circles-light_brown-div .circles-large div:nth-child(3) {
+  top: 25%;
+  left: 63%; }
+#circles-1 .circles-light_brown-div .circles-large div:nth-child(4) {
+  top: 43%;
+  left: 73%; }
+#circles-1 .circles-light_brown-div .circles-large div:nth-child(5) {
+  top: 13%;
+  left: 85%; }
+#circles-1 .circles-light_brown-div .circles-large div:nth-child(6) {
+  top: 2%;
+  left: 20%; }
+#circles-1 .circles-light_brown-div .circles-small div:nth-child(1) {
+  top: 74%;
+  left: 36%; }
+#circles-1 .circles-light_brown-div .circles-small div:nth-child(2) {
+  top: 47%;
+  left: 73%; }
+#circles-1 .circles-light_brown-div .circles-small div:nth-child(3) {
+  top: 66%;
+  left: 36%; }
+#circles-1 .circles-light_brown-div .circles-small div:nth-child(4) {
+  top: 18%;
+  left: 78%; }
+#circles-1 .circles-light_brown-div .circles-small div:nth-child(5) {
+  top: 13%;
+  left: 32%; }
+#circles-1 .circles-light_brown-div .circles-small div:nth-child(6) {
+  top: 8%;
+  left: 85%; }
+#circles-1 .circles-purple-div .circles-large div:nth-child(1) {
+  top: 25%;
+  left: 42%; }
+#circles-1 .circles-purple-div .circles-large div:nth-child(2) {
+  top: 65%;
+  left: 15%; }
+#circles-1 .circles-purple-div .circles-large div:nth-child(3) {
+  top: 0;
+  left: 79%; }
+#circles-1 .circles-purple-div .circles-large div:nth-child(4) {
+  top: 59%;
+  left: 48%; }
+#circles-1 .circles-purple-div .circles-large div:nth-child(5) {
+  top: 14%;
+  left: 56%; }
+#circles-1 .circles-purple-div .circles-small div:nth-child(1) {
+  top: 21%;
+  left: 97%; }
+#circles-1 .circles-purple-div .circles-small div:nth-child(2) {
+  top: 7%;
+  left: 18%; }
+#circles-1 .circles-purple-div .circles-small div:nth-child(3) {
+  top: 48%;
+  left: 95%; }
+#circles-1 .circles-purple-div .circles-small div:nth-child(4) {
+  top: 19%;
+  left: 65%; }
+#circles-1 .circles-purple-div .circles-small div:nth-child(5) {
+  top: 21%;
+  left: 8%; }
+#circles-1 .circles-dark_brown-div .circles-small div:nth-child(1) {
+  top: 38%;
+  left: 69%; }
+#circles-1 .circles-dark_brown-div .circles-small div:nth-child(2) {
+  top: 68%;
+  left: 68%; }
+#circles-1 .circles-dark_brown-div .circles-small div:nth-child(3) {
+  top: 47%;
+  left: 12%; }
+#circles-1 .circles-dark_brown-div .circles-small div:nth-child(4) {
+  top: 2%;
+  left: 52%; }
+#circles-1 .circles-dark_brown-div .circles-small div:nth-child(5) {
+  top: 33%;
+  left: 94%; }
+#circles-1 .circles-dark_brown-div .circles-small div:nth-child(6) {
+  top: 15%;
+  left: 4%; }
+#circles-1 .circles-dark_brown-div .circles-large div:nth-child(1) {
+  top: 55%;
+  left: 31%; }
+#circles-1 .circles-dark_brown-div .circles-large div:nth-child(2) {
+  top: 12%;
+  left: 22%; }
+#circles-1 .circles-dark_brown-div .circles-large div:nth-child(3) {
+  top: 55%;
+  left: 62%; }
+#circles-1 .circles-dark_brown-div .circles-large div:nth-child(4) {
+  top: 36%;
+  left: 6%; }
 
 /****** HEADER ******/
 #desktop-header-nav {
@@ -180,6 +356,24 @@ h1,
   padding: 7px 10px;
   display: block; }
 
+/****** CONTENT ******/
+.container {
+  z-index: 7; }
+
+.homepage-content-section {
+  width: 100%;
+  height: 935px;
+  position: relative; }
+
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 100%;
+    padding-left: 0;
+    padding-right: 0; }
+
+  .col-lg-12 {
+    padding-left: 165px;
+    padding-right: 76px; } }
 /****** ELEMENT INDEX ******/
 /* 
   ----- HEADER ------ 
@@ -187,10 +381,40 @@ h1,
     - NAV
       #header-nav-ul 
       - Serves as container and background for the header navigation links
+      |
+        .header-nav-a
+        - Links within the header navigation
 
-      .header-nav-a
-      - Links within the header navigation
+        .nav-link-bold
+        - Link that matches the current webpage
 
+  ---- CONTENT ----
+    |
+    - CAROUSEL
+      .carousel
+        - Contains all content of the hero section.
+      |
+        .carousel-item.active
+        - Contains logo and all CTA-related content
+        |
+          #cta-logo
+          - The image (logo) that appears above the CTA
+
+          .carousel-cta
+          - Holds the page header, text, and button for the CTA.
+            Also serves as the background for the CTA.
+          |
+            h1 
+            - The page title and main header
+
+            p 
+            - The text describing the CTA
+
+            .cta-a
+            - The link intended to route the visitor to the Talk to EADC page.
+
+          img 
+          - The background photo of the hero section
 */
 
 /*# sourceMappingURL=main.css.map */

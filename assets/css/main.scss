@@ -21,7 +21,8 @@ $light_brown_1: #ffffe6;
 $light_brown_2: #ffffb0;
 $light_brown_3: #fff7cd;
 $light_brown_4: #e9d9b0;
-$light_brown_5: #cdd8ba;
+$light_brown_5: #dae5c7;
+$light_brown_6: #cdd8ba;
 
 $dark_brown_1: #ccc073;
 $dark_brown_2: #c3bb93;
@@ -189,6 +190,27 @@ $border_radius_med_1: 14px;
   border-radius: $border_radius_med_1 $border_radius_med_1 0 $border_radius_med_1;
 }
 
+.circles-large div,
+.circles-small div {
+  border-radius: 100%;
+}
+
+.circles-large div, 
+.circles-small div {
+  border: 3px solid;
+}
+
+.circles-light_brown-div div div {
+  border-color: $light_brown_5;
+}
+
+.circles-dark_brown-div div div {
+  border-color: $dark_brown_3;
+}
+
+.circles-purple-div div div {
+  border-color: $light_purple_3;
+}
 
 
 /****** SHADOWS ******/
@@ -255,6 +277,276 @@ $border_radius_med_1: 14px;
 }
 
 
+
+/****** BACKGROUNDS ******/
+
+.content-background-div {
+  width: 100%;
+}
+
+#background-1 {
+  background-color: $light_green_1;
+  height: 935px;
+}
+
+.background-shield-div {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 10;
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.background-circles-div, 
+.circles-light_brown-div, 
+.circles-dark_brown-div, 
+.circles-purple, 
+.circles-large, 
+.circles-small {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.background-circles-div {
+  z-index: 3;
+
+  .circles-large div {
+    width: 76px;
+    height: 76px;
+  }
+
+  .circles-small div {
+    width: 26px;
+    height: 26px;
+  }
+}
+
+.circles-light_brown-div {
+  z-index: 8;
+
+  .circles-dark_brown-large-div {
+    z-index: 8;
+  }
+
+  .circles-dark_brown-small-div {
+    z-index: 9;
+  }
+}
+
+.circles-purple-div {
+  z-index: 6;
+
+  .circles-purple-small-div {
+    z-index: 6;
+  }
+  
+  .circles-purple-large-div {
+    z-index: 7;
+  }
+}
+
+.circles-dark_brown-div {
+  z-index: 4;
+
+  .circles-dark_brown-large-div {
+    z-index: 4;
+  }
+
+  .circles-dark_brown-small-div {
+    z-index: 5;
+  }
+}
+
+.circles-light_brown-div div div, 
+.circles-purple-div div div, 
+.circles-dark_brown-div div div {
+  position: relative;
+}
+
+#circles-1 {
+  .circles-light_brown-div {
+    .circles-large {
+      div:nth-child(1) {
+        top: 5%;
+        left: 8%;
+      }
+  
+      div:nth-child(2) {
+        top: 12%;
+        left: 55%;
+      }
+  
+      div:nth-child(3) {
+        top: 25%;
+        left: 63%;
+      }
+  
+      div:nth-child(4) {
+        top: 43%;
+        left: 73%;
+      }
+  
+      div:nth-child(5) {
+        top: 13%;
+        left: 85%;
+      }
+  
+      div:nth-child(6) {
+        top: 2%;
+        left: 20%;
+      }  
+    }
+
+    .circles-small {
+      div:nth-child(1) {
+        top: 74%;
+        left: 36%;
+      }
+  
+      div:nth-child(2) {
+        top: 47%;
+        left: 73%;
+      }
+  
+      div:nth-child(3) {
+        top: 66%;
+        left: 36%;
+      }
+
+      div:nth-child(4) {
+        top: 18%;
+        left: 78%;
+      }
+  
+      div:nth-child(5) {
+        top: 13%;
+        left: 32%;
+      }
+  
+      div:nth-child(6) {
+        top: 8%;
+        left: 85%;
+      }
+    }
+  }
+
+  .circles-purple-div {
+    .circles-large {
+      div:nth-child(1) {
+        top: 25%;
+        left: 42%;
+      }
+  
+      div:nth-child(2) {
+        top: 65%;
+        left: 15%;
+      }
+
+      div:nth-child(3) {
+        top: 0;
+        left: 79%;
+      }
+  
+      div:nth-child(4) {
+        top: 59%;
+        left: 48%;
+      }
+  
+      div:nth-child(5) {
+        top: 14%;
+        left: 56%;
+      }
+    }
+
+    .circles-small {
+      div:nth-child(1) {
+        top: 21%;
+        left: 97%;
+      }
+  
+      div:nth-child(2) {
+        top: 7%;
+        left: 18%;
+      }
+
+      div:nth-child(3) {
+        top: 48%;
+        left: 95%;
+      }
+  
+      div:nth-child(4) {
+        top: 19%;
+        left: 65%;
+      }
+
+      div:nth-child(5) {
+        top: 21%;
+        left: 8%;
+      }
+    }
+  }
+
+  .circles-dark_brown-div {
+    .circles-small {
+      div:nth-child(1) {
+        top: 38%;
+        left: 69%;
+      }
+  
+      div:nth-child(2) {
+        top: 68%;
+        left: 68%;
+      }
+  
+      div:nth-child(3) {
+        top: 47%;
+        left: 12%;
+      }
+
+      div:nth-child(4) {
+        top: 2%;
+        left: 52%;
+      }
+  
+      div:nth-child(5) {
+        top: 33%;
+        left: 94%;
+      }
+  
+      div:nth-child(6) {
+        top: 15%;
+        left: 4%;
+      }
+    }
+
+    .circles-large {
+      div:nth-child(1) {
+        top: 55%;
+        left: 31%;
+      }
+  
+      div:nth-child(2) {
+        top: 12%;
+        left: 22%;
+      }
+
+      div:nth-child(3) {
+        top: 55%;
+        left: 62%;
+      }
+  
+      div:nth-child(4) {
+        top: 36%;
+        left: 6%;
+      }
+    }
+  }
+}
 
 /****** HEADER ******/
 
@@ -333,6 +625,34 @@ $border_radius_med_1: 14px;
 
 
 
+/****** CONTENT ******/
+
+.container {
+  z-index: 7;
+}
+
+.homepage-content-section {
+  width: 100%;
+  height: 935px;
+  position: relative;
+}
+
+
+
+
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  
+  .col-lg-12 {
+    padding-left: $spacer_lg_3;
+    padding-right: $spacer_lg_1;
+  }
+}
+
 /****** ELEMENT INDEX ******/
 
 /* 
@@ -341,8 +661,38 @@ $border_radius_med_1: 14px;
     - NAV
       #header-nav-ul 
       - Serves as container and background for the header navigation links
+      |
+        .header-nav-a
+        - Links within the header navigation
 
-      .header-nav-a
-      - Links within the header navigation
+        .nav-link-bold
+        - Link that matches the current webpage
 
+  ---- CONTENT ----
+    |
+    - CAROUSEL
+      .carousel
+        - Contains all content of the hero section.
+      |
+        .carousel-item.active
+        - Contains logo and all CTA-related content
+        |
+          #cta-logo
+          - The image (logo) that appears above the CTA
+
+          .carousel-cta
+          - Holds the page header, text, and button for the CTA.
+            Also serves as the background for the CTA.
+          |
+            h1 
+            - The page title and main header
+
+            p 
+            - The text describing the CTA
+
+            .cta-a
+            - The link intended to route the visitor to the Talk to EADC page.
+
+          img 
+          - The background photo of the hero section
 */
