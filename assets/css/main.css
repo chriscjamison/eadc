@@ -89,6 +89,12 @@ h2 {
 .cta-a {
   background-color: #4057b3; }
 
+.gallery-nav-a {
+  background-color: #444ca0; }
+
+.gallery-nav-a.gallery-a-visible {
+  background-color: #dfd2f2; }
+
 /****** BORDERS ******/
 .header-nav-a {
   border-bottom: none; }
@@ -98,6 +104,12 @@ h2 {
 
 #ylo-gallery img {
   border: 3px solid #a8bbe4; }
+
+.gallery-nav-a {
+  border: 3px solid #ffffff; }
+
+.gallery-nav-a {
+  border-radius: 8px 8px 0 8px; }
 
 .cta-a {
   border-radius: 10px 10px 0 10px; }
@@ -126,10 +138,14 @@ h2 {
 .circles-purple-div div div {
   border-color: #9fa1d9; }
 
+.gallery-nav-a.gallery-a-visible {
+  border-color: #444ca0; }
+
 /****** SHADOWS ******/
 #header-nav-ul,
 .carousel-cta,
-.cta-a {
+.cta-a,
+.gallery-nav-a {
   box-shadow: 0 0 6px #4057b3; }
 
 /******* COMMON ELEMENTS ****** */
@@ -414,12 +430,26 @@ h2 {
   padding-right: 0; }
 
 #ylo-gallery {
-  margin-top: 10px; }
+  margin-top: 10px;
+  position: relative; }
   #ylo-gallery img {
     width: 100%; }
 
 #ylo-copy {
   flex-direction: column; }
+
+.gallery-nav-div {
+  display: flex;
+  position: absolute;
+  opacity: 0.95; }
+  .gallery-nav-div .gallery-nav-a {
+    width: 26px;
+    height: 26px;
+    margin-right: 16px; }
+
+#ylo-gallery-nav {
+  bottom: 26px;
+  left: 26px; }
 
 @media screen and (min-width: 1200px) {
   .container {
