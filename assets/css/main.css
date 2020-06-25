@@ -14,15 +14,29 @@
 h1,
 .cta-a,
 h2,
-.copy-first-p::first-line {
+.copy-first-p::first-line,
+h3,
+.ytc-dhss-span,
+.accordion .btn-link,
+.package-dollar_amount_container-div,
+h4 {
   font-family: "Century Gothic WGL W01 Bold", sans-serif; }
 
 .header-nav-a,
-p {
+p,
+.ytc-package-per_week-span,
+.package-ul li {
   font-family: "Century Gothic WGL W01 Regular", sans-serif; }
 
+.package-ul li {
+  font-size: 1rem; }
+
 p,
-.cta-a {
+.cta-a,
+.ytc-dhss-span,
+.accordion .btn-link,
+.ytc-package-per_week-span,
+h4 {
   font-size: 1.1rem; }
 
 .header-nav-a {
@@ -31,7 +45,8 @@ p,
 .copy-first-p::first-line {
   font-size: 1.6rem; }
 
-h1 {
+h1,
+.package-dollar_amount_container-div {
   font-size: 2.1rem; }
 
 h2 {
@@ -39,7 +54,9 @@ h2 {
 
 .carousel-cta p,
 .content-copy-div p,
-.copy-first-p::first-line {
+.copy-first-p::first-line,
+.ytc-dhss-span,
+.ytc-package-per_week-span {
   font-weight: 600; }
 
 h2 {
@@ -48,6 +65,13 @@ h2 {
 h1,
 .copy-first-p::first-line {
   letter-spacing: -0.2px; }
+
+.ytc-dhss-span {
+  letter-spacing: -0.1px; }
+
+.package-ul li,
+.ytc-insurance-h4 {
+  letter-spacing: 0.2px; }
 
 .carousel-cta p {
   letter-spacing: 0.3px; }
@@ -59,8 +83,16 @@ h1,
   letter-spacing: 0.6px; }
 
 .header-nav-a,
-.cta-a {
+.cta-a,
+.accordion .btn-link,
+.accordion .btn-link:hover {
   text-decoration: none; }
+
+.ytc-package-per_week-span {
+  line-height: 1; }
+
+.ytc-insurance-h4 {
+  line-height: 1.4; }
 
 .content-copy-div p {
   line-height: 1.6; }
@@ -70,13 +102,18 @@ h1,
 
 h1,
 .carousel-cta p,
-h2 {
+h2,
+.package-ul li {
   color: #4057b3; }
 
 .cta-a {
   color: #ffffff; }
 
-.content-copy-div p {
+.content-copy-div p,
+.ytc-dhss-span,
+.accordion button,
+.package-dollar_amount_container-div,
+h4 {
   color: #020000; }
 
 /****** COLOR STYLING ******/
@@ -95,18 +132,18 @@ h2 {
 .gallery-nav-a.gallery-a-visible {
   background-color: #dfd2f2; }
 
+.accordion > .card > .card-header {
+  background-color: #f5ffe1; }
+
+.package-dollar_amount_container-div {
+  background: radial-gradient(circle, #ffebff 0%, #ffebff 50%, #dfd2f2 100%); }
+
+.card-body {
+  background-color: #f7f7f2; }
+
 /****** BORDERS ******/
 .header-nav-a {
   border-bottom: none; }
-
-.cta-a {
-  border: 3px solid #ffffff; }
-
-#ylo-gallery img {
-  border: 3px solid #a8bbe4; }
-
-.gallery-nav-a {
-  border: 3px solid #ffffff; }
 
 .gallery-nav-a {
   border-radius: 8px 8px 0 8px; }
@@ -118,16 +155,48 @@ h2 {
   border-radius: 10px; }
 
 .carousel-cta,
-#ylo-gallery img {
+#ylo-gallery img,
+.accordion {
   border-radius: 14px 14px 0 14px; }
 
-.circles-large div,
-.circles-small div {
-  border-radius: 100%; }
+.accordion > .card:first-of-type {
+  border-radius: 14px 14px 0 0; }
+
+.accordion > .card:last-of-type {
+  border-radius: 0 0 0 14px; }
 
 .circles-large div,
-.circles-small div {
+.circles-small div,
+#circles-ytc div,
+.ytc-testimonial .ytc-testimonial-img,
+.accordion-dot-div,
+.package-dollar_amount_container-div {
+  border-radius: 100%; }
+
+.card-body {
+  border-top: 1px solid; }
+
+.card {
+  border: 1px solid; }
+
+.circles-large div,
+.circles-small div,
+.package-dollar_amount_container-div,
+.cta-a,
+.gallery-nav-a,
+#ylo-gallery img,
+.accordion-dot-div {
   border: 3px solid; }
+
+#circles-ytc div {
+  border: 61px solid; }
+
+.cta-a,
+.gallery-nav-a {
+  border-color: #ffffff; }
+
+#ylo-gallery img {
+  border-color: #a8bbe4; }
 
 .circles-light_brown-div div div {
   border-color: #dae5c7; }
@@ -135,11 +204,25 @@ h2 {
 .circles-dark_brown-div div div {
   border-color: #c2c08f; }
 
-.circles-purple-div div div {
+.accordion-dot-div {
+  border-color: #899878; }
+
+.card,
+.card-body {
+  border-color: rgba(194, 214, 189, 0.6); }
+
+.circles-purple-div div div,
+.package-dollar_amount_container-div {
   border-color: #9fa1d9; }
 
 .gallery-nav-a.gallery-a-visible {
   border-color: #444ca0; }
+
+.circle-light_green-1 {
+  border-color: #c0d8ba !important; }
+
+.circle-dark_brown-1 {
+  border-color: #c2c08f !important; }
 
 /****** SHADOWS ******/
 #header-nav-ul,
@@ -148,15 +231,23 @@ h2 {
 .gallery-nav-a {
   box-shadow: 0 0 6px #4057b3; }
 
+.ytc-testimonial .ytc-testimonial-img,
+#ytc-accordion-div {
+  box-shadow: 0 0 6px #899878; }
+
 /******* COMMON ELEMENTS ****** */
 :root {
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
   z-index: 0; }
 
 h2 {
   margin-bottom: 47px;
   padding-left: 0 !important; }
+
+h3 {
+  margin-bottom: 16px; }
 
 #content-container-ylo h2 {
   margin-bottom: 37px; }
@@ -205,6 +296,10 @@ h2 {
   background-color: #eaffff;
   height: 935px; }
 
+#background-ytc {
+  background-color: #dae5c7;
+  height: 935px; }
+
 .background-shield-div {
   width: 100%;
   height: 100%;
@@ -219,7 +314,8 @@ h2 {
 .circles-dark_brown-div,
 .circles-purple,
 .circles-large,
-.circles-small {
+.circles-small,
+#circles-ytc {
   width: 100%;
   height: 100%;
   position: absolute; }
@@ -350,6 +446,24 @@ h2 {
   top: 36%;
   left: 6%; }
 
+#circles-ytc div {
+  position: absolute; }
+#circles-ytc .circle-xl {
+  width: 472px;
+  height: 472px; }
+#circles-ytc .circle-xxl {
+  width: 800px;
+  height: 800px; }
+#circles-ytc .upper-left {
+  top: -8%;
+  left: 8%; }
+#circles-ytc .lower-left {
+  top: 22%;
+  left: -2%; }
+#circles-ytc .upper-right {
+  top: -24%;
+  right: -12%; }
+
 /****** HEADER ******/
 #desktop-header-nav {
   position: absolute;
@@ -358,7 +472,7 @@ h2 {
   z-index: 2; }
   #desktop-header-nav #header-nav-ul {
     width: 1005px;
-    padding: 10px 16px;
+    padding: 9px 16px;
     display: flex;
     float: right;
     list-style-type: none; }
@@ -384,7 +498,7 @@ h2 {
   .carousel-cta h1 {
     margin-bottom: 0; }
   .carousel-cta p {
-    margin: 10px 0 16px 0; }
+    margin: 9px 0 16px 0; }
 
 #cta-homepage {
   width: 409px; }
@@ -398,7 +512,7 @@ h2 {
 
 .cta-a {
   width: 220px;
-  padding: 7px 10px;
+  padding: 7px 9px;
   display: block; }
 
 /****** CONTENT ******/
@@ -410,27 +524,48 @@ h2 {
   height: 935px;
   position: relative; }
 
+#content-ylo {
+  z-index: 2; }
+
+#content-ytc {
+  z-index: 1; }
+
 .content-copy-div {
   padding-top: 139px;
   position: absolute;
   z-index: 8; }
 
 .column-left-div,
+.column-middle-div,
 .column-right-div,
 .column-spacer-div {
   display: inline-flex;
   vertical-align: top; }
 
-.column-left-div {
+#content-container-ylo .column-left-div {
   padding-left: 0;
   padding-right: 47px; }
-
-.column-right-div {
+#content-container-ylo .column-right-div {
   padding-left: 0;
   padding-right: 0; }
 
+#content-container-ytc .column-left-div,
+#content-container-ytc .column-middle-div,
+#content-container-ytc .column-right-div {
+  flex-direction: column; }
+#content-container-ytc .column-left-div {
+  padding-left: 0;
+  padding-right: 9px; }
+#content-container-ytc .column-middle-div {
+  padding-left: 16px;
+  padding-right: 16px; }
+#content-container-ytc .column-right-div {
+  padding-left: 9px;
+  padding-right: 0; }
+
+/* ------ YOUR LOVED ONE ------ */
 #ylo-gallery {
-  margin-top: 10px;
+  margin-top: 9px;
   position: relative; }
   #ylo-gallery img {
     width: 100%; }
@@ -450,6 +585,68 @@ h2 {
 #ylo-gallery-nav {
   bottom: 26px;
   left: 26px; }
+
+/* ------ YOU - THE CARETAKER ------ */
+.ytc-testimonial {
+  margin-bottom: 26px;
+  display: flex; }
+  .ytc-testimonial .ytc-testimonial-img {
+    width: 181px;
+    height: 181px; }
+  .ytc-testimonial .ytc-testimonial-p {
+    margin: 19px 0 0 16px; }
+
+.ytc-testimonial:last-of-type {
+  margin-bottom: 0; }
+
+.ytc-dhss-span {
+  display: block;
+  margin-bottom: 16px; }
+
+.ytc-dhss-img {
+  width: 190px;
+  height: auto; }
+
+.accordion button {
+  padding: 7px 0 5px 0;
+  display: flex; }
+
+.accordion-dot-div {
+  width: 10px;
+  height: 10px;
+  margin: 9px 9px 0 0; }
+
+.card-body {
+  display: flex; }
+
+.ytc-package-per_week-span {
+  display: block; }
+
+.package-dollar_amount_container-div {
+  width: 148px;
+  height: 136px;
+  padding: 26px; }
+
+.package-ul li {
+  list-style-image: url("/assets/img/common/icons/ytc-dot.png"); }
+
+.ytc-insurance-h4,
+.ytc-insurance-div {
+  display: inline-flex; }
+
+.ytc-insurance-h4 {
+  margin-top: 54px;
+  padding-left: 0;
+  padding-right: 0;
+  vertical-align: top; }
+
+.ytc-insurance-div {
+  margin-top: 36px;
+  padding-left: 16px;
+  padding-right: 0; }
+
+#ytc-insurance-mohealthnet {
+  margin-right: 36px; }
 
 @media screen and (min-width: 1200px) {
   .container {
