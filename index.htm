@@ -14,7 +14,7 @@
   <body>
     
 <!-- HEADER INCLUDING NAVIGATION -->
-    <header>
+    <header class="visible-desktop">
 
 <!-- DESKTOP MAIN NAVIGATION -->
       <nav id="desktop-header-nav">
@@ -50,10 +50,11 @@
         <div class="carousel-item active" id="carousel-item-landing">
 
 <!-- LOGO -->
-          <img src="/assets/img/common/logo/desktop.png" alt="Emmanuel Adult Day Center" id="cta-logo">
+          <img src="/assets/img/common/logo/desktop.png" alt="Emmanuel Adult Day Center" class="visible-desktop" id="cta-logo">
 
 <!-- CALL TO ACTION -->
           <div class="carousel-cta" id="cta-homepage">
+            <img src="/assets/img/common/logo/mobile.png" alt="Emmanuel Adult Day Center" class="visible-mobile" id="mobile-cta-logo">
             <h1>
               Emmanuel Adult Day Center
             </h1>
@@ -61,9 +62,10 @@
               We offer love and community for the seniors we serve and provide peace of mind 
               for their caretakers.
             </p>
-            <a href="/talk-to-eadc.htm" class="cta-a" id="cta-action">Schedule a conversation about your senior&rsquo;s wellbeing</a>
+            <a href="/talk-to-eadc.htm" class="cta-a" id="cta-action">Talk to EADC about your senior&rsquo;s wellbeing</a>
           </div>
-          <img class="d-block img-fluid" src="/assets/img/copy/homepage/hero/hero.jpg" alt="Welcome to Emmanuel Adult Care Center!">
+          <img class="img-fluid visible-desktop" src="/assets/img/copy/homepage/hero/hero.jpg" alt="Welcome to Emmanuel Adult Care Center!">
+          <img class="img-fluid visible-mobile" src="/assets/img/copy/homepage/hero/hero-mobile.jpg" alt="Welcome to Emmanuel Adult Care Center!">
         </div>
         <!-- <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -77,14 +79,14 @@
     </div>
 
 <!-- MOBILE MAIN NAVIGATION -->
-    <nav class="visible-mobile" id="mobile-nav">
+    <nav id="mobile-nav">
       <div id="mobile-nav-main">
-        <ul>
-          <li>
-            <a href="#menu" title="Menu" class="nav-a" id="mobile-nav-a-menu"><img src="/assets/img/common/icons/menu.svg" alt="Menu" id="mobile-nav-icon-img"><span class="nav-span" id="mobile-nav-span-menu">Menu</span></a>
+        <ul id="mobile-nav-ul">
+          <li id="mobile-nav-li-icon">
+            <a href="#menu" title="Menu" class="nav-a" id="mobile-nav-a-menu"><img src="/assets/img/common/icons/menu.svg" alt="Menu" class="mobile-nav-img" id="mobile-nav-icon-img"><span class="mobile-nav-span" id="mobile-nav-span-menu">Menu</span></a>
           </li>
-          <li>
-            <a href="/talk-to-eadc.htm" title="Talk to EADC" class="nav-a" id="mobile-nav-a-tte"><img src="/assets/img/common/icons/send_message.svg" alt="Talk to EADC"><span class="nav-span" id="mobile-nav-span-tte">Talk to EADC</span></a>
+          <li id="mobile-nav-li-tte">
+            <a href="/talk-to-eadc.htm" title="Talk to EADC" class="nav-a" id="mobile-nav-a-tte"><img src="/assets/img/common/icons/send_message.svg" class="mobile-nav-img" alt="Talk to EADC" id="mobile-nav-tte-img"><span class="mobile-nav-span" id="mobile-nav-span-tte">Talk to EADC</span></a>
           </li>
         </ul>
       </div>
@@ -195,14 +197,14 @@
           </div>
         </div>
       </div>
-    </footer>
+    </nav>
 
 <!-- MAIN CONTENT -->
     <main class="container">
       <section class="homepage-content-section" id="content-ylo">
-        <div class="content-copy-div col-lg-12" id="content-container-ylo">
-          <h2 class="col-lg-6">Your Loved One</h2>
-          <div class="column-left-div col-lg-7" id="ylo-gallery">
+        <div class="content-copy-div col-12 col-12" id="content-container-ylo">
+          <h2 class="col-lg-6 col-sm-12">Your Loved One</h2>
+          <div class="column-left-div col-lg-7 col-sm-12" id="ylo-gallery">
             <div class="gallery-nav-div" id="ylo-gallery-nav">
               <a href="#" class="gallery-nav-a gallery-a-visible">&nbsp;</a>
               <a href="#" class="gallery-nav-a">&nbsp;</a>
@@ -212,7 +214,7 @@
             <!-- <img src="assets/img/copy/homepage/your-loved-one/ylo-2.jpg">
             <img src="assets/img/copy/homepage/your-loved-one/ylo-3.jpg"> -->
           </div>
-          <div class="column-right-div col-lg-4" id="ylo-copy">
+          <div class="column-right-div col-lg-4 col-sm-12" id="ylo-copy">
             <p class="copy-first-p">
               Suspendisse nec urna vel felis mollis auctor. Donec molestie interdum lorem, scelerisque 
               maximus erat suscipit vitae. In pellentesque posuere lorem, quis blandit justo imperdiet eu. 
@@ -283,9 +285,9 @@
         </div>
       </section>
       <section class="homepage-content-section" id="content-ytc">
-        <div class="content-copy-div col-lg-12" id="content-container-ytc">
-          <h2 class="col-lg-6">You &ndash; the Caretaker</h2>
-          <div class="col-lg-4 column-left-div" id="ytc-testimonials_container">
+        <div class="content-copy-div col-12" id="content-container-ytc">
+          <h2 class="col-lg-6 col-sm-12">You &ndash; the Caretaker</h2>
+          <div class="col-lg-4 col-sm-12 column-left-div" id="ytc-testimonials_container">
             <h3>Testimonials</h3>
             <div class="ytc-testimonial" id="ytc-testimonial-top">
               <img src="/assets/img/copy/you-the-caretaker/testimonial-1.png" alt="Brenda L. thinks the best of EADC." class="ytc-testimonial-img" id="ytc-testimonial-img-1">
@@ -300,7 +302,7 @@
               </p>
             </div>
           </div>
-          <div class="col-lg-4 column-middle-div">
+          <div class="col-lg-4 col-sm-12 column-middle-div">
             <p class="copy-first-p">
               Fusce sed luctus lectus. Nunc efficitur libero augue, ac molestie odio tristique quis. Aliquam vel ipsum orci. 
               Nulla aliquam augue nec lacus hendrerit, ut venenatis erat tincidunt. 
@@ -308,7 +310,7 @@
             <span class="ytc-dhss-span">EADC is certified by the Missouri Department of Health and Senior Services</span>
             <img src="/assets/img/copy/homepage/you-the-caretaker/dhss.png" alt="EADC is certified by the Missouri Department of Health and Senior Services" class="ytc-dhss-img">
           </div>
-          <div class="col-lg-3 column-right-div">
+          <div class="col-lg-3 col-sm-12 column-right-div">
             <h3>Available packages</h3>
             <div class="accordion" id="ytc-accordion-div">
               <div class="card">
@@ -362,8 +364,8 @@
               </div>
             </div>
           </div>
-          <h4 class="ytc-insurance-h4 col-4">EADC accepts MoHealthnet and Tricare as insurance. We also take on private pay seniors.</h4>
-          <div class="ytc-insurance-div col-3">
+          <h4 class="ytc-insurance-h4 col-lg-4 col-sm-12">EADC accepts MoHealthnet and Tricare as insurance. We also take on private pay seniors.</h4>
+          <div class="ytc-insurance-div col-lg-3 col-sm-12">
             <img src="/assets/img/copy/homepage/you-the-caretaker/mo_healthnet.png" alt="EADC accepts MoHealthNet" id="ytc-insurance-mohealthnet">
             <img src="/assets/img/copy/homepage/you-the-caretaker/tricare.png" alt="EADC accepts Tricare" ytc="ytc-insurance-tricare">
           </div>
@@ -377,9 +379,9 @@
         </div>
       </section>
       <section class="homepage-content-section" id="content-we">
-        <div class="content-copy-div col-lg-12" id="content-container-we">
-          <h2 class="col-lg-6">Why EADC is good for your senior?</h2>
-          <div class="col-lg-3 column-left-div" id="we-benefits_container-div">
+        <div class="content-copy-div col-12" id="content-container-we">
+          <h2 class="col-lg-6 col-sm-12">Why EADC is good for your senior?</h2>
+          <div class="col-lg-3 col-sm-12 column-left-div" id="we-benefits_container-div">
             <div id="we-benefits-copy-div">
               <div class="benefit-copy-div benefit-copy-visible" id="benefit-copy-card_games">
                 <img src="/assets/img/copy/homepage/why-eadc/thumbnail-1.jpg" class="benefit-copy-img">
@@ -429,7 +431,7 @@
               </button>
             </div>            
           </div>
-          <div class="column-right-div col-lg-7" id="we-gallery">
+          <div class="column-right-div col-lg-7 col-sm-12" id="we-gallery">
             <div class="gallery-nav-div" id="we-gallery-nav">
               <a href="#" class="gallery-nav-a gallery-a-visible">&nbsp;</a>
               <a href="#" class="gallery-nav-a">&nbsp;</a>
@@ -457,9 +459,9 @@
         </div>
       </section>
       <section class="homepage-content-section" id="content-tte">
-        <div class="content-copy-div col-lg-12" id="content-container-tte">
-          <h2 class="col-lg-6">Talk to EADC</h2>
-          <div class="col-lg-4 column-left-div" id="tte-copy-div">
+        <div class="content-copy-div col-12" id="content-container-tte">
+          <h2 class="col-lg-6 col-sm-12">Talk to EADC</h2>
+          <div class="col-lg-4 col-sm-12 column-left-div" id="tte-copy-div">
             <p class="copy-first-p">
               Pellentesque non tempus odio, vel blandit sapien. Ut gravida porta enim sit 
               amet accumsan. Vestibulum eu tincidunt lacus, id accumsan sem. In eget felis 
@@ -474,7 +476,7 @@
               rhoncus. Aenean sit amet tincidunt orci. Nulla quis est sit amet quam efficitur volutpat. 
             </p>
           </div>
-          <div class="col-lg-7 column-right-div" id="tte-form-div">
+          <div class="col-lg-7 col-sm-12 column-right-div" id="tte-form-div">
             <form method="post" action="#">
             <div class="form-column-left col-5">
               <div class="form-field-div" id="field-first_name">
@@ -490,7 +492,7 @@
                 <input type="text" name="first_name" class="form-input-text" id="input-text-first_name">
               </div>
             </div>
-            <div class="form-column-right col-7">
+            <div class="form-column-right col-lg-7 col-sm-12">
               <div class="form-textarea-div" id="textarea-message">
                 <label for="message" class="form-label">Type your message below:</label>
                 <textarea name="message" class="form-textarea" id="input-type-textarea"></textarea>
@@ -553,8 +555,8 @@
         </div>
       </section>
       <footer>
-        <div class="content-copy-div col-lg-12" id="content-container-footer">
-          <div class="col-lg-4 column-left-div" id="footer-contact_eadc-div">
+        <div class="content-copy-div col-12" id="content-container-footer">
+          <div class="col-lg-4 col-sm-12 column-left-div" id="footer-contact_eadc-div">
             <img src="/assets/img/common/logo/desktop.png" alt="Emmanuel Adult Day Center" id="footer-logo">
             <h3 class="footer-h3">Emmanuel Adult Day Center</h3>
             <div class="contact_info-div" id="contact_info-office_address">
@@ -588,7 +590,7 @@
               <a href="#" target="Instagram: instagram.com/myeadcstl" class="contact_info-a">instagram.com/myeadcstl</a>
             </div>
           </div>
-          <div class="col-lg-3 column-middle-div" id="footer-links-container">
+          <div class="col-lg-3 col-sm-12 column-middle-div" id="footer-links-container">
             <div id="footer-links">
               <a href="/your-loved-one.htm" title="Your Loved One" class="footer-link-a" id="footer-link-ylo">Your Loved One</a>
               <a href="/you-the-caretaker.htm" title="You - the Caretaker" class="footer-link-a" id="footer-link-ytc">You &ndash; the Caretaker</a>
@@ -602,7 +604,7 @@
               <h4 class="copyright-h4">Emmanuel Adult Day Center &ndash; &copy; 2020</h4>
             </div>
           </div>
-          <div class="col-lg-4 column-right-div" id="footer-sidebar">
+          <div class="col-lg-4 col-sm-12 column-right-div" id="footer-sidebar">
             <div id="sidebar-images-div">
               <img src="assets/img/common/footer/top-right.jpg" alt="Photo of exterior of facility" class="sidebar-img">
               <img src="assets/img/common/footer/bottom-right.jpg" alt="Photo of lobby of facility" class="sidebar-img">

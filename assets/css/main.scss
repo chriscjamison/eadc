@@ -18,7 +18,8 @@ $dark_blue_1: #a5c4d8;
 $dark_blue_2: #80a1c1;
 $dark_blue_3: #8cadc9;
 $dark_blue_4: #405371;
-$dark_blue_5: #002599;
+$dark_blue_5: #203ea6;
+$dark_blue_6: #002599;
 
 $light_brown_1: #ffffe6;
 $light_brown_2: #ffffb0;
@@ -98,8 +99,9 @@ $spacer_lg_3: 165px;
 
 /****** TYPOGRAPHY STYLING ******/  
 
-$font_sm_1: 1rem; // 12pt
-$font_sm_2: 1.1rem; // 13pt
+$font_sm_1: 0.8rem; // 10pt
+$font_sm_2: 1rem; // 12pt
+$font_sm_3: 1.1rem; // 13pt
 
 $font_med_1: 1.3rem; // 16pt
 $font_med_2: 1.6rem; // 20pt
@@ -133,8 +135,13 @@ p,
 .package-ul li, 
 .contact_info-span, 
 .contact_info-a, 
-.footer-link-a {
+.footer-link-a, 
+.mobile-nav-span {
   font-family: $century_gothic_regular;
+}
+
+.mobile-nav-span {
+  font-size: $font_sm_1;
 }
 
 .package-ul li, 
@@ -145,7 +152,7 @@ label,
 .contact_info-span, 
 .contact_info-a, 
 .footer-link-a {
-  font-size: $font_sm_1;
+  font-size: $font_sm_2;
 }
 
 p, 
@@ -159,7 +166,7 @@ h4,
 .footer-h3, 
 .contact_info-h4,  
 .copyright-h4 {
-  font-size: $font_sm_2;
+  font-size: $font_sm_3;
 }
 
 .header-nav-a, 
@@ -227,7 +234,8 @@ h1,
 .cta-a, 
 .accordion .btn-link, 
 .accordion .btn-link:hover, 
-.gallery-category-a {
+.gallery-category-a, 
+.mobile-nav-span {
   text-decoration: none;
 }
 
@@ -268,7 +276,8 @@ h2,
   color: $white_1;
 }
 
-.benefit_listing-visible .benefit_listing-link-span {
+.benefit_listing-visible .benefit_listing-link-span, 
+.mobile-nav-span {
   color: $white_2
 }
 
@@ -291,30 +300,36 @@ label,
   background-color: $white_2;
 }
 
-.carousel-cta {
-  background-color: $light_purple_2;
+.card-body, 
+.benefit-copy-button {
+  background-color: $white_3;
 }
 
-.cta-a, 
-.gallery-category-a, 
-#submit-tte {
-  background-color: $dark_purple_2;
-}
-
-.gallery-nav-a {
-  background-color: $dark_purple_1;
+#mobile-nav {
+  background-color: $dark_blue_5;
 }
 
 .circle-xxl-filled.circle-light_purple-1 {
   background-color: $light_purple_1;
 }
 
+.carousel-cta, 
+.gallery-nav-a.gallery-a-visible {
+  background-color: $light_purple_2;
+}
+
 .circle-xl-filled.circle-dark_purple-1 {
   background-color: $light_purple_3;
 }
 
-.gallery-nav-a.gallery-a-visible {
-  background-color: $light_purple_2;
+.gallery-nav-a {
+  background-color: $dark_purple_1;
+}
+
+.cta-a, 
+.gallery-category-a, 
+#submit-tte {
+  background-color: $dark_purple_2;
 }
 
 .benefit_listing-visible {
@@ -328,11 +343,6 @@ label,
 
 .package-dollar_amount_container-div {
   background: radial-gradient(circle, rgba(255,235,255,1) 0%, rgba(255,235,255,1) 50%, rgba(223,210,242,1) 100%);
-}
-
-.card-body, 
-.benefit-copy-button {
-  background-color: $white_3;
 }
 
 
@@ -392,7 +402,7 @@ $border_radius_med_1: 14px;
   border-radius: 100%;
 }
 
-.card-body,  {
+.card-body  {
   border-top: 1px solid;
 }
 
@@ -542,7 +552,9 @@ label {
   padding: $spacer_sm_5;
 }
 
-.visible-mobile { 
+.visible-mobile, 
+#mobile-nav, 
+#content-container-footer { 
   display: none;
 }
 
@@ -604,7 +616,7 @@ label {
 
 .contact_info-a:hover, 
 .footer-link-a:hover {
-  color: $dark_blue_5;
+  color: $dark_blue_6;
 }
 
 
@@ -1147,8 +1159,6 @@ label {
   z-index: 300;
 }
 
-
-
 .content-copy-div {
   padding-top: $spacer_lg_2;
   position: absolute;
@@ -1258,10 +1268,8 @@ label {
   }
 }
 
-
 /* ------ YOUR LOVED ONE ------ */
   
-
 #content-container-ylo { 
   h2 {
     margin-bottom: 37px;
@@ -1297,7 +1305,6 @@ label {
   bottom: $spacer_med_2;
   left: $spacer_med_2;
 }
-
 
 /* ------ YOU - THE CARETAKER ------ */
 
@@ -1434,7 +1441,6 @@ label {
   }
 }
 
-
 /* ------ TALK TO EADC ------ */
 
 #tte-form-div {
@@ -1517,6 +1523,8 @@ label {
 
 
 
+/******* BREAKPOINTS ******/
+
 @media screen and (min-width: 1200px) {
   .container {
     max-width: 100%;
@@ -1529,6 +1537,279 @@ label {
     padding-right: $spacer_lg_1;
   }
 }
+
+/* ------ MOBILE PHONES (< 414x???) ------- */
+@media screen and (max-width: 414px) {
+
+  /******* COMMON ELEMENTS *******/
+
+  .visible-desktop, 
+  #content-container-footer {
+    display: none;
+  }
+
+  .visible-mobile, 
+  #mobile-nav {
+    display: block;
+  }
+
+  h2 {
+    margin-bottom: $spacer_sm_6;
+  }
+
+
+  /****** TYPOGRAPHY STYLING ******/
+
+  .carousel-cta p, 
+  .cta-a, 
+  p {
+    font-size: $font_sm_2;
+  }
+
+  .copy-first-p::first-line {
+    font-size: $font_med_1;
+  }
+
+  h1, 
+  h2 {
+    font-size: $font_med_2;
+  }
+
+
+  /******* BORDERS ******/
+
+  .carousel-cta {
+    border-radius: $border_radius_med_1 $border_radius_med_1 0 0;
+  }
+
+
+
+  /****** SHADOWS ******/
+
+  #mobile-nav {
+    box-shadow: 0 0 6px $dark_purple_2;
+  }
+
+
+
+  /****** BACKGROUNDS ******/
+
+  #background-ylo, 
+  #circles-ylo {
+    height: 886px;
+  }
+
+  #circles-ylo {
+    .circles-light_brown-div {
+      .circles-large {
+        div:nth-child(1) {
+          display: none;
+        }
+
+        div:nth-child(3) {
+          top: 80%;
+          left: 73%;
+        }
+      }
+
+      .circles-small {
+        div:nth-child(3)  {
+          display: none;
+        }
+
+        div:nth-child(1) {
+          top: 97%;
+        }
+      }
+    }
+
+    .circles-purple-div {
+      .circles-small {
+        div:nth-child(1),
+        div:nth-child(3), 
+        div:nth-child(5) {
+          display: none;
+        }
+      }
+
+      .circles-large { 
+        div:nth-child(2), 
+        div:nth-child(4), 
+        div:nth-child(5)  {
+          display: none;
+        }
+        
+        div:nth-child(2) {
+          top: 83%;
+          left: 34%;
+        }
+      }
+
+    }
+
+    .circles-dark_brown-div {
+      .circles-small {
+        div:nth-child(2)  {
+          top: 75%; 
+          left: 89%;
+        }
+
+        div:nth-child(3) {
+          top: 44%;
+          left: 82%;
+        }
+      }
+
+      .circles-large {
+        div:nth-child(1), 
+        div:nth-child(3),  
+        div:nth-child(4) {
+          display: none;
+        }
+
+        div:nth-child(2) {
+          top: 9%;
+        }
+      }
+    }
+  }
+
+
+  /* ****** MAIN NAVIGATION ****** */
+
+  #mobile-nav {
+    width: 100%;
+    height: 94px;
+    position: fixed;
+    bottom: 0;
+    z-index: 800;
+  }
+
+  #mobile-nav-ul {
+    padding: $spacer_sm_5 $spacer_med_2;
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+
+    li {
+      text-align: center;
+    }
+
+    #mobile-nav-li-icon {
+      width: 40px;
+    }
+
+    #mobile-nav-li-tte {
+      width: 42px;
+    }
+
+    .mobile-nav-img {
+      height: auto;
+    }
+
+    #mobile-nav-icon-img {
+      width: 36px;
+      margin-left: 2px;
+    }
+
+    #mobile-nav-tte-img {
+      width: 42px;
+    }
+
+    #mobile-nav-span-tte {
+      margin-top: 10px;
+      display: block;
+      line-height: 1.2;
+    }
+  }
+
+  #mobile-nav-icon-img {
+    margin-left: $spacer_sm_2;
+  }
+
+  /****** CAROUSEL ******/
+
+  .carousel-inner, 
+  .carousel-item, 
+  .carousel-item.active, 
+  .carousel-item-next, 
+  .carousel-item-prev { 
+    height: 100%;  
+  }
+
+  .carousel-cta {
+    width: 100% !important;
+    left: 0;
+    bottom: 0;
+
+    #mobile-cta-logo {
+      width: 190px;
+      margin-bottom: $spacer_sm_2;
+    }
+
+    .cta-a {
+      width: 100%;
+    }
+  }
+
+
+
+  /****** COPY ******/
+
+  .container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .content-copy-div {
+    padding-top: $spacer_med_4;
+    padding-left: $spacer_med_2;
+    padding-right: $spacer_med_2;
+  }
+
+  /* ------ YOUR LOVED ONE ------ */
+
+  #content-ylo {
+    height: 886px;
+  }
+
+  #content-container-ylo { 
+    h2 {
+      margin-bottom: $spacer_sm_6;
+    }
+
+    .column-left-div {
+      margin-top: 0;
+      padding-right: 0;
+    }
+
+    .column-right-div {
+      margin-top: $spacer_sm_6;
+    }
+  }
+}
+
+/* ------ APPLE PHONES (414x???) ------ */
+@media screen and (min-width: 375px) and (max-width: 414px) {
+
+  /****** MAIN NAVIGATION ******/ 
+
+  #mobile-nav-ul {
+    width: 375px;
+  }
+}
+
+
+/* ------ IPHONE X (414x812) ------ */
+@media screen and (width: 375px) and (height: 812px) {
+
+  /****** CAROUSEL ******/ 
+
+  .carousel {
+    height: 718px;
+  }
+}
+
 
 /****** ELEMENT INDEX ******/
 
