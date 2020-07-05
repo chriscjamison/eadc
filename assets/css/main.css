@@ -366,8 +366,7 @@ label {
   padding: 12px; }
 
 .visible-mobile,
-#mobile-nav,
-#content-container-footer {
+#mobile-nav {
   display: none; }
 
 /****** LINK/BUTTON BEHAVIOR ******/
@@ -578,11 +577,6 @@ label {
 #circles-ylo .circles-purple-div .circles-large div:nth-child(4),
 #circles-tte .circles-purple-div .circles-large div:nth-child(4),
 #circles-footer .circles-purple-div .circles-large div:nth-child(4) {
-  top: 59%;
-  left: 48%; }
-#circles-ylo .circles-purple-div .circles-large div:nth-child(5),
-#circles-tte .circles-purple-div .circles-large div:nth-child(5),
-#circles-footer .circles-purple-div .circles-large div:nth-child(5) {
   top: 14%;
   left: 53%; }
 #circles-ylo .circles-purple-div .circles-small div:nth-child(1),
@@ -722,9 +716,6 @@ label {
 #circles-footer .circles-purple-div .circles-large div:nth-child(2) {
   top: 65%;
   left: 30%; }
-#circles-footer .circles-purple-div .circles-large div:nth-child(4) {
-  top: 67%;
-  left: 48%; }
 #circles-footer .circles-dark_brown-div .circles-small div:nth-child(3) {
   top: 47%;
   left: 26%; }
@@ -804,6 +795,7 @@ label {
 
 .content-copy-div {
   padding-top: 139px;
+  padding-left: 152px;
   position: absolute;
   z-index: 8; }
 
@@ -1065,7 +1057,17 @@ label {
     display: block; }
 
   h2 {
-    margin-bottom: 16px; }
+    margin-bottom: 26px; }
+
+  .column-left-div {
+    margin-top: 0 !important;
+    padding-right: 0 !important; }
+
+  .column-middle-div,
+  .column-right-div {
+    margin-top: 16px !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important; }
 
   /****** TYPOGRAPHY STYLING ******/
   .carousel-cta p,
@@ -1079,6 +1081,12 @@ label {
   h1,
   h2 {
     font-size: 1.6rem; }
+
+  h3 {
+    font-size: 1.3rem; }
+
+  h4 {
+    font-size: 1.1rem; }
 
   /******* BORDERS ******/
   .carousel-cta {
@@ -1184,7 +1192,8 @@ label {
     padding-right: 0; }
 
   .content-copy-div {
-    padding-top: 47px;
+    padding-top: 36px;
+    padding-bottom: 26px;
     padding-left: 26px;
     padding-right: 26px; }
 
@@ -1192,19 +1201,43 @@ label {
   #content-ylo {
     height: 886px; }
 
-  #content-container-ylo h2 {
-    margin-bottom: 16px; }
-  #content-container-ylo .column-left-div {
-    margin-top: 0;
-    padding-right: 0; }
-  #content-container-ylo .column-right-div {
-    margin-top: 16px; } }
+  /* ------ YOU - THE CARETAKER ------ */
+  .ytc-testimonial .ytc-testimonial-img {
+    width: 139px;
+    height: 139px; }
+  .ytc-testimonial .ytc-testimonial-p {
+    margin: 0 0 0 16px; }
+
+  .ytc-insurance-h4 {
+    margin-top: 16px; }
+
+  .ytc-insurance-div {
+    margin-top: 16px;
+    padding-left: 0; } }
 /* ------ APPLE PHONES (414x???) ------ */
 @media screen and (min-width: 375px) and (max-width: 414px) {
   /****** MAIN NAVIGATION ******/
   #mobile-nav-ul {
-    width: 375px; } }
-/* ------ IPHONE X (414x812) ------ */
+    width: 375px; }
+
+  /****** BACKGROUNDS ******/
+  #background-ytc,
+  #content-ytc {
+    height: 1545px; }
+
+  #circles-ytc #ytc-circle-upper-left {
+    top: -18%; }
+  #circles-ytc #ytc-circle-lower-left {
+    top: 4%;
+    left: -2%; }
+  #circles-ytc #ytc-circle-upper-right {
+    top: 42%; } }
+/* ------ IPHONE 6/7/8 (375x667) ------ */
+@media screen and (width: 375px) and (height: 667px) {
+  /****** CAROUSEL ******/
+  .carousel {
+    height: 667px; } }
+/* ------ IPHONE X (375x812) ------ */
 @media screen and (width: 375px) and (height: 812px) {
   /****** CAROUSEL ******/
   .carousel {

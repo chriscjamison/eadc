@@ -93,7 +93,8 @@ $spacer_med_6: 54px;
 
 $spacer_lg_1: 76px;
 $spacer_lg_2: 139px;
-$spacer_lg_3: 165px;
+$spacer_lg_3: 152px;
+$spacer_lg_4: 165px;
 
 
 
@@ -553,8 +554,7 @@ label {
 }
 
 .visible-mobile, 
-#mobile-nav, 
-#content-container-footer { 
+#mobile-nav { 
   display: none;
 }
 
@@ -819,11 +819,6 @@ label {
       }
   
       div:nth-child(4) {
-        top: 59%;
-        left: 48%;
-      }
-  
-      div:nth-child(5) {
         top: 14%;
         left: 53%;
       }
@@ -1030,11 +1025,6 @@ label {
         top: 65%;
         left: 30%;
       }
-
-      div:nth-child(4) {
-        top: 67%;
-        left: 48%;
-      }
     }
   }
 
@@ -1122,7 +1112,7 @@ label {
   width: 225px;
   height: auto;
   position: absolute;
-  left: $spacer_lg_3;
+  left: $spacer_lg_4;
   bottom: 440px;
 }
 
@@ -1161,6 +1151,7 @@ label {
 
 .content-copy-div {
   padding-top: $spacer_lg_2;
+  padding-left: $spacer_lg_3;
   position: absolute;
   z-index: 8;
 }
@@ -1533,10 +1524,12 @@ label {
   }
   
   .col-lg-12 {
-    padding-left: $spacer_lg_3;
+    padding-left: $spacer_lg_4;
     padding-right: $spacer_lg_1;
   }
 }
+
+
 
 /* ------ MOBILE PHONES (< 414x???) ------- */
 @media screen and (max-width: 414px) {
@@ -1554,9 +1547,20 @@ label {
   }
 
   h2 {
-    margin-bottom: $spacer_sm_6;
+    margin-bottom: $spacer_med_2;
   }
 
+  .column-left-div {
+    margin-top: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  .column-middle-div, 
+  .column-right-div {
+    margin-top: $spacer_sm_6 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
 
   /****** TYPOGRAPHY STYLING ******/
 
@@ -1573,6 +1577,14 @@ label {
   h1, 
   h2 {
     font-size: $font_med_2;
+  }
+
+  h3 {
+    font-size: $font_med_1;
+  }
+
+  h4 {
+    font-size: $font_sm_3;
   }
 
 
@@ -1763,6 +1775,7 @@ label {
 
   .content-copy-div {
     padding-top: $spacer_med_4;
+    padding-bottom: $spacer_med_2;
     padding-left: $spacer_med_2;
     padding-right: $spacer_med_2;
   }
@@ -1773,21 +1786,30 @@ label {
     height: 886px;
   }
 
-  #content-container-ylo { 
-    h2 {
-      margin-bottom: $spacer_sm_6;
+  /* ------ YOU - THE CARETAKER ------ */
+
+  .ytc-testimonial {
+    .ytc-testimonial-img {
+      width: 139px;
+      height: 139px;
     }
 
-    .column-left-div {
-      margin-top: 0;
-      padding-right: 0;
-    }
-
-    .column-right-div {
-      margin-top: $spacer_sm_6;
+    .ytc-testimonial-p {
+      margin: 0 0 0 $spacer_sm_6;
     }
   }
+
+  .ytc-insurance-h4 {
+    margin-top: $spacer_sm_6;
+  }
+
+  .ytc-insurance-div {
+    margin-top: $spacer_sm_6;
+    padding-left: 0;
+  }
 }
+
+
 
 /* ------ APPLE PHONES (414x???) ------ */
 @media screen and (min-width: 375px) and (max-width: 414px) {
@@ -1797,10 +1819,47 @@ label {
   #mobile-nav-ul {
     width: 375px;
   }
+
+
+
+  /****** BACKGROUNDS ******/ 
+
+  #background-ytc, 
+  #content-ytc {
+    height: 1545px;
+  }
+
+  #circles-ytc {
+    #ytc-circle-upper-left {
+      top: -18%;
+    }
+
+    #ytc-circle-lower-left  {
+      top: 4%;
+      left: -2%;
+    }
+
+    #ytc-circle-upper-right {
+      top: 42%;
+    }
+  }
 }
 
 
-/* ------ IPHONE X (414x812) ------ */
+
+/* ------ IPHONE 6/7/8 (375x667) ------ */
+@media screen and (width: 375px) and (height: 667px) {
+
+  /****** CAROUSEL ******/ 
+
+  .carousel {
+    height: 667px;
+  }
+}
+
+
+
+/* ------ IPHONE X (375x812) ------ */
 @media screen and (width: 375px) and (height: 812px) {
 
   /****** CAROUSEL ******/ 
