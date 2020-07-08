@@ -89,11 +89,16 @@ $spacer_19px: 19px;
 $spacer_20px: 20px;
 $spacer_26px: 26px;
 $spacer_29px: 29px;
+
+$spacer_32px: 32px;
 $spacer_36px: 36px;
+
 $spacer_47px: 47px;
+
 $spacer_54px: 54px;
 
 $spacer_76px: 76px;
+
 $spacer_109px: 109px;
 $spacer_139px: 139px;
 $spacer_152px: 152px;
@@ -392,20 +397,33 @@ h3,
   background: radial-gradient(circle, rgba(255,235,255,1) 0%, rgba(255,235,255,1) 50%, rgba(223,210,242,1) 100%);
 }
 
+.circle-light_brown-1 {
+  background-color: $light_brown_3;
+}
+
+.circle-brown-1 {
+  background-color: $light_brown_4;
+}
+
+.circle-dark_brown-2 {
+  background-color: $dark_brown_2;
+}
+
 
 
 /****** BORDERS ******/
 
-$border_radius_sm_1: 8px;
-$border_radius_sm_2: 10px;
-$border_radius_med_1: 14px;
+$border_radius_8px: 8px;
+$border_radius_10px: 10px;
+$border_radius_14px: 14px;
+$border_radius_16px: 16px;
 
 .header-nav-a {
   border-bottom: none;
 }
 
 .gallery-nav-a {
-  border-radius: $border_radius_sm_1 $border_radius_sm_1 0 $border_radius_sm_1;
+  border-radius: $border_radius_8px $border_radius_8px 0 $border_radius_8px;
 }
 
 .cta-a, 
@@ -414,11 +432,11 @@ $border_radius_med_1: 14px;
 #submit-tte, 
 #sidebar-images-div .sidebar-img, 
 .sp-copy-photo-img {
-  border-radius: $border_radius_sm_2 $border_radius_sm_2 0 $border_radius_sm_2;
+  border-radius: $border_radius_10px $border_radius_10px 0 $border_radius_10px;
 }
 
 #header-nav-ul {
-  border-radius: $border_radius_sm_2;
+  border-radius: $border_radius_10px;
 }
 
 .carousel-cta, 
@@ -426,17 +444,21 @@ $border_radius_med_1: 14px;
 .accordion, 
 #we-benefits_listing_container-div, 
 .gallery-photo-div {
-  border-radius: $border_radius_med_1 $border_radius_med_1 0 $border_radius_med_1;
+  border-radius: $border_radius_14px $border_radius_14px 0 $border_radius_14px;
 }
 
 .accordion > .card:first-of-type, 
 #we-benefits_listing_container-div > .benefit_listing-button:first-of-type {
-  border-radius: $border_radius_med_1 $border_radius_med_1 0 0;
+  border-radius: $border_radius_14px $border_radius_14px 0 0;
 }
 
 .accordion > .card:last-of-type, 
 #we-benefits_listing_container-div > .benefit_listing-button:last-of-type {
-  border-radius: 0 0 0 $border_radius_med_1;
+  border-radius: 0 0 0 $border_radius_14px;
+}
+
+#sp-testimonial-social_media-img-instagram {
+  border-radius: $border_radius_16px;
 }
 
 .circles-large div,
@@ -446,7 +468,12 @@ $border_radius_med_1: 14px;
 .accordion-dot-div, 
 .package-dollar_amount_container-div, 
 #circles-we div, 
-.benefit_listing-dot-div {
+.benefit_listing-dot-div, 
+.sp-testimonial-img, 
+#sp-testimonial-social_media-img-facebook, 
+.sp-circle-sm, 
+.sp-circle-med, 
+.sp-circle-lg {
   border-radius: 100%;
 }
 
@@ -575,7 +602,9 @@ $border_radius_med_1: 14px;
 .gallery-nav-a, 
 .gallery-category-a, 
 .gallery-photo-div, 
-#submit-tte {
+#submit-tte, 
+.sp-testimonial-img, 
+.sp-testimonial-social_media-img {
   box-shadow: 0 0 6px $dark_purple_2;
 }
 
@@ -1108,6 +1137,80 @@ label {
   }
 }
 
+.sp-circle-sm {
+  width: 279px;
+  height: 279px;
+}
+
+.sp-circle-med {
+  width: 451px;
+  height: 451px;
+}
+
+.sp-circle-lg {
+  width: 555px;
+  height: 555px;
+}
+
+.circles-lg-1, 
+.circles-lg-2 {
+  width: 277px;
+  height: 555px;
+  position: absolute;
+  overflow-x: hidden;
+  z-index: 100;
+  opacity: 0.95;
+
+  div {
+    position: absolute;
+  }
+
+  .sp-circle-sm  {
+    transform: translate(50%, 50%);
+    z-index: 130;
+  }
+
+  .sp-circle-med  {
+    transform: translate(14%, 12%);
+    z-index: 120;
+  }
+
+  .sp-circle-lg {
+    z-index: 110;
+  }
+}
+
+#background-hero {
+  top: 655px;
+  right: 0;
+}
+
+#circles-middle {
+  top: 1880px;
+  left: 0;
+
+  .sp-circle-sm  {
+    transform: translate(-50%, 50%);
+    z-index: 130;
+  }
+
+  .sp-circle-med  {
+    transform: translate(-50%, 12%);
+    z-index: 120;
+  }
+
+  .sp-circle-lg {
+    transform: translateX(-50%);
+    z-index: 110;
+  }
+}
+
+#circles-bottom-right {
+  height: 277px;
+  top: 3486px;
+  right: 0;
+  overflow-y: hidden;
+}
 
 
 /****** MAIN NAVIGATION ******/
@@ -1215,7 +1318,7 @@ label {
 
 
 
-/****** CONTENT ******/
+/****** CONTAINER ******/
 
 .container, 
 .sp-container-main {
@@ -1247,10 +1350,17 @@ label {
   }
 }
 
-.sp-h3 {
-  margin-top: $spacer_2px;
+#sp-content-container-ylo, 
+.sp-testimonials-copy-container-div {
+  .col-12 {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
+
+
+/****** COPY ******/
 
 /* ------ HOMEPAGE ------ */
 
@@ -1602,6 +1712,10 @@ label {
   left: 44px;
 }
 
+.sp-h3 {
+  margin-top: $spacer_2px;
+}
+
 .sp-days-description-h4 {
   margin: $spacer_9px 0 $spacer_7px 0;
 }
@@ -1644,7 +1758,7 @@ label {
 }
 
 #sp-testimonials-social_media-instagram {
-  margin-top: $spacer_36px;
+  margin-top: $spacer_32px;
 }
 
 #sp-testimonials-social_media-logo-facebook {
@@ -1655,7 +1769,19 @@ label {
   margin-top: $spacer_2px;
 }
 
+#sp-content-container-ylo {
+  iframe {
+    width: 1013px;
+    height: 547px;
+  }
+}
+
+
 /****** FOOTER ******/ 
+
+.sp-footer {
+  margin-top: $spacer_76px;
+}
 
 #footer-logo {
   width: 225px;
@@ -1824,7 +1950,7 @@ label {
   /******* BORDERS ******/
 
   .carousel-cta {
-    border-radius: $border_radius_med_1 $border_radius_med_1 0 0;
+    border-radius: $border_radius_14px $border_radius_14px 0 0;
   }
 
   #footer-links {
