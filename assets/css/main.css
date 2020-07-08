@@ -25,7 +25,9 @@ h4,
 .benefit_listing-link-span,
 .gallery-category-a,
 label,
-#submit-tte {
+#submit-tte,
+.sp-testimonials-social_media-h4,
+.sp-testimonials-social_media-copy-h5 {
   font-family: "Century Gothic WGL W01 Bold", sans-serif; }
 
 .header-nav-a,
@@ -36,7 +38,9 @@ p,
 .contact_info-a,
 .footer-link-a,
 .mobile-nav-span,
-.menu-link-a {
+.menu-link-a,
+.sp-benefit-ul li,
+.sp-testimonials-social_media-a {
   font-family: "Century Gothic WGL W01 Regular", sans-serif; }
 
 .mobile-nav-span {
@@ -50,7 +54,11 @@ label,
 .contact_info-span,
 .contact_info-a,
 .footer-link-a,
-.menu-link-a {
+.menu-link-a,
+.sp-benefit-ul li,
+.sp-days-description-p,
+.sp-testimonials-social_media-copy-h5,
+.sp-testimonials-social_media-a {
   font-size: 1rem; }
 
 p,
@@ -64,7 +72,9 @@ h4,
 .footer-h3,
 .contact_info-h4,
 .copyright-h4,
-.menu-h3 {
+.menu-h3,
+.sp-days-description-h4,
+.sp-testimonials-social_media-h4 {
   font-size: 1.1rem; }
 
 .header-nav-a,
@@ -90,7 +100,9 @@ h2 {
 .contact_info-a,
 .footer-link-a,
 .menu-link-a,
-.contact_info-p {
+.contact_info-p,
+.sp-content-section p,
+.sp-testimonials-social_media-a {
   font-weight: 600; }
 
 h2 {
@@ -104,7 +116,8 @@ h1,
   letter-spacing: -0.1px; }
 
 .package-ul li,
-.ytc-insurance-h4 {
+.ytc-insurance-h4,
+.sp-benefit-ul li {
   letter-spacing: 0.2px; }
 
 .carousel-cta p {
@@ -115,7 +128,8 @@ h1,
 #submit-tte {
   letter-spacing: 0.4px; }
 
-.content-copy-div p {
+.content-copy-div p,
+.sp-content-section p {
   letter-spacing: 0.6px; }
 
 .header-nav-a,
@@ -172,6 +186,14 @@ label,
 .contact_info-span {
   color: #020000; }
 
+.sp-content-section p,
+.sp-accordion button,
+.sp-benefit-ul li,
+h3,
+.sp-testimonials-social_media-h4,
+.sp-testimonials-social_media-copy-h5 {
+  color: #261a18; }
+
 /****** COLOR STYLING ******/
 #header-nav-ul {
   background-color: #fffffb; }
@@ -208,6 +230,15 @@ label,
 .benefit_listing-button {
   background-color: #f5ffe1; }
 
+.sp-accordion .card-body {
+  background-color: #ffffe6; }
+
+.sp-accordion > .card > .card-header {
+  background-color: #fff7cd; }
+
+#sp-ylo-accordion-community {
+  background-color: #ccc073; }
+
 .package-dollar_amount_container-div {
   background: radial-gradient(circle, #ffebff 0%, #ffebff 50%, #dfd2f2 100%); }
 
@@ -222,7 +253,8 @@ label,
 .benefit-copy-img,
 .gallery-category-a,
 #submit-tte,
-#sidebar-images-div .sidebar-img {
+#sidebar-images-div .sidebar-img,
+.sp-copy-photo-img {
   border-radius: 10px 10px 0 10px; }
 
 #header-nav-ul {
@@ -277,7 +309,8 @@ label,
 .form-input-text,
 .form-textarea,
 #submit-tte,
-#footer-sidebar .sidebar-img {
+#footer-sidebar .sidebar-img,
+.sp-copy-photo-img {
   border: 3px solid; }
 
 #circles-ytc div {
@@ -299,14 +332,21 @@ label,
 #ylo-gallery img,
 .benefit-copy-img,
 .gallery-photo-div,
-#sidebar-images-div .sidebar-img {
+#sidebar-images-div .sidebar-img,
+.sp-copy-photo-img {
   border-color: #a8bbe4; }
+
+#sp-ylo-accordion-community .accordion-dot-div {
+  border-color: #ffffb0; }
 
 .circles-light_brown-div div div {
   border-color: #dae5c7; }
 
 .circles-dark_brown-div div div {
   border-color: #c2c08f; }
+
+.sp-accordion .accordion-dot-div {
+  border-color: #b6a865; }
 
 .accordion-dot-div,
 .benefit_listing-dot-div,
@@ -317,6 +357,10 @@ label,
 .card-body,
 .benefit_listing-button {
   border-color: rgba(194, 214, 189, 0.6); }
+
+.sp-accordion .card,
+.sp-accordion .card-body {
+  border-color: rgba(204, 192, 115, 0.6); }
 
 #circles-we .circle-xl-1 {
   border-color: #ffebff; }
@@ -751,19 +795,19 @@ label {
     #desktop-header-nav #header-nav-ul .header-nav-a {
       display: inline-flex; }
 
-.section_page-header-nav {
+.sp-header-nav {
   width: 100%;
   display: flex;
   right: auto !important;
   justify-content: space-between; }
-  .section_page-header-nav #header-nav-link-logo {
+  .sp-header-nav #header-nav-link-logo {
     display: block;
     position: relative;
     left: 76px; }
-  .section_page-header-nav #header-nav-logo {
+  .sp-header-nav #header-nav-logo {
     width: 183px;
     height: auto; }
-  .section_page-header-nav #header-nav-ul {
+  .sp-header-nav #header-nav-ul {
     height: 50px;
     float: none !important;
     position: relative;
@@ -776,6 +820,7 @@ label {
   height: auto; }
 
 .carousel-cta {
+  width: 409px;
   padding: 16px 26px 26px 26px;
   position: absolute;
   left: 139px;
@@ -786,15 +831,15 @@ label {
   .carousel-cta p {
     margin: 9px 0 16px 0; }
 
-#cta-homepage {
-  width: 409px; }
+#cta-ylo {
+  left: 261px; }
 
 #cta-logo {
   width: 225px;
   height: auto;
   position: absolute;
   left: 165px;
-  bottom: 440px; }
+  bottom: 484px; }
 
 .cta-a {
   width: 285px;
@@ -802,9 +847,31 @@ label {
   display: block; }
 
 /****** CONTENT ******/
-.container {
+.container,
+.sp-container-main {
   z-index: 7; }
 
+.sp-container-main {
+  padding-top: 26px;
+  background-color: #ffffe6; }
+
+.sp-content-section {
+  width: 1125px;
+  margin: 76px auto 0 auto; }
+  .sp-content-section .column-left-div {
+    padding-left: 0;
+    padding-right: 26px; }
+  .sp-content-section .column-middle-div {
+    padding-left: 0;
+    padding-right: 0; }
+  .sp-content-section .column-right-div {
+    padding-left: 26px;
+    padding-right: 0; }
+
+.sp-h3 {
+  margin-top: 2px; }
+
+/* ------ HOMEPAGE ------ */
 .homepage-content-section {
   width: 100%;
   height: 935px;
@@ -831,6 +898,7 @@ label {
 .column-right-div,
 .column-spacer-div {
   display: inline-flex;
+  flex-direction: column;
   vertical-align: top; }
 
 #content-container-ylo {
@@ -893,7 +961,6 @@ label {
   #content-container-footer .column-right-div {
     flex-direction: column; }
 
-/* ------ YOUR LOVED ONE ------ */
 #content-container-ylo h2 {
   margin-bottom: 37px; }
 
@@ -919,7 +986,6 @@ label {
   bottom: 26px;
   left: 26px; }
 
-/* ------ YOU - THE CARETAKER ------ */
 .ytc-testimonial {
   margin-bottom: 26px;
   display: flex; }
@@ -949,7 +1015,7 @@ label {
 .benefit_listing-dot-div {
   width: 10px;
   height: 10px;
-  margin: 9px 9px 0 0; }
+  margin: 7px 9px 0 0; }
 
 .card-body {
   display: flex; }
@@ -983,7 +1049,6 @@ label {
 #ytc-insurance-mohealthnet {
   margin-right: 36px; }
 
-/* ------ WHY EADC IS GOOD FOR YOUR SENIOR ------ */
 #we-benefits-copy-div .benefit-copy-div {
   display: none; }
 #we-benefits-copy-div .benefit-copy-visible {
@@ -1013,7 +1078,6 @@ label {
   padding: 7px 9px;
   display: inline-flex; }
 
-/* ------ TALK TO EADC ------ */
 #tte-form-div form {
   display: flex;
   margin-top: 9px; }
@@ -1024,6 +1088,67 @@ label {
 #tte-form-div #submit-tte {
   margin-top: 16px;
   padding: 7px 9px; }
+
+/* ------ YOUR LOVED ONE ------ */
+.sp-copy-photo-img {
+  width: 100%;
+  height: auto; }
+
+#sp-ytc-photo-services {
+  margin-top: 9px; }
+
+.sp-benefit-ul {
+  margin-bottom: 0;
+  padding-left: 17px; }
+  .sp-benefit-ul li {
+    margin-bottom: 10px;
+    list-style-image: url("/assets/img/common/icons/sp-dot.png"); }
+  .sp-benefit-ul li:last-of-type {
+    margin-bottom: 0; }
+
+#sp-ylo-gallery-nav {
+  bottom: 100px;
+  left: 44px; }
+
+.sp-days-description-h4 {
+  margin: 9px 0 7px 0; }
+
+.sp-days-description-p {
+  margin-bottom: 0; }
+
+.sp-testimonial-div {
+  display: flex; }
+
+.sp-testimonial-img {
+  width: 141px;
+  height: 141px; }
+
+.sp-testimonial-p {
+  margin: 16px 0 0 16px; }
+
+.sp-testimonials-social_media-container-div {
+  margin-top: 26px; }
+
+.sp-testimonials-social_media-container-copy-div {
+  display: flex; }
+
+#sp-testimonials-social_media-container-copy-link-facebook {
+  margin-top: 5px; }
+
+.sp-testimonials-social_media-copy-h5 {
+  margin-bottom: 5px; }
+
+.sp-testimonials-social_media-logo-a {
+  margin-left: 16px; }
+
+#sp-testimonials-social_media-instagram {
+  margin-top: 36px; }
+
+#sp-testimonials-social_media-logo-facebook {
+  margin-top: 10px; }
+
+#sp-testimonials-social_media-logo-instagram {
+  margin-top: 2px; }
 
 /****** FOOTER ******/
 #footer-logo {
