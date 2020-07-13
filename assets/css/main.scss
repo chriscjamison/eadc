@@ -85,6 +85,7 @@ $spacer_9px: 9px;
 
 $spacer_10px: 10px;
 $spacer_12px: 12px;
+$spacer_13px: 13px;
 $spacer_16px: 16px;
 $spacer_17px: 17px;
 $spacer_19px: 19px;
@@ -150,7 +151,10 @@ label,
 #sp-ytc-insurance-span, 
 .sp-we-services-factoid-headline-p, 
 .sp-we-facilities-h4, 
-.sp-tte-cta-detail-type-span {
+.sp-tte-cta-detail-type-span, 
+.sp-au-document-info-h4, 
+.sp-au-document-instruction-span, 
+.sp-au-staff_member-span {
   font-family: $century_gothic_bold;
 }
 
@@ -171,7 +175,9 @@ p,
 .sp-we-facilities-ul li, 
 .sp-tte-cta-detail-info-span, 
 .sp-tte-cta-detail-a, 
-.sp-tte-location-ol li {
+.sp-tte-location-ol li, 
+.sp-au-certifications-ul li, 
+.sp-au-document-info-span {
   font-family: $century_gothic_regular;
 }
 
@@ -193,10 +199,8 @@ label,
 .sp-testimonials-social_media-copy-h5, 
 .sp-testimonials-social_media-a, 
 .sp-ytc-credentials-a, 
-.sp-ytc-services-ul li, 
 #sp-ytc-insurance-span, 
-.sp-we-services-factoid-ul li, 
-.sp-we-facilities-ul li {
+.sp-we-services-factoid-ul li {
   font-size: $font_sm_3;
 }
 
@@ -217,10 +221,17 @@ h4,
 .sp-testimonials-social_media-h4, 
 .sp-ylo-intake-h4, 
 .sp-we-facilities-h4, 
+.sp-ytc-services-ul li, 
 .sp-tte-cta-detail-type-span, 
 .sp-tte-cta-detail-info-span, 
 .sp-tte-cta-detail-a, 
-.sp-tte-location-ol li {
+.sp-tte-location-ol li, 
+.sp-we-facilities-ul li, 
+.sp-au-certifications-ul li, 
+.sp-au-document-info-h4, 
+.sp-au-document-info-span, 
+.sp-au-document-instruction-span, 
+.sp-au-staff_member-span {
   font-size: $font_sm_4;
 }
 
@@ -260,7 +271,9 @@ h2 {
 .sp-we-facilities-ul li, 
 .sp-tte-cta-detail-info-span, 
 .sp-tte-cta-detail-a, 
-.sp-tte-location-ol li {
+.sp-tte-location-ol li, 
+.sp-au-certifications-ul li, 
+.sp-au-document-info-span {
   font-weight: 600;
 }
 
@@ -300,7 +313,11 @@ h1,
 .sp-content-section p, 
 .sp-ytc-services-ul li, 
 .sp-we-facilities-ul li, 
-.sp-tte-location-ol li {
+.sp-tte-location-ol li, 
+.sp-au-certifications-ul li, 
+.sp-au-document-info-span, 
+.sp-au-document-instruction-span, 
+.sp-au-staff_member-span {
   letter-spacing: 0.6px;
 }
 
@@ -394,7 +411,12 @@ h3,
 #sp-ytc-insurance-span, 
 .sp-we-facilities-h4, 
 .sp-we-facilities-ul li, 
-.sp-tte-location-ol li {
+.sp-tte-location-ol li, 
+.sp-au-certifications-ul li, 
+.sp-au-document-info-h4, 
+.sp-au-document-info-span, 
+.sp-au-document-instruction-span, 
+.sp-au-staff_member-span {
   color: $black_1;
 }
 
@@ -1289,7 +1311,7 @@ label {
   right: 0;
 }
 
-#ylo-circles-middle {
+#sp-ylo-circles-middle {
   top: 1880px;
   left: 0;
 
@@ -1309,9 +1331,9 @@ label {
   }
 }
 
-#ylo-circles-bottom-right {
+#sp-ylo-circles-bottom-right {
   height: 277px;
-  top: 3494px;
+  top: 3486px;
   right: 0;
   overflow-y: hidden;
 }
@@ -1375,7 +1397,8 @@ label {
 }
 
 #sp-ytc-circles-bottom-left, 
-#sp-tte-circles-bottom-left {
+#sp-tte-circles-bottom-left, 
+#sp-au-circles-bottom-left {
   height: 277px;
   top: 5274px;
   overflow-y: hidden;
@@ -1393,11 +1416,15 @@ label {
   }
 }
 
-#tte-circles-bottom-left {
+#sp-tte-circles-bottom-left {
   top: 1956px;
 }
 
-#we-circles-middle-1 {
+#sp-au-circles-bottom-left {
+  top: 2672px;
+}
+
+#sp-we-circles-middle-1 {
   right: 0;
 }
 
@@ -2038,7 +2065,8 @@ label {
 }
 
 .sp-ytc-services-ul, 
-.sp-we-facilities-ul { 
+.sp-we-facilities-ul, 
+.sp-au-certifications-ul { 
   padding-left: $spacer_17px; 
   
   li {
@@ -2189,6 +2217,55 @@ label {
 }
 
 
+/* ------ ABOUT US ------ */
+
+#sp-au-photo-img {
+  margin-top: $spacer_10px;
+}
+
+.sp-au-document_container-div {
+  display: flex;
+}
+
+.sp-au-document-img {
+  width: 47px;
+  height: auto;
+}
+
+.sp-au-document-info-div {
+  margin-left: $spacer_16px;
+}
+
+.sp-au-document-info-h4 {
+  margin-bottom: $spacer_2px;
+}
+
+.sp-au-staff_member-span {
+  margin-bottom: $spacer_5px;
+  display: block;
+}
+
+.sp-au-staff_member_container-div {
+  margin-bottom: $spacer_16px;
+
+  p {
+    margin-bottom: 0;
+  }
+}
+
+.sp-au-staff_member_container-div:last-of-type {
+  margin-bottom: 0;
+}
+
+#sp-content-au-middle-2 {
+  .sp-h3 {
+    margin-top: 0;
+  }
+
+  .column-right-div {
+    padding-left: $spacer_13px;
+  }
+}
 
 /****** FOOTER ******/ 
 
@@ -2615,6 +2692,9 @@ label {
     top: 1915px;
   }
 
+  #sp-au-circles-bottom-left {
+    top: 2615px;
+  }
 
   /* ****** MAIN NAVIGATION ****** */
 
@@ -2931,7 +3011,8 @@ label {
     margin-top: $spacer_10px;
   }
 
-  #sp-ytc-services-ul-left {
+  #sp-ytc-services-ul-left, 
+  #sp-au-certifications-ul-right {
     margin-bottom: $spacer_10px;
 
     li:last-of-type {
@@ -2998,10 +3079,23 @@ label {
   .sp-tte-cta-detail-a {
     display: inline;
   }
-  
+
   #sp-tte-location-map-iframe {
     position: relative;
     left: -26px;
+  }
+
+
+  /* ------ ABOUT US ------ */
+
+  #sp-content-au-middle-1 { 
+    .column-middle-div {
+      margin-top: 0 !important;
+    }
+  }
+
+  .sp-au-certifications-ul {
+    margin-bottom: 0;
   }
 
   /****** FOOTER ******/

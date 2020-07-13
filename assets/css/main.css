@@ -33,7 +33,10 @@ label,
 #sp-ytc-insurance-span,
 .sp-we-services-factoid-headline-p,
 .sp-we-facilities-h4,
-.sp-tte-cta-detail-type-span {
+.sp-tte-cta-detail-type-span,
+.sp-au-document-info-h4,
+.sp-au-document-instruction-span,
+.sp-au-staff_member-span {
   font-family: "Century Gothic WGL W01 Bold", sans-serif; }
 
 .header-nav-a,
@@ -53,7 +56,9 @@ p,
 .sp-we-facilities-ul li,
 .sp-tte-cta-detail-info-span,
 .sp-tte-cta-detail-a,
-.sp-tte-location-ol li {
+.sp-tte-location-ol li,
+.sp-au-certifications-ul li,
+.sp-au-document-info-span {
   font-family: "Century Gothic WGL W01 Regular", sans-serif; }
 
 .mobile-nav-span {
@@ -73,10 +78,8 @@ label,
 .sp-testimonials-social_media-copy-h5,
 .sp-testimonials-social_media-a,
 .sp-ytc-credentials-a,
-.sp-ytc-services-ul li,
 #sp-ytc-insurance-span,
-.sp-we-services-factoid-ul li,
-.sp-we-facilities-ul li {
+.sp-we-services-factoid-ul li {
   font-size: 1rem; }
 
 p,
@@ -96,10 +99,17 @@ h4,
 .sp-testimonials-social_media-h4,
 .sp-ylo-intake-h4,
 .sp-we-facilities-h4,
+.sp-ytc-services-ul li,
 .sp-tte-cta-detail-type-span,
 .sp-tte-cta-detail-info-span,
 .sp-tte-cta-detail-a,
-.sp-tte-location-ol li {
+.sp-tte-location-ol li,
+.sp-we-facilities-ul li,
+.sp-au-certifications-ul li,
+.sp-au-document-info-h4,
+.sp-au-document-info-span,
+.sp-au-document-instruction-span,
+.sp-au-staff_member-span {
   font-size: 1.1rem; }
 
 .header-nav-a,
@@ -134,7 +144,9 @@ h2 {
 .sp-we-facilities-ul li,
 .sp-tte-cta-detail-info-span,
 .sp-tte-cta-detail-a,
-.sp-tte-location-ol li {
+.sp-tte-location-ol li,
+.sp-au-certifications-ul li,
+.sp-au-document-info-span {
   font-weight: 600; }
 
 h2 {
@@ -167,7 +179,11 @@ h1,
 .sp-content-section p,
 .sp-ytc-services-ul li,
 .sp-we-facilities-ul li,
-.sp-tte-location-ol li {
+.sp-tte-location-ol li,
+.sp-au-certifications-ul li,
+.sp-au-document-info-span,
+.sp-au-document-instruction-span,
+.sp-au-staff_member-span {
   letter-spacing: 0.6px; }
 
 .header-nav-a,
@@ -248,7 +264,12 @@ h3,
 #sp-ytc-insurance-span,
 .sp-we-facilities-h4,
 .sp-we-facilities-ul li,
-.sp-tte-location-ol li {
+.sp-tte-location-ol li,
+.sp-au-certifications-ul li,
+.sp-au-document-info-h4,
+.sp-au-document-info-span,
+.sp-au-document-instruction-span,
+.sp-au-staff_member-span {
   color: #261a18; }
 
 .sp-accordion .package-dollar_amount_container-div,
@@ -922,22 +943,22 @@ label {
   top: 655px;
   right: 0; }
 
-#ylo-circles-middle {
+#sp-ylo-circles-middle {
   top: 1880px;
   left: 0; }
-  #ylo-circles-middle .sp-circle-sm {
+  #sp-ylo-circles-middle .sp-circle-sm {
     transform: translate(-50%, 50%);
     z-index: 130; }
-  #ylo-circles-middle .sp-circle-med {
+  #sp-ylo-circles-middle .sp-circle-med {
     transform: translate(-50%, 12%);
     z-index: 120; }
-  #ylo-circles-middle .sp-circle-lg {
+  #sp-ylo-circles-middle .sp-circle-lg {
     transform: translateX(-50%);
     z-index: 110; }
 
-#ylo-circles-bottom-right {
+#sp-ylo-circles-bottom-right {
   height: 277px;
-  top: 3494px;
+  top: 3486px;
   right: 0;
   overflow-y: hidden; }
 
@@ -983,24 +1004,31 @@ label {
   top: 400px; }
 
 #sp-ytc-circles-bottom-left,
-#sp-tte-circles-bottom-left {
+#sp-tte-circles-bottom-left,
+#sp-au-circles-bottom-left {
   height: 277px;
   top: 5274px;
   overflow-y: hidden; }
   #sp-ytc-circles-bottom-left .sp-circle-sm,
-  #sp-tte-circles-bottom-left .sp-circle-sm {
+  #sp-tte-circles-bottom-left .sp-circle-sm,
+  #sp-au-circles-bottom-left .sp-circle-sm {
     transform: translate(-139px, 139px); }
   #sp-ytc-circles-bottom-left .sp-circle-med,
-  #sp-tte-circles-bottom-left .sp-circle-med {
+  #sp-tte-circles-bottom-left .sp-circle-med,
+  #sp-au-circles-bottom-left .sp-circle-med {
     transform: translate(-238px, 75px); }
   #sp-ytc-circles-bottom-left .sp-circle-lg,
-  #sp-tte-circles-bottom-left .sp-circle-lg {
+  #sp-tte-circles-bottom-left .sp-circle-lg,
+  #sp-au-circles-bottom-left .sp-circle-lg {
     transform: translateX(-277px); }
 
-#tte-circles-bottom-left {
+#sp-tte-circles-bottom-left {
   top: 1956px; }
 
-#we-circles-middle-1 {
+#sp-au-circles-bottom-left {
+  top: 2672px; }
+
+#sp-we-circles-middle-1 {
   right: 0; }
 
 #sp-we-circles-middle-2 {
@@ -1442,10 +1470,12 @@ label {
   margin-top: 9px; }
 
 .sp-ytc-services-ul,
-.sp-we-facilities-ul {
+.sp-we-facilities-ul,
+.sp-au-certifications-ul {
   padding-left: 17px; }
   .sp-ytc-services-ul li,
-  .sp-we-facilities-ul li {
+  .sp-we-facilities-ul li,
+  .sp-au-certifications-ul li {
     margin-bottom: 10px;
     list-style-image: url("/assets/img/common/icons/sp-dot.png"); }
 
@@ -1543,6 +1573,40 @@ label {
 
 #sp-tte-photo-img {
   margin-top: 40px; }
+
+/* ------ ABOUT US ------ */
+#sp-au-photo-img {
+  margin-top: 10px; }
+
+.sp-au-document_container-div {
+  display: flex; }
+
+.sp-au-document-img {
+  width: 47px;
+  height: auto; }
+
+.sp-au-document-info-div {
+  margin-left: 16px; }
+
+.sp-au-document-info-h4 {
+  margin-bottom: 2px; }
+
+.sp-au-staff_member-span {
+  margin-bottom: 5px;
+  display: block; }
+
+.sp-au-staff_member_container-div {
+  margin-bottom: 16px; }
+  .sp-au-staff_member_container-div p {
+    margin-bottom: 0; }
+
+.sp-au-staff_member_container-div:last-of-type {
+  margin-bottom: 0; }
+
+#sp-content-au-middle-2 .sp-h3 {
+  margin-top: 0; }
+#sp-content-au-middle-2 .column-right-div {
+  padding-left: 13px; }
 
 /****** FOOTER ******/
 #footer-logo {
@@ -1797,6 +1861,9 @@ label {
   #sp-tte-circles-bottom-left {
     top: 1915px; }
 
+  #sp-au-circles-bottom-left {
+    top: 2615px; }
+
   /* ****** MAIN NAVIGATION ****** */
   #mobile-nav {
     width: 100%;
@@ -2018,9 +2085,11 @@ label {
     width: 240px;
     margin-top: 10px; }
 
-  #sp-ytc-services-ul-left {
+  #sp-ytc-services-ul-left,
+  #sp-au-certifications-ul-right {
     margin-bottom: 10px; }
-    #sp-ytc-services-ul-left li:last-of-type {
+    #sp-ytc-services-ul-left li:last-of-type,
+    #sp-au-certifications-ul-right li:last-of-type {
       margin-bottom: 0; }
 
   #sp-content-ytc-middle-3 .column-middle-div {
@@ -2065,6 +2134,13 @@ label {
   #sp-tte-location-map-iframe {
     position: relative;
     left: -26px; }
+
+  /* ------ ABOUT US ------ */
+  #sp-content-au-middle-1 .column-middle-div {
+    margin-top: 0 !important; }
+
+  .sp-au-certifications-ul {
+    margin-bottom: 0; }
 
   /****** FOOTER ******/
   .footer-sp {
