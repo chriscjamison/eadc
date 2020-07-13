@@ -144,7 +144,7 @@ h4,
 .gallery-category-a, 
 .sp-gallery-category-a, 
 label, 
-#submit-tte, 
+.form-submit, 
 .sp-testimonials-social_media-h4, 
 .sp-testimonials-social_media-copy-h5, 
 .sp-ylo-intake-h4, 
@@ -212,7 +212,7 @@ h4,
 .benefit_listing-link-span, 
 .gallery-category-a, 
 .sp-gallery-category-a, 
-#submit-tte, 
+.form-submit, 
 .footer-h3, 
 .contact_info-h4,  
 .copyright-h4, 
@@ -305,7 +305,7 @@ h1,
 .cta-a, 
 .gallery-category-a, 
 .sp-gallery-category-a, 
-#submit-tte {
+.form-submit {
   letter-spacing: 0.4px;
 }
 
@@ -376,7 +376,7 @@ h2,
 .cta-a, 
 .gallery-category-a, 
 .sp-gallery-category-a, 
-#submit-tte {
+.form-submit {
   color: $white_1;
 }
 
@@ -466,7 +466,7 @@ h3,
 .cta-a, 
 .gallery-category-a, 
 .sp-gallery-category-a, 
-#submit-tte {
+.form-submit {
   background-color: $dark_purple_2;
 }
 
@@ -479,6 +479,10 @@ h3,
   background-color: $light_green_1;
 }
 
+
+
+.sp-container-main, 
+#sp-search-body, 
 .sp-accordion  .card-body {
   background-color: $light_brown_1;
 }
@@ -513,7 +517,6 @@ h3,
 }
 
 
-
 /****** BORDERS ******/
 
 $border_radius_8px: 8px;
@@ -533,7 +536,7 @@ $border_radius_16px: 16px;
 .benefit-copy-img, 
 .gallery-category-a, 
 .sp-gallery-category-a, 
-#submit-tte, 
+.form-submit, 
 #sidebar-images-div .sidebar-img, 
 .sp-copy-photo-img, 
 .sp-gallery-photo-img {
@@ -612,7 +615,7 @@ $border_radius_16px: 16px;
 .sp-gallery-category-a, 
 .form-input-text, 
 .form-textarea, 
-#submit-tte, 
+.form-submit, 
 #footer-sidebar .sidebar-img,
 .sp-copy-photo-img, 
 .sp-we-services-factoid_container-div, 
@@ -633,7 +636,7 @@ $border_radius_16px: 16px;
 .gallery-nav-a, 
 .gallery-category-a, 
 .sp-gallery-category-a, 
-#submit-tte {
+.form-submit {
   border-color: $white_1;
 }
 
@@ -726,7 +729,7 @@ $border_radius_16px: 16px;
 .gallery-category-a, 
 .sp-gallery-category-a, 
 .gallery-photo-div, 
-#submit-tte, 
+.form-submit, 
 .sp-testimonial-img, 
 .sp-testimonial-social_media-img {
   box-shadow: 0 0 6px $dark_purple_2;
@@ -808,7 +811,7 @@ label {
 .cta-a, 
 .gallery-category-a, 
 .sp-gallery-category-a, 
-#submit-tte {
+.form-submit {
   transition-property: background-color, color, border-color;
   transition-duration: 0.2s;
   transition-timing-function: ease-out;
@@ -817,7 +820,7 @@ label {
 .cta-a:hover, 
 .gallery-category-a:hover, 
 .sp-gallery-category-a:hover, 
-#submit-tte:hover {
+.form-submit:hover {
   color: $dark_purple_1;
   background-color: $white_1;
   border-color: $dark_purple_1;
@@ -1306,7 +1309,7 @@ label {
   }
 }
 
-#background-hero {
+#sp-background-hero {
   top: 655px;
   right: 0;
 }
@@ -1398,9 +1401,9 @@ label {
 
 #sp-ytc-circles-bottom-left, 
 #sp-tte-circles-bottom-left, 
-#sp-au-circles-bottom-left {
+#sp-au-circles-bottom-left, 
+#sp-search-background-hero {
   height: 277px;
-  top: 5274px;
   overflow-y: hidden;
 
   .sp-circle-sm {
@@ -1416,6 +1419,10 @@ label {
   }
 }
 
+#sp-ytc-circles-bottom-left {
+  top: 5274px;  
+}
+
 #sp-tte-circles-bottom-left {
   top: 1956px;
 }
@@ -1426,6 +1433,13 @@ label {
 
 #sp-we-circles-middle-1 {
   right: 0;
+}
+
+#sp-search-background-hero {
+  height: 277px;
+  top: calc(100vh - 277px);
+  left: 0;
+  right: auto;
 }
 
 #sp-we-circles-middle-2 {
@@ -1458,6 +1472,10 @@ label {
   overflow-y: hidden;
 }
 
+#sp-search-circles-right {
+  top: 25%;
+  right: 0;
+}
 
 
 /****** MAIN NAVIGATION ******/
@@ -1583,7 +1601,6 @@ label {
 
 .sp-container-main {
   padding-top: $spacer_26px;
-  background-color: $light_brown_1;
 }
 
 .sp-content-section {
@@ -1930,7 +1947,8 @@ label {
 }
 
 #tte-form-div, 
-#sp-tte-form-div {
+#sp-tte-form-div, 
+#sp-search-form {
   form {
     display: flex;
     margin-top: $spacer_9px;
@@ -1944,7 +1962,7 @@ label {
     height: 279px;
   }
 
-  #submit-tte {
+  .form-submit {
     margin-top: $spacer_16px;
     padding: $spacer_7px $spacer_9px;
   }
@@ -2266,6 +2284,49 @@ label {
     padding-left: $spacer_13px;
   }
 }
+
+
+/* ------ SEARCH ------ */
+
+.sp-search-carousel-div {
+  height: 100vh;
+
+  .carousel-inner {
+    height: 100vh;
+    padding-left: 167px;
+  }
+
+  h2 {
+    margin-top: 0;
+    margin-bottom: $spacer_26px;
+    position: relative;
+    top: 180px;
+  }
+
+  #sp-search-form {
+    width: 655px;
+    position: relative;
+    top: 180px;
+
+    .form-label {
+      margin-bottom: $spacer_2px;
+    }
+
+    input {
+      display: inline-flex;
+    }
+
+    #input-text-query_terms {
+      width: 493px;
+    }
+
+    #sp-search-input-submit {
+      margin-left: $spacer_16px;
+    }
+  }
+}
+
+
 
 /****** FOOTER ******/ 
 
@@ -2660,7 +2721,8 @@ label {
     z-index: 0;
   }
 
-  #background-hero {
+  #sp-background-hero, 
+  #search-background-hero {
     height: 277px;
     top: calc(100vh - 94px);
 
@@ -2695,6 +2757,12 @@ label {
   #sp-au-circles-bottom-left {
     top: 2615px;
   }
+
+  #sp-search-background-hero {
+    top: calc(100vh - 277px - 94px);
+  }
+
+  
 
   /* ****** MAIN NAVIGATION ****** */
 
@@ -2832,6 +2900,10 @@ label {
 
   .carousel {
     height: calc(100vh - 94px);
+  }
+
+  .sp-search-carousel-div {
+    padding-left: 0;
   }
 
   .carousel-inner, 
@@ -3098,6 +3170,30 @@ label {
     margin-bottom: 0;
   }
 
+
+  /* ------ SEARCH ------ */
+
+  .sp-search-carousel-div {
+    .carousel-inner {
+      padding-left: $spacer_26px;
+    }
+
+    h2 {
+      margin-bottom: $spacer_16px;
+      top: 145px;
+    }
+  
+    #sp-search-form {
+      top: 145px;
+  
+      .form-label {
+        margin-bottom: $spacer_10px;
+      }
+    }
+  }
+  
+
+
   /****** FOOTER ******/
 
   .footer-sp {
@@ -3193,6 +3289,14 @@ label {
   }
 
 
+  /****** COPY ******/ 
+
+  #sp-ylo-video-iframe, 
+  #sp-we-tour-iframe {
+    width: 375px;
+    height: 203px;
+  }
+
   /* ------ TALK TO EADC ------ */
 
   #sp-tte-location-map-iframe {
@@ -3200,6 +3304,24 @@ label {
     height: 232px;
   }
 
+  .sp-search-carousel-div {
+    #sp-search-form { 
+      width: 323px;
+
+      h2, 
+      #sp-search-form, 
+      .form-label, 
+      #input-text-query_terms {
+        width: 323px;
+      }
+    }
+    
+    #sp-search-input-submit {
+      margin-left: 0;
+      position: relative;
+      right: -166px;
+    }
+  }
 
 
   /****** MAIN NAVIGATION ******/
@@ -3208,15 +3330,6 @@ label {
     width: 83%;
   }
 
-
-
-  /****** COPY ******/ 
-
-  #sp-ylo-video-iframe, 
-  #sp-we-tour-iframe {
-    width: 375px;
-    height: 203px;
-  }
 }
 
 

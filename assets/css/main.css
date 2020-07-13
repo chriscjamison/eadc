@@ -26,7 +26,7 @@ h4,
 .gallery-category-a,
 .sp-gallery-category-a,
 label,
-#submit-tte,
+.form-submit,
 .sp-testimonials-social_media-h4,
 .sp-testimonials-social_media-copy-h5,
 .sp-ylo-intake-h4,
@@ -90,7 +90,7 @@ h4,
 .benefit_listing-link-span,
 .gallery-category-a,
 .sp-gallery-category-a,
-#submit-tte,
+.form-submit,
 .footer-h3,
 .contact_info-h4,
 .copyright-h4,
@@ -172,7 +172,7 @@ h1,
 .cta-a,
 .gallery-category-a,
 .sp-gallery-category-a,
-#submit-tte {
+.form-submit {
   letter-spacing: 0.4px; }
 
 .content-copy-div p,
@@ -233,7 +233,7 @@ h2,
 .cta-a,
 .gallery-category-a,
 .sp-gallery-category-a,
-#submit-tte {
+.form-submit {
   color: #ffffff; }
 
 .benefit_listing-visible .benefit_listing-link-span,
@@ -306,7 +306,7 @@ h3,
 .cta-a,
 .gallery-category-a,
 .sp-gallery-category-a,
-#submit-tte {
+.form-submit {
   background-color: #4057b3; }
 
 .benefit_listing-visible {
@@ -316,6 +316,8 @@ h3,
 .benefit_listing-button {
   background-color: #f5ffe1; }
 
+.sp-container-main,
+#sp-search-body,
 .sp-accordion .card-body {
   background-color: #ffffe6; }
 
@@ -351,7 +353,7 @@ h3,
 .benefit-copy-img,
 .gallery-category-a,
 .sp-gallery-category-a,
-#submit-tte,
+.form-submit,
 #sidebar-images-div .sidebar-img,
 .sp-copy-photo-img,
 .sp-gallery-photo-img {
@@ -420,7 +422,7 @@ h3,
 .sp-gallery-category-a,
 .form-input-text,
 .form-textarea,
-#submit-tte,
+.form-submit,
 #footer-sidebar .sidebar-img,
 .sp-copy-photo-img,
 .sp-we-services-factoid_container-div,
@@ -438,7 +440,7 @@ h3,
 .gallery-nav-a,
 .gallery-category-a,
 .sp-gallery-category-a,
-#submit-tte {
+.form-submit {
   border-color: #ffffff; }
 
 .form-input-text,
@@ -511,7 +513,7 @@ h3,
 .gallery-category-a,
 .sp-gallery-category-a,
 .gallery-photo-div,
-#submit-tte,
+.form-submit,
 .sp-testimonial-img,
 .sp-testimonial-social_media-img {
   box-shadow: 0 0 6px #4057b3; }
@@ -575,7 +577,7 @@ label {
 .cta-a,
 .gallery-category-a,
 .sp-gallery-category-a,
-#submit-tte {
+.form-submit {
   transition-property: background-color, color, border-color;
   transition-duration: 0.2s;
   transition-timing-function: ease-out; }
@@ -583,7 +585,7 @@ label {
 .cta-a:hover,
 .gallery-category-a:hover,
 .sp-gallery-category-a:hover,
-#submit-tte:hover {
+.form-submit:hover {
   color: #444ca0;
   background-color: #ffffff;
   border-color: #444ca0;
@@ -939,7 +941,7 @@ label {
   .circles-lg-2 .sp-circle-lg {
     z-index: 110; }
 
-#background-hero {
+#sp-background-hero {
   top: 655px;
   right: 0; }
 
@@ -1005,22 +1007,28 @@ label {
 
 #sp-ytc-circles-bottom-left,
 #sp-tte-circles-bottom-left,
-#sp-au-circles-bottom-left {
+#sp-au-circles-bottom-left,
+#sp-search-background-hero {
   height: 277px;
-  top: 5274px;
   overflow-y: hidden; }
   #sp-ytc-circles-bottom-left .sp-circle-sm,
   #sp-tte-circles-bottom-left .sp-circle-sm,
-  #sp-au-circles-bottom-left .sp-circle-sm {
+  #sp-au-circles-bottom-left .sp-circle-sm,
+  #sp-search-background-hero .sp-circle-sm {
     transform: translate(-139px, 139px); }
   #sp-ytc-circles-bottom-left .sp-circle-med,
   #sp-tte-circles-bottom-left .sp-circle-med,
-  #sp-au-circles-bottom-left .sp-circle-med {
+  #sp-au-circles-bottom-left .sp-circle-med,
+  #sp-search-background-hero .sp-circle-med {
     transform: translate(-238px, 75px); }
   #sp-ytc-circles-bottom-left .sp-circle-lg,
   #sp-tte-circles-bottom-left .sp-circle-lg,
-  #sp-au-circles-bottom-left .sp-circle-lg {
+  #sp-au-circles-bottom-left .sp-circle-lg,
+  #sp-search-background-hero .sp-circle-lg {
     transform: translateX(-277px); }
+
+#sp-ytc-circles-bottom-left {
+  top: 5274px; }
 
 #sp-tte-circles-bottom-left {
   top: 1956px; }
@@ -1030,6 +1038,12 @@ label {
 
 #sp-we-circles-middle-1 {
   right: 0; }
+
+#sp-search-background-hero {
+  height: 277px;
+  top: calc(100vh - 277px);
+  left: 0;
+  right: auto; }
 
 #sp-we-circles-middle-2 {
   height: 823px; }
@@ -1048,6 +1062,10 @@ label {
   top: 4831px;
   right: 0;
   overflow-y: hidden; }
+
+#sp-search-circles-right {
+  top: 25%;
+  right: 0; }
 
 /****** MAIN NAVIGATION ******/
 #desktop-header-nav {
@@ -1133,8 +1151,7 @@ label {
   z-index: 7; }
 
 .sp-container-main {
-  padding-top: 26px;
-  background-color: #ffffe6; }
+  padding-top: 26px; }
 
 .sp-content-section {
   width: 1125px;
@@ -1372,17 +1389,21 @@ label {
   display: inline-flex; }
 
 #tte-form-div form,
-#sp-tte-form-div form {
+#sp-tte-form-div form,
+#sp-search-form form {
   display: flex;
   margin-top: 9px; }
 #tte-form-div .form-field-div,
-#sp-tte-form-div .form-field-div {
+#sp-tte-form-div .form-field-div,
+#sp-search-form .form-field-div {
   margin-bottom: 26px; }
 #tte-form-div #input-type-textarea,
-#sp-tte-form-div #input-type-textarea {
+#sp-tte-form-div #input-type-textarea,
+#sp-search-form #input-type-textarea {
   height: 279px; }
-#tte-form-div #submit-tte,
-#sp-tte-form-div #submit-tte {
+#tte-form-div .form-submit,
+#sp-tte-form-div .form-submit,
+#sp-search-form .form-submit {
   margin-top: 16px;
   padding: 7px 9px; }
 
@@ -1607,6 +1628,30 @@ label {
   margin-top: 0; }
 #sp-content-au-middle-2 .column-right-div {
   padding-left: 13px; }
+
+/* ------ SEARCH ------ */
+.sp-search-carousel-div {
+  height: 100vh; }
+  .sp-search-carousel-div .carousel-inner {
+    height: 100vh;
+    padding-left: 167px; }
+  .sp-search-carousel-div h2 {
+    margin-top: 0;
+    margin-bottom: 26px;
+    position: relative;
+    top: 180px; }
+  .sp-search-carousel-div #sp-search-form {
+    width: 655px;
+    position: relative;
+    top: 180px; }
+    .sp-search-carousel-div #sp-search-form .form-label {
+      margin-bottom: 2px; }
+    .sp-search-carousel-div #sp-search-form input {
+      display: inline-flex; }
+    .sp-search-carousel-div #sp-search-form #input-text-query_terms {
+      width: 493px; }
+    .sp-search-carousel-div #sp-search-form #sp-search-input-submit {
+      margin-left: 16px; }
 
 /****** FOOTER ******/
 #footer-logo {
@@ -1839,16 +1884,20 @@ label {
   .circles-lg-2 {
     z-index: 0; }
 
-  #background-hero {
+  #sp-background-hero,
+  #search-background-hero {
     height: 277px;
     top: calc(100vh - 94px); }
-    #background-hero .sp-circle-sm {
+    #sp-background-hero .sp-circle-sm,
+    #search-background-hero .sp-circle-sm {
       transform: translate(50%, -50%);
       z-index: 30; }
-    #background-hero .sp-circle-med {
+    #sp-background-hero .sp-circle-med,
+    #search-background-hero .sp-circle-med {
       transform: translate(14%, -50%);
       z-index: 20; }
-    #background-hero .sp-circle-lg {
+    #sp-background-hero .sp-circle-lg,
+    #search-background-hero .sp-circle-lg {
       transform: translateY(-50%);
       z-index: 10; }
 
@@ -1863,6 +1912,9 @@ label {
 
   #sp-au-circles-bottom-left {
     top: 2615px; }
+
+  #sp-search-background-hero {
+    top: calc(100vh - 277px - 94px); }
 
   /* ****** MAIN NAVIGATION ****** */
   #mobile-nav {
@@ -1962,6 +2014,9 @@ label {
   /****** CAROUSEL ******/
   .carousel {
     height: calc(100vh - 94px); }
+
+  .sp-search-carousel-div {
+    padding-left: 0; }
 
   .carousel-inner,
   .carousel-item,
@@ -2142,6 +2197,17 @@ label {
   .sp-au-certifications-ul {
     margin-bottom: 0; }
 
+  /* ------ SEARCH ------ */
+  .sp-search-carousel-div .carousel-inner {
+    padding-left: 26px; }
+  .sp-search-carousel-div h2 {
+    margin-bottom: 16px;
+    top: 145px; }
+  .sp-search-carousel-div #sp-search-form {
+    top: 145px; }
+    .sp-search-carousel-div #sp-search-form .form-label {
+      margin-bottom: 10px; }
+
   /****** FOOTER ******/
   .footer-sp {
     margin-top: 0; }
@@ -2201,20 +2267,32 @@ label {
   #circles-bottom-right {
     top: 3501px; }
 
+  /****** COPY ******/
+  #sp-ylo-video-iframe,
+  #sp-we-tour-iframe {
+    width: 375px;
+    height: 203px; }
+
   /* ------ TALK TO EADC ------ */
   #sp-tte-location-map-iframe {
     width: 375px;
     height: 232px; }
 
+  .sp-search-carousel-div #sp-search-form {
+    width: 323px; }
+    .sp-search-carousel-div #sp-search-form h2,
+    .sp-search-carousel-div #sp-search-form #sp-search-form,
+    .sp-search-carousel-div #sp-search-form .form-label,
+    .sp-search-carousel-div #sp-search-form #input-text-query_terms {
+      width: 323px; }
+  .sp-search-carousel-div #sp-search-input-submit {
+    margin-left: 0;
+    position: relative;
+    right: -166px; }
+
   /****** MAIN NAVIGATION ******/
   #menu-links {
-    width: 83%; }
-
-  /****** COPY ******/
-  #sp-ylo-video-iframe,
-  #sp-we-tour-iframe {
-    width: 375px;
-    height: 203px; } }
+    width: 83%; } }
 /* ------ IPHONE 6/7/8 (375x667) ------ */
 @media screen and (width: 375px) and (height: 667px) {
   /****** CAROUSEL ******/
