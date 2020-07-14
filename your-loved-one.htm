@@ -169,9 +169,9 @@
                     </button>
                   </h2>
                 </div>
-                <div id="collapseOne" class="collapse show" aria-labelledby="sp-ylo-accordion-community" data-parent="#sp-ylo-accordion-div">
+                <div id="collapseOne" class="show" aria-labelledby="sp-ylo-accordion-community" data-parent="#sp-ylo-accordion-div">
                   <div class="card-body">
-                    <ul class="sp-benefit-ul">
+                    <ul class="sp-accordion-ul">
                       <li>Donec condimentum maximus, eget varius nunc consequat vitae</li>
                       <li>Proin a enim tellus. In ipsum erat, aliquam ultrices ipsum eu, facilisis imperdiet libero</li>
                     </ul>
@@ -188,7 +188,10 @@
                 </div>
                 <div id="collapseTwo" class="collapse" aria-labelledby="sp-ylo-accordion-meals" data-parent="#sp-ylo-accordion-div">
                   <div class="card-body">
-                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                    <ul class="sp-accordion-ul">
+                      <li>Donec condimentum maximus, eget varius nunc consequat vitae</li>
+                      <li>Proin a enim tellus. In ipsum erat, aliquam ultrices ipsum eu, facilisis imperdiet libero</li>
+                    </ul>
                   </div>
                 </div>
               </div>
@@ -202,7 +205,10 @@
                 </div>
                 <div id="collapseThree" class="collapse" aria-labelledby="sp-ylo-accordion-wellbeing" data-parent="#sp-ylo-accordion-div">
                   <div class="card-body">
-                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                    <ul class="sp-accordion-ul">
+                      <li>Donec condimentum maximus, eget varius nunc consequat vitae</li>
+                      <li>Proin a enim tellus. In ipsum erat, aliquam ultrices ipsum eu, facilisis imperdiet libero</li>
+                    </ul>
                   </div>
                 </div>
               </div>
@@ -241,15 +247,33 @@
           <div class="col-lg-4 col-sm-12 column-right-div">
             <h3 class="sp-h3">Activities include:</h3>
             <div class="gallery-nav-div" id="sp-ylo-gallery-nav">
-              <a href="#" class="gallery-nav-a gallery-a-visible">&nbsp;</a>
-              <a href="#" class="gallery-nav-a">&nbsp;</a>
-              <a href="#" class="gallery-nav-a">&nbsp;</a>
+              <a href="javascript:swapGalleryContent('sp-ylo-days-description', '1');" class="gallery-nav-a gallery-a-visible">&nbsp;</a>
+              <a href="javascript:swapGalleryContent('sp-ylo-days-description', '2');" class="gallery-nav-a">&nbsp;</a>
+              <a href="javascript:swapGalleryContent('sp-ylo-days-description', '3');" class="gallery-nav-a">&nbsp;</a>
             </div>
-            <div class="sp-ylo-days-descriptions_container-div">
-              <div class="sp-ylo-days-description-div" id="sp-ylo-days-description-card_games">
-                <img src="/assets/img/copy/your-loved-one/days-photo-1.jpg" alt="" class="sp-copy-photo-img" id="sp-ylo-days-photo-card_games">
-                <div class="sp-ylo-days-description-copy-div" id="sp-ylo-days-copy-card_games">
+            <div class="sp-ylo-days-descriptions_container">
+              <div class="sp-ylo-days-description content-visible" id="sp-ylo-days-description-1">
+                <img src="/assets/img/copy/your-loved-one/days-photo-1.jpg" alt="" class="sp-copy-photo-img" id="sp-ylo-days-photo-1">
+                <div class="sp-ylo-days-description-copy-div" id="sp-ylo-days-copy-1">
                   <h4 class="sp-days-description-h4">Card Games</h4>
+                  <p class="sp-days-description-p">
+                    Aenean ultrices lectus sem, ut ornare dui euismod ut.
+                  </p>
+                </div>
+              </div>
+              <div class="sp-ylo-days-description" id="sp-ylo-days-description-2">
+                <img src="/assets/img/copy/your-loved-one/days-photo-1.jpg" alt="" class="sp-copy-photo-img" id="sp-ylo-days-photo-2">
+                <div class="sp-ylo-days-description-copy-div" id="sp-ylo-days-copy-2">
+                  <h4 class="sp-days-description-h4">Senior Trips</h4>
+                  <p class="sp-days-description-p">
+                    Aenean ultrices lectus sem, ut ornare dui euismod ut.
+                  </p>
+                </div>
+              </div>
+              <div class="sp-ylo-days-description" id="sp-ylo-days-description-3">
+                <img src="/assets/img/copy/your-loved-one/days-photo-1.jpg" alt="" class="sp-copy-photo-img" id="sp-ylo-days-photo-3">
+                <div class="sp-ylo-days-description-copy-div" id="sp-ylo-days-copy-3">
+                  <h4 class="sp-days-description-h4">Mealtime</h4>
                   <p class="sp-days-description-p">
                     Aenean ultrices lectus sem, ut ornare dui euismod ut.
                   </p>
@@ -311,7 +335,7 @@
       </section>
 
 <!-- PAGE BACKGROUND ELEMENTS -->
-      <div class="circles-lg-2" id="sp-ylo-circles-bottom-right">
+      <div class="circles-lg-2 circles-bottom" id="sp-ylo-circles-bottom-right">
         <div class="sp-circle-sm circle-light_brown-1"></div>
         <div class="sp-circle-med circle-brown-1"></div>
         <div class="sp-circle-lg circle-dark_brown-2"></div>

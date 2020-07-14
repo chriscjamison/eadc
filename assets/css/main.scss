@@ -510,10 +510,10 @@ h3,
 .sp-accordion > .card > .card-header {
   background-color: $light_brown_3;
 }
-
+/* 
 #sp-ylo-accordion-community {
   background-color: $dark_brown_1;
-}
+} */
 
 .package-dollar_amount_container-div {
   background: radial-gradient(circle, rgba(255,235,255,1) 0%, rgba(255,235,255,1) 50%, rgba(223,210,242,1) 100%);
@@ -678,10 +678,10 @@ $border_radius_16px: 16px;
 .sp-we-services-factoid_container-div {
   border-color: $dark_blue_2;
 }
-
+/* 
 #sp-ylo-accordion-community .accordion-dot-div {
   border-color: $light_brown_2;
-}
+} */
 
 .circles-light_brown-div div div {
   border-color: $light_brown_5;
@@ -756,7 +756,7 @@ $border_radius_16px: 16px;
 }
 
 .ytc-testimonial .ytc-testimonial-img, 
-#ytc-accordion-div, 
+#ytc-accordion-packages-div, 
 #we-benefits_listing_container-div {
   box-shadow: 0 0 6px $dark_brown_5;
 }
@@ -796,6 +796,9 @@ label {
   display: none;
 }
 
+.content-visible {
+  display: block !important;
+}
 
 
 /****** LINK/BUTTON BEHAVIOR ******/
@@ -847,6 +850,23 @@ label {
   text-decoration: none;
 }
 
+.gallery-nav-a {
+  transition-property: background-color, border-color;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-out;
+}
+
+.gallery-nav-a:hover { 
+  background-color: $white_1;
+  border-color: $dark_purple_1;
+}
+
+.gallery-nav-a.gallery-a-visible:hover {
+  background-color: $light_purple_2;
+  border-color: $dark_purple_1;
+  cursor: default;
+}
+
 .contact_info-a, 
 .footer-link-a {
   transition-property: color;
@@ -858,6 +878,17 @@ label {
 .footer-link-a:hover {
   color: $dark_blue_6;
 }
+
+.accordion .btn-link {
+  transition-property: color;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-out;
+}
+
+.accordion .btn-link:hover {
+  color: $dark_purple_2;
+}
+
 
 
 /****** BACKGROUNDS ******/
@@ -919,7 +950,7 @@ label {
   width: 100%;
   height: 100%;
   position: absolute;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 .background-circles-div {
@@ -1847,9 +1878,18 @@ label {
   }
 }
 
-#ylo-gallery-nav {
+#homepage-ylo-gallery-nav {
   bottom: $spacer_26px;
   left: $spacer_26px;
+}
+
+.homepage-ylo-photo {
+  display: none;
+  position: absolute;
+}
+
+#homepage-ylo-photo-1 {
+  display: block;
 }
 
 .ytc-testimonial {
@@ -1872,6 +1912,7 @@ label {
 
 .ytc-dhss-span {
   display: block;
+  margin-top: $spacer_16px;
   margin-bottom: $spacer_16px;
 }
 
@@ -1893,7 +1934,7 @@ label {
   margin: $spacer_7px $spacer_9px 0 0;
 }
 
-#ytc-accordion-div .card-body, 
+#ytc-accordion-packages-div .card-body, 
 #sp-ytc-accordion-packages-div .card-body {
   display: flex;
 }
@@ -1925,7 +1966,7 @@ label {
 }
 
 .ytc-insurance-div {
-  margin-top: $spacer_36px;
+  margin-top: $spacer_76px;
   padding-left: $spacer_16px;
   padding-right: 0;
 }
@@ -2014,7 +2055,7 @@ label {
   height: auto;
 }
 
-#sp-ytc-photo-services {
+#sp-ylo-photo-services {
   margin-top: $spacer_9px;
 }
 
@@ -2043,6 +2084,12 @@ label {
 
 .sp-h3 {
   margin-top: $spacer_2px;
+}
+
+#sp-content-ylo-middle-1 {
+  .sp-h3 {
+    margin-top: $spacer_9px;
+  }
 }
 
 .sp-days-description-h4 {
@@ -2102,6 +2149,11 @@ label {
 #sp-we-tour-iframe {
   width: 1013px;
   height: 547px;
+}
+
+.sp-ylo-days-description { 
+  display: none;
+  opacity: 0;
 }
 
 
@@ -2202,8 +2254,12 @@ label {
   }
 }
 
-#sp-we-facilities-amenities_container-right-div {
+#sp-we-facilities-amenities_container-left-div {
   margin-top: $spacer_36px;
+}
+
+#sp-we-facilities-amenities_container-right-div {
+  margin-top: $spacer_47px;
 }
 
 .sp-we-facilities-h4 {
@@ -2215,7 +2271,7 @@ label {
 }
 
 #sp-we-facilities-ul-right {
-  margin-top: $spacer_67px;
+  margin-top: $spacer_21px;
 }
 
 #sp-content-we-middle-2 {
@@ -2234,6 +2290,8 @@ label {
 #sp-tte-location-map-iframe {
   width: 630px;
   height: 389px;
+  margin-top: $spacer_5px;
+
 }
 
 #sp-content-tte-top {
@@ -3126,6 +3184,12 @@ label {
 
   /* ------ YOUR LOVED ONE ------ */
 
+  #sp-content-ylo-top {
+    .column-middle-div {
+      margin-top: 0 !important;
+    }
+  }
+
   #sp-content-ylo-middle-1, 
   .sp-testimonials-social_media-container-div {
     .column-middle-div {
@@ -3243,6 +3307,7 @@ label {
   }
 
   #sp-tte-location-map-iframe {
+    margin-top: 0;
     position: relative;
     left: -26px;
   }

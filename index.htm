@@ -141,14 +141,12 @@
         <div class="content-copy-div col-12 col-12" id="content-container-ylo">
           <h2 class="col-lg-6 col-sm-12">Your Loved One</h2>
           <div class="column-left-div col-xl-6 col-lg-7 col-sm-12" id="ylo-gallery">
-            <div class="gallery-nav-div" id="ylo-gallery-nav">
-              <a href="#" class="gallery-nav-a gallery-a-visible">&nbsp;</a>
-              <a href="#" class="gallery-nav-a">&nbsp;</a>
-              <a href="#" class="gallery-nav-a">&nbsp;</a>
+            <div class="gallery-nav-div" id="homepage-ylo-gallery-nav">
+              <a href="javascript:swapGalleryContent('homepage-ylo-photo', '1');" class="gallery-nav-a gallery-a-visible">&nbsp;</a>
+              <a href="javascript:swapGalleryContent('homepage-ylo-photo', '2');" class="gallery-nav-a">&nbsp;</a>
             </div>
-            <img src="/assets/img/copy/homepage/your-loved-one/ylo-1.jpg">
-            <!-- <img src="/assets/img/copy/homepage/your-loved-one/ylo-2.jpg">
-            <img src="/assets/img/copy/homepage/your-loved-one/ylo-3.jpg"> -->
+            <img src="/assets/img/copy/homepage/your-loved-one/ylo-1.jpg" class="homepage-ylo-photo" id="homepage-ylo-photo-1">
+            <img src="/assets/img/copy/homepage/your-loved-one/ylo-2.jpg" class="homepage-ylo-photo" id="homepage-ylo-photo-2">
           </div>
           <div class="column-right-div col-xl-5 col-lg-4 col-sm-12" id="ylo-copy">
             <p class="copy-first-p">
@@ -248,7 +246,7 @@
           </div>
           <div class="col-lg-3 col-sm-12 column-right-div">
             <h3>Available packages</h3>
-            <div class="accordion" id="ytc-accordion-div">
+            <div class="accordion" id="ytc-accordion-packages-div">
               <div class="card">
                 <div class="card-header" id="ytc-package-premier">
                   <h2 class="mb-0">
@@ -257,7 +255,7 @@
                     </button>
                   </h2>
                 </div>
-                <div id="collapseOne" class="collapse show" aria-labelledby="ytc-package-premier" data-parent="#ytc-accordion-div">
+                <div id="collapseOne" class="collapse show" aria-labelledby="ytc-package-premier" data-parent="#ytc-accordion-packages-div">
                   <div class="card-body">
                     <div class="package-dollar_amount_container-div">
                       $125<span class="ytc-package-per_week-span">per week</span>
@@ -271,30 +269,44 @@
                 </div>
               </div>
               <div class="card">
-                <div class="card-header" id="headingTwo">
+                <div class="card-header" id="ytc-package-deluxe">
                   <h2 class="mb-0">
                     <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                       <div class="accordion-dot-div">&nbsp;</div> Deluxe Package
                     </button>
                   </h2>
                 </div>
-                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                <div id="collapseTwo" class="collapse" aria-labelledby="ytc-package-gold" data-parent="#ytc-accordion-packages-div">
                   <div class="card-body">
-                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                    <div class="package-dollar_amount_container-div">
+                      $100<span class="ytc-package-per_week-span">per week</span>
+                    </div>
+                    <ul class="package-ul">
+                      <li>Luctus ut nunc</li>
+                      <li>Sed scelerisque orci lectus</li>
+                      <li>Ultricies lorem</li>
+                    </ul>
                   </div>
                 </div>
               </div>
               <div class="card">
-                <div class="card-header" id="headingThree">
+                <div class="card-header" id="ytc-package-gold">
                   <h2 class="mb-0">
                     <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                       <div class="accordion-dot-div">&nbsp;</div> Gold Package
                     </button>
                   </h2>
                 </div>
-                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                <div id="collapseThree" class="collapse" aria-labelledby="ytc-package-gold" data-parent="#ytc-accordion-packages-div">
                   <div class="card-body">
-                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                    <div class="package-dollar_amount_container-div">
+                      $75<span class="ytc-package-per_week-span">per week</span>
+                    </div>
+                    <ul class="package-ul">
+                      <li>Luctus ut nunc</li>
+                      <li>Sed scelerisque orci lectus</li>
+                      <li>Ultricies lorem</li>
+                    </ul>
                   </div>
                 </div>
               </div>

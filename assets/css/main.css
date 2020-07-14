@@ -343,9 +343,10 @@ h3,
 .sp-accordion > .card > .card-header {
   background-color: #fff7cd; }
 
+/* 
 #sp-ylo-accordion-community {
-  background-color: #ccc073; }
-
+  background-color: $dark_brown_1;
+} */
 .package-dollar_amount_container-div {
   background: radial-gradient(circle, #ffebff 0%, #ffebff 50%, #dfd2f2 100%); }
 
@@ -478,9 +479,10 @@ h3,
 .sp-we-services-factoid_container-div {
   border-color: #80a1c1; }
 
+/* 
 #sp-ylo-accordion-community .accordion-dot-div {
-  border-color: #ffffb0; }
-
+  border-color: $light_brown_2;
+} */
 .circles-light_brown-div div div {
   border-color: #dae5c7; }
 
@@ -538,7 +540,7 @@ h3,
   box-shadow: 0 0 6px #4057b3; }
 
 .ytc-testimonial .ytc-testimonial-img,
-#ytc-accordion-div,
+#ytc-accordion-packages-div,
 #we-benefits_listing_container-div {
   box-shadow: 0 0 6px #899878; }
 
@@ -567,6 +569,9 @@ label {
 .visible-mobile,
 #mobile-nav {
   display: none; }
+
+.content-visible {
+  display: block !important; }
 
 /****** LINK/BUTTON BEHAVIOR ******/
 .header-nav-a {
@@ -610,6 +615,20 @@ label {
   border-color: #444ca0;
   text-decoration: none; }
 
+.gallery-nav-a {
+  transition-property: background-color, border-color;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-out; }
+
+.gallery-nav-a:hover {
+  background-color: #ffffff;
+  border-color: #444ca0; }
+
+.gallery-nav-a.gallery-a-visible:hover {
+  background-color: #dfd2f2;
+  border-color: #444ca0;
+  cursor: default; }
+
 .contact_info-a,
 .footer-link-a {
   transition-property: color;
@@ -619,6 +638,14 @@ label {
 .contact_info-a:hover,
 .footer-link-a:hover {
   color: #002599; }
+
+.accordion .btn-link {
+  transition-property: color;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-out; }
+
+.accordion .btn-link:hover {
+  color: #4057b3; }
 
 /****** BACKGROUNDS ******/
 .content-background-div {
@@ -669,7 +696,7 @@ label {
   width: 100%;
   height: 100%;
   position: absolute;
-  overflow-x: hidden; }
+  overflow: hidden; }
 
 .background-circles-div {
   z-index: 110; }
@@ -1327,9 +1354,16 @@ label {
     height: 26px;
     margin-right: 16px; }
 
-#ylo-gallery-nav {
+#homepage-ylo-gallery-nav {
   bottom: 26px;
   left: 26px; }
+
+.homepage-ylo-photo {
+  display: none;
+  position: absolute; }
+
+#homepage-ylo-photo-1 {
+  display: block; }
 
 .ytc-testimonial {
   margin-bottom: 26px;
@@ -1345,6 +1379,7 @@ label {
 
 .ytc-dhss-span {
   display: block;
+  margin-top: 16px;
   margin-bottom: 16px; }
 
 .ytc-dhss-img {
@@ -1362,7 +1397,7 @@ label {
   height: 10px;
   margin: 7px 9px 0 0; }
 
-#ytc-accordion-div .card-body,
+#ytc-accordion-packages-div .card-body,
 #sp-ytc-accordion-packages-div .card-body {
   display: flex; }
 
@@ -1388,7 +1423,7 @@ label {
   vertical-align: top; }
 
 .ytc-insurance-div {
-  margin-top: 36px;
+  margin-top: 76px;
   padding-left: 16px;
   padding-right: 0; }
 
@@ -1448,7 +1483,7 @@ label {
   width: 100%;
   height: auto; }
 
-#sp-ytc-photo-services {
+#sp-ylo-photo-services {
   margin-top: 9px; }
 
 .sp-accordion-ul {
@@ -1469,6 +1504,9 @@ label {
 
 .sp-h3 {
   margin-top: 2px; }
+
+#sp-content-ylo-middle-1 .sp-h3 {
+  margin-top: 9px; }
 
 .sp-days-description-h4 {
   margin: 9px 0 7px 0; }
@@ -1514,6 +1552,10 @@ label {
 #sp-we-tour-iframe {
   width: 1013px;
   height: 547px; }
+
+.sp-ylo-days-description {
+  display: none;
+  opacity: 0; }
 
 /* ------ YOU - THE CARETAKER ------ */
 .sp-ytc-credentials-a {
@@ -1588,8 +1630,11 @@ label {
     padding: 7px 9px;
     display: inline-flex; }
 
-#sp-we-facilities-amenities_container-right-div {
+#sp-we-facilities-amenities_container-left-div {
   margin-top: 36px; }
+
+#sp-we-facilities-amenities_container-right-div {
+  margin-top: 47px; }
 
 .sp-we-facilities-h4 {
   margin-bottom: 10px; }
@@ -1598,7 +1643,7 @@ label {
   margin-bottom: 0; }
 
 #sp-we-facilities-ul-right {
-  margin-top: 67px; }
+  margin-top: 21px; }
 
 #sp-content-we-middle-2 .column-middle-div {
   padding-right: 26px; }
@@ -1608,7 +1653,8 @@ label {
 /* ------ TALK TO EADC ------ */
 #sp-tte-location-map-iframe {
   width: 630px;
-  height: 389px; }
+  height: 389px;
+  margin-top: 5px; }
 
 #sp-content-tte-top .sp-h3 {
   margin-top: 0;
@@ -2183,6 +2229,9 @@ label {
     padding-right: 0; }
 
   /* ------ YOUR LOVED ONE ------ */
+  #sp-content-ylo-top .column-middle-div {
+    margin-top: 0 !important; }
+
   #sp-content-ylo-middle-1 .column-middle-div,
   .sp-testimonials-social_media-container-div .column-middle-div {
     margin-top: 0 !important; }
@@ -2262,6 +2311,7 @@ label {
     display: inline; }
 
   #sp-tte-location-map-iframe {
+    margin-top: 0;
     position: relative;
     left: -26px; }
 
