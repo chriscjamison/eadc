@@ -10,11 +10,41 @@ $(document).ready(
   }
 );
 
-$(window).on("load", 
+
+
+/* ****** EVENT HANDLERS ****** */
+
+var why_eadc_button_selector = "";
+
+why_eadc_button_selector = ".homepage-benefit_listing-button";
+
+$(why_eadc_button_selector).click(
   function () {
-    
+    var button_id_value = "";
+
+    button_id_value = $(this).attr("id");
+
+    var button_id_value_Array = [];
+
+    button_id_value_Array = button_id_value.split("-");
+
+    button_id_value = button_id_value_Array[2];
+
+// console.log("button_id_value = " + button_id_value);
+    displayWeContent(button_id_value);
   }
 );
+
+var menu_icon_selector = "";
+
+menu_icon_selector = "#mobile-nav-a-menu";
+
+$(menu_icon_selector).click(
+  function () {
+    displayMobileMenu();
+  }
+);
+
 
 
 
@@ -193,74 +223,146 @@ function swapGalleryContent(gallery_value, content_value) {
 
   // The first two values of 'gallery_value_strings_Array' are cocatenated 
   // and passed on.
-  gallery_stem = gallery_value_strings_Array[0] + "-" + gallery_value_strings_Array[1];
+  gallery_stem = gallery_value_strings_Array[0] + "-" + gallery_value_strings_Array[1] + "-gallery";
 
-  // The <a> elements that correspond to the gallery that called this function 
-  // are synced to the visible content.
-  swapGalleryLinks(gallery_stem, content_value);
+  // IF statement that will change the value of 'gallery_stem' 
+  // that corresponds with the gallery that called this function.
+  if (gallery_stem === "homepage-we-gallery" || 
+      gallery_stem === "sp-we-gallery")  {
     
-  // A Number variable that will hold the height of the HTML element 
-  // that refers to the visible content is initialized.
-  var visible_content_height_value;
+    var gallery_category_value = gallery_value_strings_Array[gallery_value_strings_Array.length - 1];
 
-  // A Number variable that will hold the value of the CSS property 
-  // 'z-index' of the block of content under prcessing is initialized.
-  var current_content_zindex_value;
-
-  // A Number variable that holds the vertical position to place 
-  // the content of the gallery.
-  var vertical_position_value;
-
-  // An Object variable that will hold the jQuery object that refers 
-  // to the block of content the loop below is processing.
-  var current_content = {};
-
-  // EACH loop that determines the height of the content within a gallery 
-  // and repositions the content to lie at the same vertical postition.
-  $(all_gallery_selector).each(
-    function () {
-      current_content = this;
-
-      vertical_position_value = -($(current_content).height()) + vertical_position_value ;
-console.log("vertical_position_value = " + vertical_position_value);
-      vertical_position_value = -vertical_position_value;
-
-      // IF statement that changes the value of 'current_content_zindex_value' 
-      // to place the content under processing below prior processed content.
-      if (-($(current_content).height()) !== vertical_position_value)  {
-        current_content_zindex_value = $(current_content).css("zIndex");
-
-        current_content_zindex_value = current_content_zindex_value - 10;
-      }
-
-      $(current_content).css({"top": vertical_position_value, "zIndex": current_content_zindex_value});
+    // IF/ELSE statement that appands a value to 'gallery_stem' 
+    // if the gallery that called this function includes 
+    // multiple categories.
+    if (gallery_category_value === "img") {
+      gallery_stem = gallery_stem + "-photos";
+    } else if (gallery_category_value === "video") {
+      gallery_stem = gallery_stem + "-videos";
     }
-  )
-  
+
+    setTimeout(
+      function () {
+        swapGalleryLinks(gallery_stem, content_value);
+      }, 450
+    );
+  } else {
+    swapGalleryLinks(gallery_stem, content_value);
+  }
+
   // All of the HTML elements container within the gallery are dimmed 
   // from view.
-  // $(all_gallery_selector).fadeTo(250, 0);
-
-  /* setTimeout(
-    function () {
-      $(all_gallery_selector).css("display", "none");
-    }, 250
-  ); */
-   
-
+  $(all_gallery_selector).fadeOut(150);
+ 
   // The content the visitor wished to view is faded into view.
   
   setTimeout(
     function () {
-      $(visible_content_element).toggle("fade", 300);
-      
-      // $(visible_content_element).fadeTo(300, 1);
-    }, 400
+      $(visible_content_element).fadeIn(350);
+    }, 150
   );
-  
-
 } // END OF swapGalleryContent
 
+
+
+function swapGalleryCategories(gallery_value, category_value) {
+  /* @params ********************************************************
+     Name:      swapGalleryCategories
+
+     Purpose:   Position the content within a gallery to appear 
+                at the same vertical position.
+
+     Variables: 
+                gallery_value 
+                  - Holds the stem of a string that refers to the 
+                    specific gallery that called this function.
+
+                category_value 
+                  - Holds a string that refers to the new category 
+                    to display.
+
+  **************************************************************** */
+
+
+  // String variables that refer to the HTML elements that will 
+  // be toggled visible or not visible are initialized.
+  var all_categories_selector = "";
+  var visible_category_selector = "";
+  var other_category_selector = "";
+
+  // CSS selectors that refer to the HTML elements that will be 
+  // toggled visible or not visible are passed on.
+  all_categories_selector = "." + gallery_value + "-gallery-category";
+  visible_category_selector = "#" + gallery_value + "-gallery-category-" + category_value;
+
+  if (category_value === "photos")  {
+    other_category_selector = "#" + gallery_value + "-gallery-category-video";
+  } else {
+    other_category_selector = "#" + gallery_value + "-gallery-category-photos";    
+  }
+
+  // All of the HTML elements container within the gallery are dimmed 
+  // from view.
+  $(all_categories_selector).fadeOut(150);
+  $(all_categories_selector).css("display", "none");
+  $(other_category_selector).css("display", "none");
+  $(other_category_selector).removeClass("content-visible");
+  // The content the visitor wished to view is faded into view.
+  
+  setTimeout(
+    function () {
+      $(visible_category_selector).fadeIn(350);
+    }, 150
+  );
+}
+
+
+function adjustGalleryElements() {
+  /* @params ********************************************************
+     Name:      adjustGalleryElements
+
+     Purpose:   Position the content within a gallery to appear 
+                at the same vertical position.
+   *************************************************************** */
+
+  var all_elements_selectors_Array = [];
+
+  all_elements_selectors_Array = [
+    ".homepage-ylo-photo", 
+    ".homepage-we-gallery-category", 
+    ".homepage-we-gallery-img", 
+    ".homepage-we-gallery-video", 
+    ".sp-ylo-days-description", 
+    ".sp-we-gallery-category", 
+    ".sp-we-gallery-img", 
+    ".sp-we-gallery-video"
+  ];
+
+  var all_gallery_selector = "";
+
+  var vertical_position_value = 0;
+
+  all_elements_selectors_Array.forEach(
+    function (value, index) {
+      
+      all_gallery_selector = value;
+
+      $(all_gallery_selector).each(
+        function () {
+          current_content = this;
+
+        if (vertical_position_value !== 0)  {
+          $(current_content).css("top",  vertical_position_value);
+        } 
+        
+        vertical_position_value = parseInt(-1 * $(current_content).height()) + vertical_position_value;
+        }
+      );
+    
+      vertical_position_value = 0;
+    }
+  );
+}
 
 
 function swapGalleryLinks(gallery_value, content_value) {
@@ -302,11 +404,8 @@ function swapGalleryLinks(gallery_value, content_value) {
   // that corresponds with the visible content is initialized.
   var gallery_selector_stem = "";
 
-  // The prefix for the CSS selectors that refer to the links that 
-  // trigger the visibility of content and the link that corresponds 
-  // with the visible content is passed on.
-  gallery_selector_stem = "#" + gallery_value + "-gallery-nav";
-
+  gallery_selector_stem = "#" + gallery_value + "-nav";
+  
   // The CSS selectors of the HTML element that holds the links that 
   // trigger the visibility of content, the HTML element that holds 
   // the link that corresponds with the visible content are passed on.
@@ -332,4 +431,73 @@ function swapGalleryLinks(gallery_value, content_value) {
   // The link that corresponds with the visible content has its 
   // appearance changed.
   $(visible_link_element).addClass(visible_link_class_value);
+} // END OF swapGalleryLinks
+
+
+
+function displayWeContent(content_value) {
+  /* @params ********************************************************
+     Name:      displayWeContent
+
+     Purpose:   Toggle the visibility of content with the 'Why EADC?' 
+                content located on the homepage.
+
+     Variables: 
+                content_value 
+                  - Holds a string that refers to the content to be 
+                    toggled visible.
+  
+  **************************************************************** */
+
+  // String variables that refer to the HTML elements that contain 
+  // the content to be toggled visible and the <button> element 
+  // that triggered this function.
+  var all_buttons_selector = "";
+  var visible_button_selector = "";
+  var all_content_selector = "";
+  var visible_content_selector = "";
+  
+  // CSS selectors that refer to the HTML elements as they were 
+  // described above are passed on.
+  all_buttons_selector = ".homepage-benefit_listing-button";
+  visible_button_selector = "#homepage-benefit_listing-" + content_value;
+  all_content_selector = ".homepage-benefit-copy-div";
+  visible_content_selector = "#homepage-benefit-copy-" + content_value;
+
+  // A String variable that will hold a CSS selector that refers 
+  // to the <button> element that corresponds with the visible content 
+  // is initialized.
+  var benefit_listing_visible = "";
+
+  // The CSS selector that was described above is passed on.
+  benefit_listing_visible = "homepage-benefit_listing-visible";
+  
+  // All of the HTML elements referring to the content are dimmed from view.
+  $(all_content_selector).fadeOut(150);
+  $(all_buttons_selector).removeClass(benefit_listing_visible);
+
+  // The content the visitor wished to view is faded into view.  
+  setTimeout(
+    function () {
+      $(visible_button_selector).addClass(benefit_listing_visible);
+      $(visible_content_selector).fadeIn(350);
+    }, 150
+  );
+} // END OF displayWeContent
+
+
+
+function displayMobileMenu() {
+  /* @params ********************************************************
+     Name:      displayMobileMenu
+
+     Purpose:   Toggle the visibility of mobile menu. 
+  
+  **************************************************************** */
+
+  var main_menu_selector = "";
+
+  main_menu_selector = "#content-container-menu";
+
+  $(main_menu_selector).fadeToggle(250);
 }

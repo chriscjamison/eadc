@@ -138,11 +138,11 @@ h3,
 .accordion .btn-link, 
 .package-dollar_amount_container-div, 
 h4, 
-.benefit-copy-span, 
-.benefit-copy-button, 
-.benefit_listing-link-span, 
-.gallery-category-a, 
-.sp-gallery-category-a, 
+.homepage-benefit-copy-span, 
+.homepage-benefit-copy-button, 
+.homepage-benefit_listing-link-span, 
+.homepage-gallery-category-link-a, 
+.sp-gallery-category-link-a, 
 label, 
 .form-submit, 
 .sp-testimonials-social_media-h4, 
@@ -191,7 +191,7 @@ p,
 
 .package-ul li, 
 .ytc-package-per_week-span,  
-.benefit-copy-p, 
+.homepage-benefit-copy-p, 
 label, 
 .contact_info-p, 
 .contact_info-span, 
@@ -213,9 +213,9 @@ p,
 .ytc-dhss-span, 
 .accordion .btn-link
 h4, 
-.benefit_listing-link-span, 
-.gallery-category-a, 
-.sp-gallery-category-a, 
+.homepage-benefit_listing-link-span, 
+.homepage-gallery-category-link-a, 
+.sp-gallery-category-link-a, 
 .form-submit, 
 .footer-h3, 
 .contact_info-h4,  
@@ -242,7 +242,7 @@ h4,
 }
 
 .header-nav-a, 
-.benefit-copy-span, 
+.homepage-benefit-copy-span, 
 .sp-h3, 
 .sp-wc-credits-h3, 
 .sp-wc-credits-h4 {
@@ -317,8 +317,8 @@ h1,
 }
 
 .cta-a, 
-.gallery-category-a, 
-.sp-gallery-category-a, 
+.homepage-gallery-category-link-a, 
+.sp-gallery-category-link-a, 
 .form-submit {
   letter-spacing: 0.4px;
 }
@@ -340,8 +340,8 @@ h1,
 .cta-a, 
 .accordion .btn-link, 
 .accordion .btn-link:hover, 
-.gallery-category-a, 
-.sp-gallery-category-a, 
+.homepage-gallery-category-link-a, 
+.sp-gallery-category-link-a, 
 .mobile-nav-span {
   text-decoration: none;
 }
@@ -367,7 +367,7 @@ h1,
 }
 
 .content-copy-div p, 
-.benefit_listing-link-span {
+.homepage-benefit_listing-link-span {
   line-height: 1.6;
 }
 
@@ -391,13 +391,13 @@ h2,
 }
 
 .cta-a, 
-.gallery-category-a, 
-.sp-gallery-category-a, 
+.homepage-gallery-category-link-a, 
+.sp-gallery-category-link-a, 
 .form-submit {
   color: $white_1;
 }
 
-.benefit_listing-visible .benefit_listing-link-span, 
+.homepage-benefit_listing-visible .homepage-benefit_listing-link-span, 
 .mobile-nav-span {
   color: $white_2
 }
@@ -407,7 +407,7 @@ h2,
 .accordion button, 
 .package-dollar_amount_container-div, 
 h4, 
-.benefit_listing-link-span, 
+.homepage-benefit_listing-link-span, 
 label, 
 .contact_info-span  {
   color: $black_3;
@@ -454,7 +454,7 @@ h3,
 }
 
 .card-body, 
-.benefit-copy-button {
+.homepage-benefit-copy-button {
   background-color: $white_3;
 }
 
@@ -484,18 +484,18 @@ h3,
 }
 
 .cta-a, 
-.gallery-category-a, 
-.sp-gallery-category-a, 
+.homepage-gallery-category-link-a, 
+.sp-gallery-category-link-a, 
 .form-submit {
   background-color: $dark_purple_2;
 }
 
-.benefit_listing-visible {
+.homepage-benefit_listing-visible {
   background-color: $dark_purple_2 !important;
 }
 
 .accordion > .card > .card-header, 
-.benefit_listing-button {
+.homepage-benefit_listing-button {
   background-color: $light_green_1;
 }
 
@@ -553,13 +553,13 @@ $border_radius_16px: 16px;
 }
 
 .cta-a, 
-.benefit-copy-img, 
-.gallery-category-a, 
-.sp-gallery-category-a, 
+.homepage-benefit-copy-img, 
+.homepage-gallery-category-link-a, 
+.sp-gallery-category-link-a, 
 .form-submit, 
 #sidebar-images-div .sidebar-img, 
 .sp-copy-photo-img, 
-.sp-gallery-photo-img {
+.sp-we-gallery-img {
   border-radius: $border_radius_10px $border_radius_10px 0 $border_radius_10px;
 }
 
@@ -568,10 +568,12 @@ $border_radius_16px: 16px;
 }
 
 .carousel-cta, 
-#ylo-gallery img, 
+#homepage-ylo-gallery img, 
 .accordion, 
-#we-benefits_listing_container-div, 
-.gallery-photo-div, 
+#homepage-we-benefits_listing_container-div, 
+.homepage-we-gallery-img, 
+.homepage-we-gallery-video, 
+.sp-we-gallery-video, 
 .sp-testimonials-social_media-h4, 
 .sp-we-services-factoid_container-div, 
 #sp-tte-location-map-iframe {
@@ -579,12 +581,12 @@ $border_radius_16px: 16px;
 }
 
 .accordion > .card:first-of-type, 
-#we-benefits_listing_container-div > .benefit_listing-button:first-of-type {
+#homepage-we-benefits_listing_container-div > .homepage-benefit_listing-button:first-of-type {
   border-radius: $border_radius_14px $border_radius_14px 0 0;
 }
 
 .accordion > .card:last-of-type, 
-#we-benefits_listing_container-div > .benefit_listing-button:last-of-type {
+#homepage-we-benefits_listing_container-div > .homepage-benefit_listing-button:last-of-type {
   border-radius: 0 0 0 $border_radius_14px;
 }
 
@@ -599,7 +601,7 @@ $border_radius_16px: 16px;
 .accordion-dot-div, 
 .package-dollar_amount_container-div, 
 #circles-we div, 
-.benefit_listing-dot-div, 
+.homepage-benefit_listing-dot-div, 
 .sp-testimonial-img, 
 #sp-testimonial-social_media-img-facebook, 
 .sp-circle-sm, 
@@ -617,7 +619,7 @@ $border_radius_16px: 16px;
 }
 
 .card, 
-.benefit_listing-button {
+.homepage-benefit_listing-button {
   border: 1px solid;
 }
 
@@ -626,20 +628,22 @@ $border_radius_16px: 16px;
 .package-dollar_amount_container-div, 
 .cta-a, 
 .gallery-nav-a, 
-#ylo-gallery img, 
+#homepage-ylo-gallery img, 
 .accordion-dot-div, 
-.benefit_listing-dot-div, 
-.benefit-copy-img, 
-.gallery-photo-div, 
-.gallery-category-a, 
-.sp-gallery-category-a, 
+.homepage-benefit_listing-dot-div, 
+.homepage-benefit-copy-img, 
+.homepage-we-gallery-img, 
+.homepage-we-gallery-video, 
+.sp-we-gallery-video, 
+.homepage-gallery-category-link-a, 
+.sp-gallery-category-link-a, 
 .form-input-text, 
 .form-textarea, 
 .form-submit, 
 #footer-sidebar .sidebar-img,
 .sp-copy-photo-img, 
 .sp-we-services-factoid_container-div, 
-.sp-gallery-photo-img, 
+.sp-we-gallery-img, 
 #sp-tte-location-map-iframe {
   border: 3px solid;
 }
@@ -654,8 +658,8 @@ $border_radius_16px: 16px;
 
 .cta-a, 
 .gallery-nav-a, 
-.gallery-category-a, 
-.sp-gallery-category-a, 
+.homepage-gallery-category-link-a, 
+.sp-gallery-category-link-a, 
 .form-submit {
   border-color: $white_1;
 }
@@ -665,12 +669,14 @@ $border_radius_16px: 16px;
   border-color: $light_gray_1;
 }
 
-#ylo-gallery img, 
-.benefit-copy-img, 
-.gallery-photo-div, 
+#homepage-ylo-gallery img, 
+.homepage-benefit-copy-img, 
+.homepage-we-gallery-img, 
+.homepage-we-gallery-video, 
+.sp-we-gallery-video, 
 #sidebar-images-div .sidebar-img, 
 .sp-copy-photo-img, 
-.sp-gallery-photo-img, 
+.sp-we-gallery-img, 
 #sp-tte-location-map-iframe {
   border-color: $light_blue_3;
 }
@@ -696,14 +702,14 @@ $border_radius_16px: 16px;
 }
 
 .accordion-dot-div, 
-.benefit_listing-dot-div, 
+.homepage-benefit_listing-dot-div, 
 #footer-links-copyright {
   border-color: $dark_brown_5;
 }
 
 .card, 
 .card-body, 
-.benefit_listing-button {
+.homepage-benefit_listing-button {
   border-color: rgba(194, 214, 189, 0.6);
 }
 
@@ -746,9 +752,9 @@ $border_radius_16px: 16px;
 .carousel-cta, 
 .cta-a, 
 .gallery-nav-a, 
-.gallery-category-a, 
-.sp-gallery-category-a, 
-.gallery-photo-div, 
+.homepage-gallery-category-link-a, 
+.sp-gallery-category-link-a, 
+.sp-we-gallery-video, 
 .form-submit, 
 .sp-testimonial-img, 
 .sp-testimonial-social_media-img {
@@ -757,7 +763,7 @@ $border_radius_16px: 16px;
 
 .ytc-testimonial .ytc-testimonial-img, 
 #ytc-accordion-packages-div, 
-#we-benefits_listing_container-div {
+#homepage-we-benefits_listing_container-div {
   box-shadow: 0 0 6px $dark_brown_5;
 }
 
@@ -832,8 +838,8 @@ label {
 }
 
 .cta-a, 
-.gallery-category-a, 
-.sp-gallery-category-a, 
+.homepage-gallery-category-link-a, 
+.sp-gallery-category-link-a, 
 .form-submit {
   transition-property: background-color, color, border-color;
   transition-duration: 0.2s;
@@ -841,8 +847,8 @@ label {
 }
 
 .cta-a:hover, 
-.gallery-category-a:hover, 
-.sp-gallery-category-a:hover, 
+.homepage-gallery-category-link-a:hover, 
+.sp-gallery-category-link-a:hover, 
 .form-submit:hover {
   color: $dark_purple_1;
   background-color: $white_1;
@@ -1623,16 +1629,19 @@ label {
   }
 }
 
-#cta-ylo, 
-#cta-tte {
-  left: 261px;
+.carousel-cta {
+  left: calc(((100% - 1125px) / 2) - 26px);
+}
+
+#cta-homepage {
+  left: 127px;
 }
 
 #cta-logo {
   width: 225px;
   height: auto;
   position: absolute;
-  left: $spacer_165px;
+  left: 153px;
   bottom: 484px;
 }
 
@@ -1853,7 +1862,8 @@ label {
   padding-bottom: $spacer_76px;
 }
 
-#ylo-gallery {
+#homepage-ylo-gallery {
+  height: 461px;
   margin-top: $spacer_9px;
   position: relative;
 
@@ -1881,11 +1891,12 @@ label {
 #homepage-ylo-gallery-nav {
   bottom: $spacer_26px;
   left: $spacer_26px;
+  z-index: 200;
 }
 
 .homepage-ylo-photo {
   display: none;
-  position: absolute;
+  position: relative;
 }
 
 #homepage-ylo-photo-1 {
@@ -1922,16 +1933,20 @@ label {
 }
 
 .accordion button, 
-.benefit_listing-button {
+.homepage-benefit_listing-button {
   padding: $spacer_7px 0 $spacer_5px 0;
   display: flex;
 }
 
 .accordion-dot-div, 
-.benefit_listing-dot-div {
+.homepage-benefit_listing-dot-div {
   width: 10px;
   height: 10px;
   margin: $spacer_7px $spacer_9px 0 0;
+}
+
+.homepage-benefit_listing-dot-div { 
+  margin: $spacer_10px $spacer_9px 0 0;
 }
 
 #ytc-accordion-packages-div .card-body, 
@@ -1947,6 +1962,13 @@ label {
   width: 148px;
   height: 136px;
   padding: $spacer_26px;
+}
+
+#collapseThree {
+  .package-dollar_amount_container-div {
+    width: 158px;
+    text-align: center;
+  }
 }
 
 .package-ul li {
@@ -1975,55 +1997,92 @@ label {
   margin-right: $spacer_36px;
 }
 
-#we-benefits-copy-div {
-  .benefit-copy-div {
+#homepage-we-benefits_container-copy-div {
+  .homepage-benefit-copy-div {
     display: none;
   }
   
-  .benefit-copy-visible {
+  #homepage-benefit-copy-1 {
     display: block;
   }
 
-  .benefit-copy-img {
+  .homepage-benefit-copy-visible {
+    display: block;
+  }
+
+  .homepage-benefit-copy-img {
     margin: $spacer_9px $spacer_16px 0 0;
     display: block;
     float: left;
   }
 
-  .benefit-copy-span {
+  .homepage-benefit-copy-span {
     display: block;
   }
 }
 
-#we-benefits_listing_container-div {
+#homepage-we-benefits_listing_container-div {
   margin-top: $spacer_16px;
 
-  .benefit_listing-button {
+  .homepage-benefit_listing-button {
     width: 100%;
     padding: $spacer_16px 0 $spacer_16px $spacer_20px;
     display: flex;
   }
 }
 
-#we-gallery {
-  #we-gallery-nav {
-    bottom: 94px;
-    left: 76px;
+#homepage-we-gallery {
+  height: 536px;
+
+  #homepage-we-gallery-photos-nav, 
+  #homepage-we-gallery-videos-nav {
+    bottom: 32px;
+    left: 32px;
   }
   
-  .gallery-photo-div {
+  .homepage-we-gallery-img, 
+  .homepage-we-gallery-video {
     width: 100%;
   }
-  
-  #we-gallery-categories {
-    margin: $spacer_19px 0 0 $spacer_29px;
+
+  .homepage-we-gallery-img {
+    display: none;
   }
 
-  .gallery-category-a {
+  #homepage-we-gallery-img-1 {
+    display: block;
+  }
+
+  .homepage-we-gallery-category {
+    height: 473px;
+    display: none;
+    position: relative;
+  }
+
+  #homepage-we-gallery-category-videos {
+    .homepage-we-gallery-video {
+      width: 819px;
+      height: 466px;
+    }
+  }
+    
+  #homepage-we-gallery-categories {
+    position: absolute;
+    bottom: 0;
+    left: 79px;
+  }
+
+  .homepage-gallery-category-link-a {
+    margin-right: $spacer_10px;
     padding: $spacer_7px $spacer_9px;
     display: inline-flex;
   }
+
+  .homepage-gallery-category-link-a:last-of-type {
+    margin-right: 0;
+  }
 }
+
 
 #tte-form-div, 
 #sp-tte-form-div, 
@@ -2153,7 +2212,10 @@ label {
 
 .sp-ylo-days-description { 
   display: none;
-  opacity: 0;
+}
+
+#sp-ylo-days-description-1 {
+  display: block;
 }
 
 
@@ -2165,7 +2227,11 @@ label {
 }
 
 .sp-ylo-intake-h4 {
-  margin-bottom: $spacer_10px;
+  margin-bottom: 0;
+}
+
+#sp-ytc-credentials-dhss {
+  margin-top: $spacer_26px;
 }
 
 #sp-ytc-credentials-photo {
@@ -2236,21 +2302,49 @@ label {
   }
 }
 
-#sp-we-gallery-nav {
-  bottom: 94px;
-  left: 30px;
+#sp-we-gallery-photos-nav {
+  bottom: 22px;
+  left: 32px;
 }
 
-#sp-we-facilities-img-1 {
+#sp-we-gallery-videos-nav {
+  bottom: 32px;
+  left: 32px;
+}
+
+.sp-we-gallery-img {
   width: 100%;
+  display: none;
+}
+
+#sp-we-gallery-img-1 {
+  display: block;
+}
+
+.sp-we-gallery-category {
+  height: 355px;
+  display: none;
+  position: relative;
+}
+
+#sp-we-gallery-category-videos {
+  .sp-we-gallery-video {
+    width: 624px;
+    height: 355px;
+  }
 }
 
 .sp-gallery-categories {
-  margin: $spacer_19px 0 0 $spacer_29px;
+  margin: $spacer_26px 0 0 $spacer_29px;
 
-  .sp-gallery-category-a {
+  .sp-gallery-category-link-a {
+    margin-right: $spacer_10px;
     padding: $spacer_7px $spacer_9px;
     display: inline-flex;
+  }
+
+  .sp-gallery-category-link-a:last-of-type {
+    margin-right: 0;
   }
 }
 
@@ -2538,6 +2632,64 @@ label {
 
 
 
+/* ------ 1366x??? ------- */
+@media screen and (min-width: 1366px) and (max-width: 1680px) {
+  #cta-logo {
+    left: 78px;
+  }
+
+  #cta-homepage {
+    left: 51px;
+  }
+
+  .homepage-content-section, 
+  #background-ylo {
+    height: 728px;
+  }
+
+  #content-ytc, 
+  #background-ytc {
+    height: 876px;
+  }
+
+  #content-we, 
+  #background-we {
+    height: 869px;
+  }
+
+  #content-tte, 
+  #background-tte {
+    height: 649px;
+  }
+
+  #background-footer {
+    height: 841px;
+  }
+
+  .content-copy-div {
+    padding-top: $spacer_76px;
+    padding-left: $spacer_76px;
+  }
+
+  #homepage-ylo-gallery {
+    height: 388px;
+  }
+
+  #homepage-we-gallery {
+    height: 463px;
+
+    .homepage-we-gallery-category {
+      height: 473px;
+    }
+
+    #homepage-we-gallery-photos-nav, 
+    #homepage-we-gallery-videos-nav {
+      bottom: 100px;
+    }
+  }
+}
+
+
 /* ------ MOBILE PHONES (< 414x???) ------- */
 @media screen and (max-width: 414px) {
 
@@ -2604,10 +2756,13 @@ label {
   .cta-a, 
   p, 
   .menu-h3, 
+  .sp-ytc-services-ul li, 
+  .sp-we-facilities-ul li, 
   .sp-tte-location-ol li, 
   .sp-tte-cta-detail-type-span, 
   .sp-tte-cta-detail-info-span, 
   .sp-tte-cta-detail-a, 
+  .sp-au-certifications-ul li, 
   .sp-wc-artist-a, 
   .sp-wc-artist-ul li {
     font-size: $font_sm_3;
@@ -2630,7 +2785,7 @@ label {
     font-size: $font_sm_4;
   }
 
-  .benefit-copy-span {
+  .homepage-benefit-copy-span {
     line-height: 1.3;
   }
 
@@ -2651,7 +2806,7 @@ label {
   }
 
   #sp-tte-location-map-iframe {
-    border-radius: none;
+    border-radius: 0;
   }
 
   #footer-links {
@@ -2963,14 +3118,16 @@ label {
   }
 
   #content-container-menu {
+    width: 100%;
     display: none;
-    position: static;
-    z-index: 1000;
+    position: absolute;
+    top: 0;
+    z-index: 700;
   }
 
   #menu-contact_eadc-div {
     width: 100%;
-    padding: $spacer_36px $spacer_26px $spacer_26px $spacer_26px;
+    padding: $spacer_26px;
     z-index: 1200;
   }
 
@@ -3152,18 +3309,21 @@ label {
     padding-left: 0;
   }
 
-  #we-benefits_listing_container-div {
-    margin-top: 0;
+  #collapseThree { 
+    .package-dollar_amount_container-div {
+      width: 203px;
+    }
   }
 
-  #we-gallery {
-    #we-gallery-nav {
-      bottom: 90px;
+  #homepage-we-gallery {
+    #homepage-we-gallery-photos-nav, 
+    #homepage-we-gallery-videos-nav {
+      bottom: 26px;
       left: 26px;
     }
 
-    #we-gallery-categories {
-      $margin: $spacer_19px 0 0 $spacer_26px;
+    #homepage-we-gallery-categories {
+      left: 29px;
     }
   }
 
@@ -3188,6 +3348,11 @@ label {
     .column-middle-div {
       margin-top: 0 !important;
     }
+  }
+
+  #sp-ylo-gallery-nav {
+    bottom: 110px;
+    left: 26px;
   }
 
   #sp-content-ylo-middle-1, 
@@ -3329,8 +3494,9 @@ label {
   /* ------ SEARCH ------ */
 
   .sp-search-container-main {
-    margin-bottom: $spacer_54px;
-    padding-bottom: 145px;
+    min-height: calc(100vh - 94px);
+    /* margin-bottom: $spacer_54px;
+    padding-bottom: 145px; */
 
     h2 {
       margin-bottom: $spacer_16px;
@@ -3342,6 +3508,16 @@ label {
   
       .form-label {
         margin-bottom: $spacer_10px;
+      }
+
+      input, 
+      #sp-search-input-submit {
+        display: block;
+      }
+
+      #sp-search-input-submit {
+        margin-left: 0;
+        position: relative;
       }
     }
   }
@@ -3375,6 +3551,11 @@ label {
 
 
   /****** FOOTER ******/
+
+  footer, 
+  #background-footer {
+    height: 1195px;
+  }
 
   .footer-sp {
     margin-top: 0;
@@ -3459,11 +3640,6 @@ label {
     height: 1283px;
   }
 
-  footer, 
-  #background-footer {
-    height: 1195px;
-  }
-
   #circles-bottom-right {
     top: 3501px;
   }
@@ -3471,17 +3647,37 @@ label {
 
   /****** COPY ******/ 
 
+  #homepage-ylo-gallery {
+    height: 215px;
+  }
+
+  #homepage-we-gallery {
+    height: 251px;
+
+    .homepage-we-gallery-category {
+      height: 186px;
+    }
+    
+    #homepage-we-gallery-category-videos {
+      .homepage-we-gallery-video {
+        width: 317px;
+        height: 181px;
+      }
+    }
+  }
+  
   #sp-ylo-video-iframe, 
   #sp-we-tour-iframe {
     width: 375px;
     height: 203px;
   }
 
+
   /* ------ TALK TO EADC ------ */
 
   #sp-tte-location-map-iframe {
     width: 375px;
-    height: 232px;
+    height: 375px;
   }
 
   .sp-search-carousel-div {
@@ -3504,12 +3700,98 @@ label {
   }
 
 
+
+  /* ------ SEARCH ------ */
+
+  .sp-search-container-main {
+    #sp-search-form {
+      width: 323px;
+
+      #input-text-query_terms {
+        width: 323px;
+      }
+
+      #sp-search-input-submit {
+        left: 181px;
+      }
+    }    
+  } 
+
+
   /****** MAIN NAVIGATION ******/
 
   #menu-links {
     width: 83%;
   }
 
+}
+
+
+
+/* ------ APPLE PHONES (414x???) ------ */
+@media screen and (width: 414px) {
+  #mobile-nav-ul {
+    width: 414px;
+  }
+
+  #homepage-ylo-gallery {
+    height: 247px;
+  }
+
+  #content-ytc, 
+  #background-ytc {
+    height: 1480px;
+  }
+
+  #content-we, 
+  #background-we {
+    height: 936px;
+  }
+
+  #ytc-insurance-mohealthnet {
+    margin-right: 88px;
+  }
+
+  #homepage-we-gallery { 
+    height: 271px;
+
+    .homepage-we-gallery-category {
+      height: 209px;
+    }
+  }
+
+  #sp-ylo-video-iframe, 
+  #sp-we-tour-iframe {
+    width: 414px;
+    height: 223px;
+  }
+
+  #sp-we-gallery {
+    height: 205px;
+  }
+
+  .sp-we-gallery-category {
+    height: 205px;
+  }
+
+  #sp-tte-location-map-iframe {
+    width: 414px;
+    height: 414px;
+  }
+
+  .sp-search-container-main {
+    #sp-search-form {
+      width: 360px;
+  
+      #input-text-query_terms {
+        width: 360px;
+      }
+  
+      #sp-search-input-submit {
+        left: 220px;
+      }
+    }    
+  }
 }
 
 
@@ -3536,6 +3818,84 @@ label {
   } */
 }
 
+
+/* ------ ANDROID (360x???) ------ */
+@media screen and (width: 360px) {
+  #menu-links {
+    width: 82.35%;
+  }
+
+  #homepage-ylo-gallery {
+    height: 215px;
+  }
+
+
+  /* ------ COPY ------ */
+
+  #content-ytc, 
+  #background-ytc {
+    height: 1614px;
+  }
+
+  #content-we, 
+  #background-we {
+    height: 931px;
+  }
+
+  #content-tte, 
+  #background-tte {
+    height: 1283px;
+  }
+
+  #homepage-we-gallery {
+    height: 239px;
+
+    .homepage-we-gallery-category {
+      height: 180px;
+    }
+  } 
+
+  .sp-testimonials-social_media-logo-a {
+    margin-left: 12px;
+  }
+
+  #sp-ylo-video-iframe, 
+  #sp-we-tour-iframe {
+    width: 360px;
+    height: 194px;
+  }
+
+  #sp-we-gallery {
+    height: 180px;
+  }
+
+  .sp-we-gallery-category {
+    height: 176px;
+  }
+
+  .sp-gallery-categories {
+    margin-top: $spacer_16px;
+  }
+
+  #sp-tte-location-map-iframe {
+    width: 360px;
+    height: 360px;
+  }
+
+  .sp-search-container-main {
+    #sp-search-form {
+      width: 309px;
+
+      #input-text-query_terms {
+        width: 309px;
+      }
+
+      #sp-search-input-submit {
+        left: 168px;
+      }
+    }    
+  } 
+}
 
 /****** ELEMENT INDEX ******/
 

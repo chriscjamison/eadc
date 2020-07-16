@@ -92,6 +92,7 @@
             <a href="mailto:info@myeadc-stl.com" title="Email Address: info@myeadc-stl.com" class="contact_info-a">info@myeadc-stl.com</a>
           </div>
           <div id="menu-links">
+            <a href="/" title="Home" class="menu-link-a" id="menu-link-home">Home</a>
             <a href="/your-loved-one.htm" title="Your Loved One" class="menu-link-a" id="menu-link-ylo">Your Loved One</a>
             <a href="/you-the-caretaker.htm" title="You - the Caretaker" class="menu-link-a" id="menu-link-ytc">You &ndash; the Caretaker</a>
             <a href="/why-eadc.htm" title="Why EADC?" class="menu-link-a" id="menu-link-we">Why EADC?</a>
@@ -205,20 +206,32 @@
       <section class="sp-content-section" id="sp-content-we-middle-1">
         <h2 class="col-lg-6 col-sm-12">View EADC&rsquo;s wonderful facilities</h2>
         <div class="column-left-div col-lg-7 col-sm-12">
-          <div class="gallery-nav-div" id="sp-we-gallery-nav">
-            <a href="#" class="gallery-nav-a gallery-a-visible">&nbsp;</a>
-            <a href="#" class="gallery-nav-a">&nbsp;</a>
-            <a href="#" class="gallery-nav-a">&nbsp;</a>
-          </div>
-          <!-- <div id="gallery-videos-div">
-            
-          </div> -->
-          <div id="gallery-photos-div">
-            <img src="/assets/img/copy/why-eadc/facilities-photo-1.jpg" class="sp-gallery-photo-img" id="sp-we-facilities-img-1">
+          <div class="sp-gallery-div" id="sp-we-gallery">
+            <div class="sp-we-gallery-category content-visible" id="sp-we-gallery-category-photos">
+              <div class="gallery-nav-div" id="sp-we-gallery-photos-nav">
+                <a href="javascript:swapGalleryContent('sp-we-gallery-img', '1');" class="gallery-nav-a gallery-a-visible">&nbsp;</a>
+                <a href="javascript:swapGalleryContent('sp-we-gallery-img', '2');" class="gallery-nav-a">&nbsp;</a>
+                <!-- <a href="javascript:swapGalleryContent('sp-we-gallery-img', '3');" class="gallery-nav-a">&nbsp;</a> -->
+              </div>
+              <div id="sp-we-gallery-photos-div">
+                <img src="/assets/img/copy/why-eadc/facilities-photo-1.jpg" class="sp-we-gallery-img" id="sp-we-gallery-img-1">
+                <img src="/assets/img/copy/homepage/why-eadc/photo-2.jpg" class="sp-we-gallery-img" id="sp-we-gallery-img-2">
+              </div>
+            </div>
+            <div class="sp-we-gallery-category" id="sp-we-gallery-category-videos">
+              <div class="gallery-nav-div" id="sp-we-gallery-videos-nav">
+                <a href="javascript:swapGalleryContent('sp-we-gallery-video', '1');" class="gallery-nav-a gallery-a-visible">&nbsp;</a>
+                <!-- <a href="javascript:swapGalleryContent('sp-we-gallery-video', '2');" class="gallery-nav-a">&nbsp;</a>
+                <a href="javascript:swapGalleryContent('sp-we-gallery-video', '3');" class="gallery-nav-a">&nbsp;</a> -->
+              </div>
+              <div id="sp-we-gallery-videos-div">
+                <iframe src="https://www.youtube.com/embed/8413HsGnZNs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="sp-we-gallery-video" id="sp-we-gallery-video-1"></iframe>
+              </div>
+            </div>
           </div>
           <div class="sp-gallery-categories">
-            <a href="javascript:swapMedia('photos');" class="sp-gallery-category-a" id="sp-we-category-photos">Photos</a>
-            <a href="javascript:swapMedia('videos');" class="sp-gallery-category-a sp-gallery-category-visible" id="sp-we-category-videos">Videos</a>
+            <a href="javascript:swapGalleryCategories('sp-we', 'photos');" class="sp-gallery-category-link-a" id="sp-we-gallery-category-link-photos">Photos</a>
+            <a href="javascript:swapGalleryCategories('sp-we', 'videos');" class="sp-gallery-category-link-a sp-gallery-category-visible" id="sp-we-gallery-category-link-videos">Videos</a>
           </div>
         </div>
         <div class="column-right-div col-lg-3 col-sm-12">
