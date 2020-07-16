@@ -500,4 +500,63 @@ function displayMobileMenu() {
   main_menu_selector = "#content-container-menu";
 
   $(main_menu_selector).fadeToggle(250);
+} // END of displayMobileMenu 
+
+
+
+function toggleTabletMenu() {
+  /* @params ********************************************************
+     Name:      toggleTabletMenu
+
+     Purpose:   Toggle the visibility of tablet menu. 
+  
+  **************************************************************** */
+
+  var menu_icon_selector = "";
+  var menu_link_selector = "";
+  var nav_selector = "";
+  var container_selector = "";
+  var body_selector = "";
+  var html_selector = "";
+  var logo_selector = "";
+
+  menu_icon_selector = "#tablet-nav-icon-img";
+  menu_link_selector = "#tablet-nav-a-menu"
+  nav_selector = "#desktop-header-nav";
+  container_selector = ".sp-container-main, .carousel, .container, footer";
+  body_selector = "body";
+  html_selector = "html";
+  logo_selector = ".sp-header-nav #header-nav-link-logo";
+
+  var nav_visibility_value = "";
+
+  nav_visibility_value = $(nav_selector).css("display");
+
+  var visible_menu_nav_class_name = "";
+  var visible_menu_content_class_name = "";
+  var visible_menu_body_class_name = "";
+  var visible_menu_position_class_name = "";
+  var visible_menu_html_class_name = "";
+  var visible_menu_logo_class_name = "";
+
+  visible_menu_nav_class_name = "visible-menu-nav";
+  visible_menu_content_class_name = "visible-menu-content";
+  visible_menu_body_class_name = "visible-menu-body";
+  visible_menu_position_class_name = "visible-menu-position-fixed";
+  visible_menu_html_class_name = "visible-menu-html";
+  visible_menu_logo_class_name = "visible-menu-logo";
+
+  if (nav_visibility_value === "none") {
+    $(menu_icon_selector).attr("src", "/assets/img/common/icons/menu-desktop-close.svg");
+  } else {
+    $(menu_icon_selector).attr("src", "/assets/img/common/icons/menu.svg");
+  }
+
+  $(nav_selector).toggleClass(visible_menu_nav_class_name);
+  $(nav_selector).toggleClass(visible_menu_position_class_name);
+  $(container_selector).toggleClass(visible_menu_content_class_name);
+  $(body_selector).toggleClass(visible_menu_body_class_name);
+  $(menu_link_selector).toggleClass(visible_menu_position_class_name);
+  $(html_selector).toggleClass(visible_menu_html_class_name);
+  $(logo_selector).toggleClass(visible_menu_logo_class_name);
 }

@@ -798,6 +798,7 @@ label {
 }
 
 .visible-mobile, 
+.visible-tablet,  
 #mobile-nav { 
   display: none;
 }
@@ -2369,6 +2370,10 @@ label {
 }
 
 #sp-content-we-middle-2 {
+  h2 {
+    margin-left: 98px;
+  }
+
   .column-middle-div {
     padding-right: $spacer_26px;
   }
@@ -2606,6 +2611,24 @@ label {
 
 /******* BREAKPOINTS ******/
 
+@media screen and (min-width: 1681px) {
+  #cta-logo {
+    bottom: 534px;
+  }
+
+  .carousel-cta {
+    bottom: 210px;
+  }
+
+  #homepage-we-gallery { 
+    .homepage-we-gallery-img {
+      width: 820px;
+    }
+  }
+}
+
+
+
 @media screen and (min-width: 1200px) {
   .container {
     max-width: 100%;
@@ -2632,8 +2655,109 @@ label {
 
 
 
+@media screen and (min-width: 415px) and (max-width: 1365px) {
+
+  .visible-tablet {
+    display: block;
+  }
+
+  .visible-menu-content {
+    position: relative;
+    left: -340px;
+    opacity: 0.4;
+  }
+
+  .visible-menu-body {
+    background-color: $dark_purple_2;
+  }
+
+  .visible-menu-position-fixed {
+    position: fixed !important;
+  }
+
+  .visible-menu-nav {
+    display: block !important;
+  }
+
+  .visible-menu-html {
+    overflow-y: hidden;
+  }
+
+  .visible-menu-logo {
+    display: none !important;
+  }
+
+
+  /* ------ COLOR STYLING ------ */
+  
+  #desktop-header-nav { 
+    background-color: $white_1;
+  }
+
+
+  /* ------ BORDERS ------ */
+
+  #header-nav-ul {
+    border-radius: 0;
+  }
+
+
+  /* ------ SHADOWS ------ */
+
+  #desktop-header-nav {
+    box-shadow: -1px 0 6px $dark_purple_2;
+  }
+
+  #header-nav-ul {
+    box-shadow: none;
+  }
+  
+
+  /* ------ MAIN NAVIGATION ------ */
+
+  #desktop-header-nav {
+    width: 340px;
+    height: 100vh;
+    display: none;
+    top: 0 !important;
+    right: 0 !important;
+    z-index: 700;
+
+    #header-nav-ul {
+      width: 202px;
+      padding: 0;
+      display: block;
+      float: right !important;
+      position: relative;
+      top: 144px;
+      right: 77px;
+
+      li {
+        display: block;
+        margin-bottom: $spacer_16px;
+      }
+
+      li:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  #tablet-nav-a-menu {
+    position: absolute;
+    top: 67px;
+    right: 72px;
+    z-index: 800;
+  }
+
+  #tablet-nav-icon-img {
+    width: 52px;
+    height: auto;
+  }
+}
+
 /* ------ 1366x??? ------- */
-@media screen and (min-width: 1366px) and (max-width: 1680px) {
+@media screen and (min-width: 1025px) and (max-width: 1366px) {
   #cta-logo {
     left: 78px;
   }
@@ -2695,7 +2819,8 @@ label {
 
   /******* COMMON ELEMENTS *******/
 
-  .visible-desktop {
+  .visible-desktop, 
+  .visible-tablet {
     display: none;
   }
 
@@ -3450,6 +3575,10 @@ label {
   }
 
   #sp-content-we-middle-2 {
+    h2 {
+      margin-left: 0;
+    }
+
     .column-middle-div, 
     .column-right-div {
       margin-top: 0 !important;
