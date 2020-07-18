@@ -14,10 +14,10 @@
   <body>
     
 <!-- HEADER INCLUDING NAVIGATION -->
-    <header class="visible-desktop">
+    <header class="visible-desktop visible-tablet">
 
 <!-- DESKTOP MAIN NAVIGATION -->
-      <a href="javascript:toggleTabletMenu();" title="Menu" class="nav-icon-a visible-tablet" id="tablet-nav-a-menu"><img src="/assets/img/common/icons/menu.svg" alt="Menu" class="desktop-nav-img" id="tablet-nav-icon-img"></a>
+      <a href="javascript:toggleTabletMenu();" title="Menu" class="nav-icon-a" id="tablet-nav-a-menu"><img src="/assets/img/common/icons/menu.svg" alt="Menu" class="desktop-nav-img" id="tablet-nav-icon-img"></a>
       <nav class="homepage-desktop-header-nav" id="desktop-header-nav">
         <ul id="header-nav-ul">
           <li>
@@ -66,6 +66,7 @@
           </div>
           <img class="img-fluid visible-desktop" src="/assets/img/copy/homepage/hero/hero.jpg" alt="Welcome to Emmanuel Adult Care Center!">
           <img class="img-fluid visible-mobile" src="/assets/img/copy/homepage/hero/hero-mobile.jpg" alt="Welcome to Emmanuel Adult Care Center!">
+          <img class="img-fluid visible-tablet" src="/assets/img/copy/homepage/hero/hero-tablet.jpg" alt="Welcome to Emmanuel Adult Care Center!">
         </div>
         <!-- <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -238,7 +239,7 @@
               </p>
             </div>
           </div>
-          <div class="col-lg-4 col-sm-12 column-middle-div">
+          <div class="col-lg-4 col-md-5 col-sm-12 column-middle-div">
             <p class="copy-first-p">
               Fusce sed luctus lectus. Nunc efficitur libero augue, ac molestie odio tristique quis. Aliquam vel ipsum orci. 
               Nulla aliquam augue nec lacus hendrerit, ut venenatis erat tincidunt. 
@@ -246,7 +247,7 @@
             <span class="ytc-dhss-span">EADC is certified by the Missouri Department of Health and Senior Services</span>
             <img src="/assets/img/copy/homepage/you-the-caretaker/dhss.png" alt="EADC is certified by the Missouri Department of Health and Senior Services" class="ytc-dhss-img">
           </div>
-          <div class="col-lg-3 col-sm-12 column-right-div">
+          <div class="col-lg-3 col-md-6 col-sm-12 column-right-div">
             <h3>Available packages</h3>
             <div class="accordion" id="ytc-accordion-packages-div">
               <div class="card">
@@ -436,7 +437,7 @@
           </div>
           <div class="col-lg-7 col-sm-12 column-right-div" id="tte-form-div">
             <form method="post" action="#">
-            <div class="form-column-left col-lg-5 col-sm-12">
+            <div class="form-column-left col-lg-5 col-md-6 col-sm-12">
               <div class="form-field-div" id="field-first_name">
                 <label for="first_name" class="form-label">Type your first name below:</label>
                 <input type="text" name="first_name" class="form-input-text" id="input-text-first_name">
@@ -450,7 +451,7 @@
                 <input type="text" name="first_name" class="form-input-text" id="input-text-first_name">
               </div>
             </div>
-            <div class="form-column-right col-lg-7 col-sm-12">
+            <div class="form-column-right col-lg-7 col-md-6 col-sm-12">
               <div class="form-textarea-div" id="textarea-message">
                 <label for="message" class="form-label">Type your message below:</label>
                 <textarea name="message" class="form-textarea" id="input-type-textarea"></textarea>
@@ -515,7 +516,7 @@
     </main>
     <footer>
       <div class="content-copy-div col-12" id="content-container-footer">
-        <div class="col-lg-4 col-sm-12 column-left-div" id="footer-contact_eadc-div">
+        <div class="col-lg-4 col-md-5 col-sm-12 column-left-div" id="footer-contact_eadc-div">
           <img src="/assets/img/common/logo/desktop.png" alt="Emmanuel Adult Day Center" id="footer-logo">
           <h3 class="footer-h3">Emmanuel Adult Day Center</h3>
           <div class="contact_info-div" id="contact_info-office_address">
@@ -530,7 +531,8 @@
           </div>
           <div class="contact_info-div" id="contact_info-phone_number">
             <h4 class="contact_info-h4">Phone Number:</h4>
-            <span class="contact_info-span">(314) 475-5556</span>
+            <span class="contact_info-span visible-desktop visible-tablet">(314) 475-5556</span>
+            <a href="tel:(314) 475-5556" title="Phone Number: (314) 475-5556" class="visible-mobile contact_info-a">(314) 475-5556</a>
           </div>
           <div class="contact_info-div" id="contact_info-fax_number">
             <h4 class="contact_info-h4">Fax Number:</h4>
@@ -549,7 +551,7 @@
             <a href="#" target="Instagram: instagram.com/myeadcstl" class="contact_info-a">instagram.com/myeadcstl</a>
           </div>
         </div>
-        <div class="col-lg-3 col-sm-12 column-middle-div" id="footer-links-container">
+        <div class="col-lg-3 col-md-6 col-sm-12 column-middle-div" id="footer-links-container">
           <div id="footer-links">
             <a href="/your-loved-one.htm" title="Your Loved One" class="footer-link-a" id="footer-link-ylo">Your Loved One</a>
             <a href="/you-the-caretaker.htm" title="You - the Caretaker" class="footer-link-a" id="footer-link-ytc">You &ndash; the Caretaker</a>

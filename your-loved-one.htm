@@ -14,12 +14,13 @@
   <body>
     
 <!-- HEADER INCLUDING NAVIGATION -->
-    <header class="visible-desktop">
+    <header class="visible-desktop visible-tablet">
 
 <!-- DESKTOP MAIN NAVIGATION -->
-      <a href="javascript:toggleTabletMenu();" title="Menu" class="nav-icon-a visible-tablet" id="tablet-nav-a-menu"><img src="/assets/img/common/icons/menu.svg" alt="Menu" class="desktop-nav-img" id="tablet-nav-icon-img"></a>
+      <a href="javascript:toggleTabletMenu();" title="Menu" class="nav-icon-a" id="tablet-nav-a-menu"><img src="/assets/img/common/icons/menu.svg" alt="Menu" class="desktop-nav-img" id="tablet-nav-icon-img"></a>
       <nav class="sp-header-nav" id="desktop-header-nav">
-        <!-- LOGO -->
+
+<!-- LOGO -->
         <a href="/" title="Emmanuel Adult Day Center - Home" id="header-nav-link-logo"><img src="/assets/img/common/logo/desktop.png" alt="Emmanuel Adult Day Center" class="visible-desktop" id="header-nav-logo"></a>
         <ul id="header-nav-ul">
           <li>
@@ -59,8 +60,12 @@
 <!-- HERO IMAGE -->
     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel"> 
       <div class="carousel-inner" role="listbox">
-        <div class="carousel-item active" id="carousel-item-landing">
+        <div class="carousel-item active" id="carousel-item-ylo">
+
+<!-- LOGO -->
           <img src="/assets/img/common/logo/desktop.png" alt="Emmanuel Adult Day Center" class="visible-mobile" id="mobile-cta-logo">
+          <img src="/assets/img/common/logo/desktop.png" alt="Emmanuel Adult Day Center" class="visible-tablet" id="cta-logo">              
+
  <!-- CALL TO ACTION -->
           <div class="carousel-cta" id="cta-ylo">
             <h1>
@@ -74,6 +79,7 @@
           </div>
           <img class="img-fluid visible-desktop" src="/assets/img/copy/your-loved-one/hero.jpg" alt="Emmanuel Adult Day Center strives to care for your loved one like they are family.">
           <img class="img-fluid visible-mobile" src="/assets/img/copy/your-loved-one/hero-mobile.jpg" alt="Emmanuel Adult Day Center strives to care for your loved one like they are family.">
+          <img class="img-fluid visible-tablet" src="/assets/img/copy/your-loved-one/hero-tablet.jpg" alt="Emmanuel Adult Day Center strives to care for your loved one like they are family.">
         </div>
       </div>
     </div>
@@ -157,10 +163,10 @@
               Vestibulum ac gravida orci. Proin rutrum libero mi.
             </p>
           </div>
-          <div class="column-middle-div col-lg-3 col-sm-12">
+          <div class="column-middle-div col-lg-3 col-md-5 col-sm-12">
             <img src="/assets/img/copy/your-loved-one/services-photo-1.jpg" alt="" class="sp-copy-photo-img" id="sp-ylo-photo-services">
           </div>
-          <div class="column-right-div col-lg-4 col-sm-12">
+          <div class="column-right-div col-lg-4 col-md-6 col-sm-12">
             <h3 class="sp-h3">Some of the benefits include:</h3>
             <div class="accordion sp-accordion" id="sp-ylo-accordion-div">
               <div class="card">
@@ -349,7 +355,7 @@
 <!-- FOOTER -->
     <footer>
       <div class="content-copy-div col-12" id="content-container-footer">
-        <div class="col-lg-4 col-sm-12 column-left-div" id="footer-contact_eadc-div">
+        <div class="col-lg-4 col-md-5 col-sm-12 column-left-div" id="footer-contact_eadc-div">
           <img src="/assets/img/common/logo/desktop.png" alt="Emmanuel Adult Day Center" id="footer-logo">
           <h3 class="footer-h3">Emmanuel Adult Day Center</h3>
           <div class="contact_info-div" id="contact_info-office_address">
@@ -364,7 +370,8 @@
           </div>
           <div class="contact_info-div" id="contact_info-phone_number">
             <h4 class="contact_info-h4">Phone Number:</h4>
-            <span class="contact_info-span">(314) 475-5556</span>
+            <span class="contact_info-span visible-desktop visible-tablet">(314) 475-5556</span>
+            <a href="tel:(314) 475-5556" title="Phone Number: (314) 475-5556" class="visible-mobile contact_info-a">(314) 475-5556</a>
           </div>
           <div class="contact_info-div" id="contact_info-fax_number">
             <h4 class="contact_info-h4">Fax Number:</h4>
@@ -383,7 +390,7 @@
             <a href="#" target="Instagram: instagram.com/myeadcstl" class="contact_info-a">instagram.com/myeadcstl</a>
           </div>
         </div>
-        <div class="col-lg-3 col-sm-12 column-middle-div" id="footer-links-container">
+        <div class="col-lg-3 col-sm-12 col-md-6 column-middle-div" id="footer-links-container">
           <div id="footer-links">
             <a href="/your-loved-one.htm" title="Your Loved One" class="footer-link-a" id="footer-link-ylo">Your Loved One</a>
             <a href="/you-the-caretaker.htm" title="You - the Caretaker" class="footer-link-a" id="footer-link-ytc">You &ndash; the Caretaker</a>

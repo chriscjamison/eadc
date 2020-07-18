@@ -798,9 +798,14 @@ label {
 }
 
 .visible-mobile, 
-.visible-tablet,  
+#tablet-nav-a-menu, 
+.visible-tablet, 
 #mobile-nav { 
   display: none;
+}
+
+.visible-desktop {
+  display: block;
 }
 
 .content-visible {
@@ -1756,6 +1761,10 @@ label {
   display: inline-flex;
   flex-direction: column;
   vertical-align: top;
+
+  p:last-of-type {
+    margin-bottom: 0;
+  }
 }
 
 #content-container-ylo {
@@ -2657,7 +2666,7 @@ label {
 
 @media screen and (min-width: 415px) and (max-width: 1365px) {
 
-  .visible-tablet {
+  #tablet-nav-a-menu {
     display: block;
   }
 
@@ -2756,6 +2765,8 @@ label {
   }
 }
 
+
+
 /* ------ 1366x??? ------- */
 @media screen and (min-width: 1025px) and (max-width: 1366px) {
   #cta-logo {
@@ -2814,12 +2825,458 @@ label {
 }
 
 
+
+/* ------ < (1024x1366) ------- */
+@media screen and (min-width: 415px) and (max-width: 1024px) {
+  
+  /******* COMMON ELEMENTS ******/
+
+  .visible-desktop, 
+  .visible-mobile {
+    display: none;
+  }
+
+  
+  #tablet-nav-a-menu, 
+  .visible-tablet {
+    display: block;
+  }
+
+
+
+  /****** BACKGROUNDS ******/
+
+  footer, 
+  #background-footer, 
+  #circles-footer {
+    height: 807px;
+  }
+
+  #circles-ylo, 
+  #circles-tte, 
+  #circles-footer {
+    .circles-small {
+      display: none;
+    }
+  }
+  
+  #sp-background-hero {
+    top: calc(100vh - 277px);
+  }
+
+
+
+  /****** CTA ******/
+
+  #cta-homepage {
+    width: 337px;
+    left: 29px;
+    bottom: 54px;
+  }
+
+  #cta-logo {
+    display: block;
+    top: 66px;
+    left: 55px;
+    right: auto;
+  }
+
+  .carousel-cta {
+    left: 29px;
+    bottom: 54px;
+  }
+  
+
+  /****** CONTAINER ******/
+
+  .container, 
+  .sp-container-main {
+    max-width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .sp-container-main {
+    padding-top: 0;
+  }
+  
+
+  /****** COPY ******/
+
+  /* ------ HOMEPAGE ------ */
+
+  .content-copy-div {
+    padding: $spacer_54px;
+  }
+
+  .sp-content-section {
+    margin: 0;
+    padding: $spacer_54px $spacer_54px 0 $spacer_54px;
+
+    .column-left-div, 
+    .column-right-div {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    .column-middle-div, 
+    .column-right-div {
+      margin-top: $spacer_26px;
+    }
+
+    .col-md-5.column-middle-div {
+      margin-right: $spacer_36px;
+    }
+  }
+
+  .sp-content-section:last-of-type {
+    padding-bottom: $spacer_54px;
+  }
+
+  
+
+  .ytc-insurance-h4 {
+    margin-top: $spacer_26px;
+  }
+
+  .ytc-insurance-div {
+    margin-top: $spacer_26px;
+    padding-left: 0;
+  }
+
+  #content-container-we, 
+  #content-container-tte {
+    .column-right-div {
+      padding-left: 0;
+    }
+  }
+
+
+  /* ------ YOUR LOVED ONE ------ */
+
+  h2 {
+    margin-bottom: $spacer_26px;
+  }
+
+  #sp-content-ylo-middle-1 {
+    .column-right-div {
+      padding-left: 0;
+    }
+  }
+
+  #sp-ylo-gallery-nav {
+    bottom: 84px;
+    left: 26px;
+  }
+
+  .sp-testimonial-p {
+    margin: $spacer_36px 0 0 $spacer_16px;
+  }
+
+  #sp-testimonials-social_media-instagram {
+    margin-top: $spacer_16px;
+  }
+
+
+  /* ------ YOU - THE CARETAKER ------ */
+
+  #sp-ytc-photo-services {
+    margin-top: $spacer_7px;
+  }
+
+  #sp-content-ytc-intake-1, 
+  #sp-content-ytc-intake-2, 
+  #sp-content-ytc-intake-3 {
+    .column-right-div {
+      margin-top: $spacer_5px;
+      padding-left: 0;
+      float: right;
+    }
+  }
+
+  #sp-content-ylo-middle-1 {
+    .column-middle-div {
+      margin-top: 0;
+      float: right;
+    }
+  }
+
+  #sp-ytc-services-ul-left {
+    margin-bottom: 0;
+  }
+
+  #sp-content-ytc-middle-3 {
+    .column-middle-div {
+      margin-top: 0;
+    }
+  }
+
+  #sp-ytc-insurance-span {
+    margin-top: 0;
+  }
+
+  #sp-ytc-insurance-mohealthnet {
+    width: 164px;
+    height: 63px;
+  }
+
+  #sp-ytc-insurance-tricare {
+    width: 110px;
+    height: 55px;
+  }
+
+  #sp-content-ytc-bottom {
+    .column-left-div {
+      padding-right: 0;
+    }
+
+    .column-right-div {
+      margin-top: $spacer_7px;
+      padding-left: $spacer_47px;
+      float: right;
+    }
+  }
+
+
+  /* ------ WHY EADC? ------ */
+
+  #sp-content-we-service-1, 
+  #sp-content-we-service-2 {
+    .column-right-div {
+      padding-left: 0;
+    }
+  }
+
+  #sp-we-facilities-amenities_container-left-div {
+    margin-top: $spacer_16px;
+  }
+
+  #sp-we-facilities-amenities_container-right-div, 
+  #sp-we-facilities-ul-right {
+    margin-top: 0;
+  }
+
+  #sp-content-we-middle-2 {
+    h2 {
+      margin-left: 0;
+    }
+  }
+
+  #sp-content-we-middle-2 { 
+    padding-bottom: $spacer_54px;
+
+    .column-middle-div { 
+      margin-right: 0;
+      padding-right: 0;
+    }
+
+    .column-right-div {
+      padding-left: 0;
+      float: right;
+    }
+  }
+
+
+  /* ------ TALK TO EADC ------ */
+
+  .sp-tte-cta-detail-info-span.visible-tablet {
+    display: inline;
+  }
+
+  #sp-content-tte-top {
+    .column-right-div {
+      padding-left: 0;
+    }
+
+    .sp-h3 {
+      margin-top: $spacer_26px;
+    }
+
+    .sp-h3:first-of-type {
+      margin-top: 0;
+    }
+  }
+
+  .sp-tte-location-ol {
+    margin-bottom: 0;
+  }
+
+  #sp-tte-form-div {
+    padding-right: 0;
+
+    .col-md-5 {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    .col-md-7 {
+      padding-left: $spacer_47px;
+    }
+  }
+
+
+  /* ------ ABOUT US ------ */
+
+  #sp-content-au-top {
+    .column-right-div {
+      margin-top: 0;
+      padding-left: 0;
+      float: right;
+    }
+  }
+
+  #sp-au-certifications-ul-left {
+    margin-bottom: 0;
+  }
+
+  #sp-content-au-middle-1 {
+    .column-middle-div {
+      margin-top: 0;
+    }
+  }
+
+  #sp-content-au-middle-2 {
+    .col-md-3, 
+    .col-md-5 {
+      margin-top: 0;
+    }
+  }
+
+
+  /* ------ SEARCH ------ */
+
+  .sp-search-container-main { 
+    h2, 
+    #sp-search-form {
+      left: 55px;
+    }
+  }
+
+
+  /* ------ WEBSITE CREDITS ------ */
+
+  .sp-one_page-container-main {
+    padding: 180px $spacer_54px $spacer_54px $spacer_54px;
+    top: 0;
+  }
+
+
+
+  /****** FOOTER ******/
+
+  #footer-sidebar {
+    display: none;
+  }
+}
+
+
+
+/* ------ KINDLE FIRE (800x1280) ------- */
+@media screen and (min-width: 769px) and (max-width: 800px) {
+
+
+}
+
+/* ------ iPAD (768x1024) ------- */
+@media screen and (min-width: 415px) and (max-width: 768px) {
+
+  
+  /****** BACKGROUNDS ******/
+
+  #background-ylo, 
+  #content-ylo {
+    height: 1013px;
+  }
+
+  #background-ytc, 
+  #content-ytc {
+    height: 1408px;
+  }
+
+  #background-we, 
+  #content-we {
+    height: 1145px;
+  }
+  
+  #circles-ytc { 
+    #ytc-circle-upper-right {
+      top: 57%;
+    }
+  }
+
+
+
+  /****** COPY ******/
+
+  /* ------ HOMEPAGE ------ */
+
+  #homepage-ylo-gallery {
+    height: 404px;
+  }
+
+  .ytc-testimonial { 
+    .ytc-testimonial-p {
+      margin: $spacer_54px 0 0 $spacer_16px;
+    }
+  }
+  
+  #homepage-we-gallery {
+    height: 441px;
+
+    #homepage-we-gallery-photos-nav, 
+    #homepage-we-gallery-videos-nav {
+      bottom: 90px;
+    }
+
+    #homepage-we-gallery-categories {
+      left: 32px;
+    }
+  }
+
+
+  /* ------ YOUR LOVED ONE ------ */
+
+  .sp-content-section {
+    width: 100%;
+  }
+
+  #sp-ylo-video-iframe, 
+  #sp-we-tour-iframe {
+    width: 660px;
+    height: 357px;
+  }
+
+
+  /* ------ YOU - THE CARETAKER ------ */
+
+  #sp-ytc-credentials-dhss {
+    width: 249px;
+    height: auto;
+  }
+
+
+  /* ------ TALK TO EADC ------ */
+
+  #sp-tte-location-map-iframe {
+    width: 660px;
+    height: 407px;
+    margin-top: 0;
+  }
+
+  
+}
+
+
+
 /* ------ MOBILE PHONES (< 414x???) ------- */
 @media screen and (max-width: 414px) {
 
   /******* COMMON ELEMENTS *******/
 
   .visible-desktop, 
+  #tablet-nav-a-menu, 
   .visible-tablet {
     display: none;
   }
