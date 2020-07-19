@@ -35,7 +35,7 @@ $(why_eadc_button_selector).click(
   }
 );
 
-var menu_icon_selector = "";
+/* var menu_icon_selector = "";
 
 menu_icon_selector = "#mobile-nav-a-menu";
 
@@ -44,7 +44,7 @@ $(menu_icon_selector).click(
     displayMobileMenu();
   }
 );
-
+ */
 
 
 
@@ -499,7 +499,17 @@ function displayMobileMenu() {
 
   main_menu_selector = "#content-container-menu";
 
+  var html_selector = "";
+
+  html_selector = "html";
+
+  var html_class_name = "";
+
+  html_class_name = "overflow-hidden-html";
+
   $(main_menu_selector).fadeToggle(250);
+
+  $(html_selector).toggleClass(html_class_name);
 } // END of displayMobileMenu 
 
 
@@ -549,7 +559,7 @@ function toggleTabletMenu() {
   if (nav_visibility_value === "none") {
     $(menu_icon_selector).attr("src", "/assets/img/common/icons/menu-desktop-close.svg");
   } else {
-    $(menu_icon_selector).attr("src", "/assets/img/common/icons/menu.svg");
+    $(menu_icon_selector).attr("src", "/assets/img/common/icons/menu-desktop.svg");
   }
 
   $(nav_selector).toggleClass(visible_menu_nav_class_name);
