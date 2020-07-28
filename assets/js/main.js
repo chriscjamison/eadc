@@ -2,15 +2,25 @@
 
 $(document).ready(
   function ()   {
+    displayMessageContent();
+    
     setTimeout(
       function () {
         adjustBackground();
-      }, 350
+      }, 250
     );
   }
 );
 
-
+$(window).resize(
+  function () {
+    setTimeout(
+      function () {
+        adjustBackground();
+      }, 150
+    );
+  }
+)
 
 /* ****** EVENT HANDLERS ****** */
 
@@ -30,21 +40,24 @@ $(why_eadc_button_selector).click(
 
     button_id_value = button_id_value_Array[2];
 
-// console.log("button_id_value = " + button_id_value);
     displayWeContent(button_id_value);
   }
 );
 
-/* var menu_icon_selector = "";
+var talk_to_eadc_submit_selector = "";
 
-menu_icon_selector = "#mobile-nav-a-menu";
+talk_to_eadc_submit_selector = "#tte-submit";
 
-$(menu_icon_selector).click(
+
+$(talk_to_eadc_submit_selector).click(
   function () {
-    displayMobileMenu();
+    var talk_to_eadc_form_selector = "";
+
+    talk_to_eadc_form_selector = "#tte-contact_form";
+
+    $(talk_to_eadc_form_selector).submit();
   }
 );
- */
 
 
 
@@ -72,8 +85,9 @@ function adjustBackground() {
 
   // The URL's for webpages that contain background circles that will 
   // not be adjusted are passed on.
-  urls_to_ignore_Array[1] = "index.htm";
-  urls_to_ignore_Array[2] = "search.htm";
+  urls_to_ignore_Array[0] = "index.htm";
+  urls_to_ignore_Array[1] = "search.htm";
+  urls_to_ignore_Array[2] = "blog.htm"
 
   // A Boolean flag that will be set to 'true' if the recenly loaded 
   // webpage is not the homepage or the 'Search' page is initialized.
@@ -162,6 +176,31 @@ function adjustBackground() {
 
     // The 'background circles' are positioned right above the footer.
     $(background_circles_element).css("top", background_circles_vertical_position_value);
+  } 
+
+  if (url_string !== "/index.htm") {
+    var hero_background_circles_selector = "";
+
+    if (url_string === "/blog.htm") {
+      hero_background_circles_selector = "#sp-blog-background-hero";
+    } else if (url_string !== "/search.htm") {
+      hero_background_circles_selector = "#sp-background-hero";
+    }
+    
+    var carousel_selector = "";
+    
+    carousel_selector = ".carousel";
+
+    var carousel_height;
+
+    carousel_height = $(carousel_selector).height();
+
+    var hero_background_circles_vertical_position_value;
+
+    hero_background_circles_vertical_position_value = carousel_height - 277;
+
+    $(hero_background_circles_selector).css("top", hero_background_circles_vertical_position_value);
+
   }
 } // END OF adjustBackground
 
@@ -569,4 +608,73 @@ function toggleTabletMenu() {
   $(menu_link_selector).toggleClass(visible_menu_position_class_name);
   $(html_selector).toggleClass(visible_menu_html_class_name);
   $(logo_selector).toggleClass(visible_menu_logo_class_name);
-}
+} // END of toggleTabletMenu
+
+
+
+function displayMessageContent() {
+  /* @params ********************************************************
+     Name: displayMessageContent
+     Purpose: Swaps out form fields with copy after a visitor 
+              sends a message.
+
+  **************************************************************** */
+
+  var url_string = "";
+
+  url_string = window.location.href;
+
+  var search_char_value = "";
+
+  search_char_value = "="
+
+  var search_char_location;
+
+  search_char_location = url_string.indexOf(search_char_value);
+
+  if (search_char_location >= 0)  {
+    var split_results_Array = [];
+
+    split_results_Array = url_string.split(search_char_value);
+
+    search_char_value = "#";
+
+    search_char_location = split_results_Array[1].indexOf(search_char_value);
+
+    var first_name_value = split_results_Array[1].slice(0, search_char_location);
+
+    var copy_of_message = "";
+
+    copy_of_message = "<p>" + 
+                      "  Hello " + first_name_value + "," + 
+                      "  <br><br>" + 
+                      "  Thank you for your interest in Emmanuel Adult Day Center's services." + 
+                      "  <br>" + 
+                      "  I will read your message and get back to you no later than one business day from today." + 
+                      "  <br><br>" + 
+                      "  I look forward to talking to you soon." + 
+                      "  <br><br>" + 
+                      "  Mirinda Johnson" + 
+                      "  <br>" + 
+                      "  Director of Operations" + 
+                      "</p>";
+  
+    var form_container_selector = "";
+  
+    form_container_selector = "tte-form-div";
+  
+    var search_string_value = ""
+  
+    search_string_value = "talk-to-eadc.htm";
+  
+    var search_string_location = url_string.indexOf(search_string_value);
+
+    if (search_string_location >= 0)  {
+      form_container_selector = "#sp-" + form_container_selector;
+    } else {
+      form_container_selector = "#" + form_container_selector;
+    }
+  
+    $(form_container_selector).html(copy_of_message);  
+  }
+} // END of displayMessageContent
