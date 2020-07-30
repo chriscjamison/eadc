@@ -2,7 +2,7 @@
 
 $(document).ready(
   function ()   {
-    displayMessageContent();
+    discoverURLVariables();
     
     setTimeout(
       function () {
@@ -20,7 +20,7 @@ $(window).resize(
       }, 150
     );
   }
-)
+);
 
 /* ****** EVENT HANDLERS ****** */
 
@@ -56,6 +56,26 @@ $(talk_to_eadc_submit_selector).click(
     talk_to_eadc_form_selector = "#tte-contact_form";
 
     $(talk_to_eadc_form_selector).submit();
+  }
+);
+
+var form_fields_selector = "";
+
+form_fields_selector = "#input-text-first_name, #input-text-last_name, #input-text-email_address, #input-textarea-message"
+
+$(form_fields_selector).focusin(
+  function () {
+    var input_element = this;
+
+    verifyFields(input_element, "focus");
+  }
+);
+
+$(form_fields_selector).focusout(
+  function () {
+    var input_element =  this;
+
+    verifyFields(input_element, "blur");
   }
 );
 
@@ -149,8 +169,6 @@ function adjustBackground() {
     background_circles_element = $(background_circles_selector);
     html_element = $(html_selector);
     footer_element = $(footer_selector);
-    // console.log("background_circles_element.attr(\"id\") = " + $(background_circles_element).attr("id"));
-
  
     // Number variables that will hold the height for the 'background circles', 
     // webpage and the footer are initialized.
@@ -612,7 +630,104 @@ function toggleTabletMenu() {
 
 
 
-function displayMessageContent() {
+function discoverURLVariables() {
+  /* @params ********************************************************
+     Name: discoverURLVariables
+
+     Purpose: Locates the presence of GET variables located 
+              in the URL.
+
+  **************************************************************** */
+
+  var url_string = window.location.href;
+
+  var search_char_value = "=";
+
+  var search_char_location = url_string.indexOf(search_char_value);
+
+  if (search_char_location >= 0)  {
+    parseURLData();
+  }
+} // END of discoverURLVariables
+
+
+
+function parseURLData() {
+  /* @params ********************************************************
+     Name:      parseURLData
+
+     Purpose:   Parses GET variables in the URL.
+
+  **************************************************************** */
+
+  var url_string = window.location.href;
+
+  search_string_value = ".htm";
+
+  var end_of_hostname_value = url_string.indexOf(search_string_value);
+
+  var raw_url_string_data = "";
+
+  if (end_of_hostname_value >= 0)  {
+    raw_url_string_data = url_string.slice(end_of_hostname_location_value) + 5;
+
+  } else {
+    search_string_value = "/";
+
+    var end_of_hostname_location_value = url_string.lastIndexOf(search_string_value) + 2;
+
+    raw_url_string_data = url_string.slice(end_of_hostname_location_value);
+  }
+
+  var split_variable_values_Array = [];
+  var parsed_get_variables_Array = [];
+
+  search_string_value = "&";
+
+  error_variables_location_value = raw_url_string_data.indexOf(search_string_value);
+
+  if (error_variables_location_value >= 0)  {
+    var get_data_variables_Array = raw_url_string_data.split(search_string_value);
+  
+    var inc;
+
+    var get_data_variables_Array_length = get_data_variables_Array.length;
+
+    search_string_value = "=";
+    
+    for (inc = 0; inc < get_data_variables_Array_length; inc++) {
+      split_variable_values_Array = get_data_variables_Array[inc].split(search_string_value);
+
+      if (inc === 4)  {
+        search_string_value = "#";
+
+        var message_variable_Array = split_variable_values_Array[1].split(search_string_value);
+
+        parsed_get_variables_Array[inc] = message_variable_Array[0];  
+      } else {
+        parsed_get_variables_Array[inc] = split_variable_values_Array[1];
+      }
+      
+    }
+  } else {
+    search_string_value = "=";
+
+    get_data_variables_Array = raw_url_string_data.split(search_string_value);
+
+    search_string_value = "#";
+
+    split_variable_values_Array = get_data_variables_Array[1].split(search_string_value);
+
+    parsed_get_variables_Array[0] = split_variable_values_Array[0]; 
+  }
+
+  displayMessageContent(parsed_get_variables_Array);
+} // END OF parseURLData
+
+
+
+
+function displayMessageContent(get_data_variables_Array) {
   /* @params ********************************************************
      Name: displayMessageContent
      Purpose: Swaps out form fields with copy after a visitor 
@@ -620,53 +735,171 @@ function displayMessageContent() {
 
   **************************************************************** */
 
-  var url_string = "";
+  var url_string = window.location.href;
 
-  url_string = window.location.href;
+  var get_data_variables_Array_length = get_data_variables_Array.length;
 
-  var search_char_value = "";
+  var copy_for_message = "";
 
-  search_char_value = "="
+  var form_container_selector = "";
 
-  var search_char_location;
+  if (get_data_variables_Array_length === 5)  {
+    var search_string_value = ",";
 
-  search_char_location = url_string.indexOf(search_char_value);
+    var fields_in_error_Array = get_data_variables_Array[0].split(search_string_value);
 
-  if (search_char_location >= 0)  {
-    var split_results_Array = [];
+    var fields_in_error_value = "";
 
-    split_results_Array = url_string.split(search_char_value);
+    var num_fields_in_error = 0;
 
-    search_char_value = "#";
+    var error_class_name = "error-form_field";
+    var valid_class_name = "valid-form_field";
 
-    search_char_location = split_results_Array[1].indexOf(search_char_value);
+    fields_in_error_Array.forEach(
+      function (item, index, array) {
+        switch (index)  {
+          case 0:
+            var first_name_selector = "#input-text-first_name";
 
-    var first_name_value = split_results_Array[1].slice(0, search_char_location);
+            if (item === "e") {
+              $(first_name_selector).addClass(error_class_name);
+              $(first_name_selector).val("Please enter your first name");
 
-    var copy_of_message = "";
+              fields_in_error_value = "first name";
+              
+              num_fields_in_error++;
+            } else {
+              $(first_name_selector).addClass(valid_class_name);
+              $(first_name_selector).val(get_data_variables_Array[1]);
+            }
+            
+          break;
 
-    copy_of_message = "<p>" + 
-                      "  Hello " + first_name_value + "," + 
-                      "  <br><br>" + 
-                      "  Thank you for your interest in Emmanuel Adult Day Center's services." + 
-                      "  <br>" + 
-                      "  I will read your message and get back to you no later than one business day from today." + 
-                      "  <br><br>" + 
-                      "  I look forward to talking to you soon." + 
-                      "  <br><br>" + 
-                      "  Mirinda Johnson" + 
-                      "  <br>" + 
-                      "  Director of Operations" + 
-                      "</p>";
-  
-    var form_container_selector = "";
-  
+          case 1:
+            var last_name_selector = "#input-text-last_name";
+
+            if (item === "e") {
+              $(last_name_selector).addClass(error_class_name);
+              $(last_name_selector).val("Please enter your last name");
+
+              if (fields_in_error_value !== "") {
+                fields_in_error_value = fields_in_error_value + ", last name";
+              } else {
+                fields_in_error_value = fields_in_error_value + "last name";
+              }
+              
+              num_fields_in_error++;
+            } else {
+              $(last_name_selector).addClass(valid_class_name);
+              $(last_name_selector).val(get_data_variables_Array[2]);
+            }
+            
+          break;
+
+          case 2:
+            var email_address_selector = "#input-text-email_address";
+
+            if (item === "e") {
+              $(email_address_selector).addClass(error_class_name);
+              $(email_address_selector).val("Please retype your email address");
+
+              if (fields_in_error_value !== "") {
+                fields_in_error_value = fields_in_error_value + ", email address";
+              } else {
+                fields_in_error_value = fields_in_error_value + "email address";
+              }
+              
+              num_fields_in_error++;
+            } else {
+              $(email_address_selector).addClass(valid_class_name);
+              $(email_address_selector).val(get_data_variables_Array[3]);
+            }
+            
+          break;
+
+          case 3:
+            var message_selector = "#input-textarea-message";
+
+            if (item === "e") {
+              $(message_selector).addClass(error_class_name);
+              $(message_selector).val("Please enter your message");
+
+              if (fields_in_error_value !== "") {
+                fields_in_error_value = fields_in_error_value + ", message";
+              } else {
+                fields_in_error_value = fields_in_error_value + "message";
+              }
+              
+              num_fields_in_error++;
+            } else {
+              $(message_selector).addClass(valid_class_name);
+              $(message_selector).val(get_data_variables_Array[4]);
+            }
+            
+          break;
+        }
+      }
+    );
+
+    search_string_value = ".htm";
+
+    var end_of_hostname_value = url_string.indexOf(search_string_value);
+
+    if (end_of_hostname_value === -1)  {
+      if (num_fields_in_error > 1)  {
+        search_string_value = ",";
+
+        var field_names_Array = fields_in_error_value.split(",");
+
+        if (num_fields_in_error === 2)  {
+          fields_in_error_value = "fields for the " + field_names_Array[0] + " and " + field_names_Array[1];
+        } else if (num_fields_in_error === 3) {
+          fields_in_error_value = "fields for the " + field_names_Array[0] + ", " + field_names_Array[1] + ", and " + field_names_Array[2];
+        } else {
+          fields_in_error_value = "fields for the " + field_names_Array[0] + ", " + field_names_Array[1] + ", " + field_names_Array[2], ", and " + field_names_Array[3];
+        }
+
+        fields_in_error_value = fields_in_error_value + " were";
+      } else {
+        fields_in_error_value = "field for the " + fields_in_error_value + " was";
+      }
+
+
+      copy_for_message = "<p>" + 
+                        "  Unfortunately, you'll need to change some of the information you tried to send EADC." + 
+                        "  <br><br>" + 
+                        "  The form  " + fields_in_error_value + " not completed correctly." +  
+                        "  <br><br>" + 
+                        "  Please correct your information." + 
+                        "</p>";
+
+      form_container_selector = "#tte-copy-div";
+
+      $(form_container_selector).html(copy_for_message);
+    } 
+  } else {
+    var first_name_value = get_data_variables_Array[0];
+
+    copy_for_message = "<p>" + 
+                    "  Hello " + first_name_value + "," + 
+                    "  <br><br>" + 
+                    "  Thank you for your interest in Emmanuel Adult Day Center's services." + 
+                    "  <br>" + 
+                    "  I will read your message and get back to you no later than one business day from today." + 
+                    "  <br><br>" + 
+                    "  I look forward to talking to you soon." + 
+                    "  <br><br>" + 
+                    "  Mirinda Johnson" + 
+                    "  <br>" + 
+                    "  Director of Operations" + 
+                    "</p>";
+
     form_container_selector = "tte-form-div";
-  
-    var search_string_value = ""
-  
+
+    search_string_value = ""
+
     search_string_value = "talk-to-eadc.htm";
-  
+
     var search_string_location = url_string.indexOf(search_string_value);
 
     if (search_string_location >= 0)  {
@@ -674,7 +907,246 @@ function displayMessageContent() {
     } else {
       form_container_selector = "#" + form_container_selector;
     }
-  
-    $(form_container_selector).html(copy_of_message);  
+
+    $(form_container_selector).html(copy_for_message);  
   }
+  
+  
+
+  
+
 } // END of displayMessageContent
+
+
+
+function verifyFields(input_element, field_status) {
+  /*  @params ********************************************************
+      Name:       verifyFields
+
+      Purpose:    Clears out data from the contact form if a given 
+                  form field includes an error message. If the 
+                  form field does not include an error message, the 
+                  data is sent off for validation by, 'validateData'.
+
+      Variables:  input_element
+                    - An object containing DOM information about the 
+                    form field calling this function
+
+                  field_status
+                    - A String that changes the appearance of the 
+                      form depending if the visitor has begun.
+                      to enter information into a given form field 
+                      or has moved onto another point on the webpage.
+
+  **************************************************************** */
+
+  var field_selector;
+  var field_value;
+  
+  field_selector = $(input_element).attr("id");
+  field_value = $(input_element).val();
+  
+  var default_value_string;
+  var error_value_string;
+
+  switch (field_selector) {
+    case "input-text-first_name":
+      default_value_string = "";
+      error_value_string = "Please enter your first name";
+      
+      if (field_value === error_value_string && 
+          field_status === "focus")	{
+
+        clearData(input_element);
+
+      } else if (field_status === "blur")	{
+
+        validateData(input_element, error_value_string);
+      }
+    break; 
+
+    case "input-text-last_name":
+      default_value_string = "";
+      error_value_string = "Please enter your last name";
+      
+      if (field_value === error_value_string && 
+        field_status === "focus")	{
+
+        clearData(input_element);
+
+      } else if (field_status === "blur")	{
+
+        validateData(input_element, error_value_string);
+      }
+    break; 
+
+    case "input-text-email_address":
+      default_value_string = "";
+      error_value_string = "Please retype your email address";
+      
+      if (field_value === error_value_string && 
+          field_status === "focus") {
+
+        clearData(input_element);
+
+      } else if (field_status === "blur") {
+        validateData(input_element, error_value_string);
+      } 
+    break;
+
+    case "input-textarea-message":
+      default_value_string = "";
+      
+      if (field_value !== default_value_string) {
+        var valid_class_name = "valid-form_field";
+
+        $(input_element).addClass(valid_class_name);
+      }
+    break;
+  }
+}
+  
+  
+function validateData(input_element, error_value_string)	{
+    /*  @params ********************************************************
+      Name:       validateData
+
+      Purpose:    This function will verify the integrity 
+                  of data entered into a given form field.
+
+      Variables:  input_element
+                    - An object containing DOM information about the 
+                    form field calling this function
+
+                  field_status
+                    - A String that changes the appearance of the 
+                      form depending if the visitor has begun.
+                      to enter information into a given form field 
+                      or has moved onto another point on the webpage.
+
+  **************************************************************** */
+
+  var field_value;
+  
+  field_value = $(input_element).val();
+
+  var valid_form_field_class_name = "valid-form_field";
+  var error_form_field_class_name = "error-form_field";
+  
+  switch ($(input_element).attr("id"))	{
+    case "input-text-first_name": 
+      var field_value_length = field_value.length;
+
+      if (field_value_length > 1 && 
+          field_value !== "Please enter your first name")	{
+        $(input_element).addClass(valid_form_field_class_name);
+      }	else {
+        $(input_element).removeClass(valid_form_field_class_name);
+        $(input_element).addClass(error_form_field_class_name);
+        $(input_element).val(error_value_string);
+      }
+    break;
+
+    case "input-text-last_name": 
+      var field_value_length = field_value.length;
+  
+      if (field_value_length > 1 && 
+        field_value !== "Please enter your last name")	{
+        $(input_element).addClass(valid_form_field_class_name);
+      }	else {
+        $(input_element).removeClass(valid_form_field_class_name);
+        $(input_element).addClass(error_form_field_class_name);
+        $(input_element).val(error_value_string);
+      }
+    break;
+
+    case "input-text-email_address": 
+      var search_string_Array;
+      var email_string;
+
+      search_string_Array = [
+        "@", 
+        ".", 
+        "com", 
+        "net", 
+        "org", 
+        "mil", 
+        "edu", 
+        ".co"
+      ];
+
+      email_string = field_value;
+
+      var is_valid_results_Array;
+
+      is_valid_results_Array = [];
+
+      search_string_Array.forEach(
+        function (item, index)	{
+          var search_string;
+          var search_result_num;
+
+          search_string = item;
+
+
+          search_result_num = email_string.indexOf(search_string);
+
+          if (search_result_num > -1)	{
+            is_valid_results_Array[index] = true;
+          } else {
+            is_valid_results_Array[index] = false;
+          }
+        }
+      );
+            
+      var is_valid;
+      
+      is_valid = false;
+      
+      if (is_valid_results_Array[0] === true &&  
+          is_valid_results_Array[1] === true)	{
+        var i;
+      
+        for (i = 2; i < is_valid_results_Array.length; i++)	{
+          if (is_valid_results_Array[i] === true)	{
+            is_valid = true;
+          }
+        }	
+      }	else {
+        is_valid = false;
+      }
+
+      if (is_valid === true)	{
+        $(input_element).addClass(valid_form_field_class_name);
+      }	else {
+        $(input_element).addClass(error_form_field_class_name);
+        $(input_element).val(error_value_string);
+      }
+      
+    break;      
+  }
+}
+
+
+  
+function clearData(input_element)	{
+  $(input_element).val("");
+  
+  var error_class_name = "error-form_field";
+  var valid_class_name = "valid-form_field";
+
+  $(input_element).removeClass(error_class_name);
+  $(input_element).removeClass(valid_class_name);
+}
+  
+
+
+function resetData(input_element, default_value_string) {
+  var error_class_name = "error-form_field";
+  var valid_class_name = "valid-form_field";
+
+  $(input_element).removeClass(error_class_name);
+  $(input_element).removeClass(valid_class_name);
+
+  $(input_element).val(default_value_string);	
+}

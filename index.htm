@@ -392,7 +392,7 @@
               }
             </script>
 
-            <form method="post" action="/assets/php/talk-to-eadc.php?v=1" name="tte-contact_form" id="tte-contact_form">
+            <form method="post" action="/assets/php/talk-to-eadc.php?v=1.1.4" name="tte-contact_form" id="tte-contact_form">
             <div class="form-column-left col-lg-5 col-md-6 col-sm-12">
               <div class="form-field-div" id="field-first_name">
                 <label for="first_name" class="form-label">Type your first name below:</label>
@@ -402,15 +402,15 @@
                 <label for="last_name" class="form-label">Type your last name below:</label>
                 <input type="text" name="last_name" class="form-input-text" id="input-text-last_name">
               </div>
-              <div class="form-field-div" id="field-first_name">
+              <div class="form-field-div" id="field-email_address">
                 <label for="email_address" class="form-label">Type your email address below:</label>
-                <input type="text" name="email_address" class="form-input-text" id="input-text-first_name">
+                <input type="email" name="email_address" class="form-input-text" id="input-text-email_address">
               </div>
             </div>
             <div class="form-column-right col-lg-7 col-md-6 col-sm-12">
               <div class="form-textarea-div" id="textarea-message">
                 <label for="message" class="form-label">Type your message below:</label>
-                <textarea name="message" class="form-textarea" id="input-type-textarea"></textarea>
+                <textarea name="message" class="form-textarea" id="input-textarea-message"></textarea>
               </div>
               <button data-sitekey="6LdjHrcZAAAAAJI4dccQ94_-7cxXraUpjlcc_MVP" data-callback='onSubmit' data-action='submit' class="g-recaptcha form-submit" id="tte-submit">Send Message</button>
             </div>

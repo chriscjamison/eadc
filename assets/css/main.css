@@ -67,7 +67,7 @@ p,
 .sp-wc-artist-ul li,
 .sp-wc-credits-h4,
 .sp-wc-artist-a,
-input[type=text],
+.form-input-text,
 textarea {
   font-family: "Century Gothic WGL W01 Regular", sans-serif;
 }
@@ -124,7 +124,7 @@ p,
 .sp-au-staff_member-span,
 .sp-wc-artist-ul li,
 .sp-wc-artist-a,
-input[type=text],
+.form-input-text,
 textarea {
   font-size: 1.1rem;
 }
@@ -331,7 +331,7 @@ h3,
 .sp-wc-credits-h3,
 .sp-wc-credits-h4,
 .sp-wc-artist-ul li,
-input[type=text],
+.form-input-text,
 textarea {
   color: #261a18;
 }
@@ -520,7 +520,7 @@ textarea {
 .sp-we-gallery-video,
 .homepage-gallery-category-link-a,
 .sp-gallery-category-link-a,
-input[type=text],
+.form-input-text,
 textarea,
 .form-submit,
 #footer-sidebar .sidebar-img,
@@ -547,8 +547,12 @@ textarea,
   border-color: #ffffff;
 }
 
-input[type=text],
+.form-input-text,
 textarea {
+  border-color: #d8d8d4;
+}
+
+#sp-search-form input[type=text] {
   border-color: #d8d8d4 !important;
 }
 
@@ -668,7 +672,7 @@ label {
   display: block;
 }
 
-input[type=text],
+.form-input-text,
 textarea {
   width: 100%;
   padding: 12px;
@@ -693,6 +697,49 @@ textarea {
 
 .content-visible {
   display: block !important;
+}
+
+.error-form_field {
+  border-color: #7F1F05 !important;
+  color: #7F1F05 !important;
+}
+
+.valid-form_field {
+  border-color: #76A557 !important;
+}
+
+#form-alert {
+  width: inherit;
+  height: inherit;
+  display: table;
+  position: absolute;
+  background-color: #d8d8d4;
+  text-align: center;
+  opacity: 0.95;
+  z-index: 800;
+}
+#form-alert div {
+  display: inline-table;
+  font-family: "Century Gothic WGL W01 Regular", sans-serif;
+  font-size: 1.1rem;
+  transform: translateY(100%);
+}
+#form-alert div div {
+  margin: 0 auto;
+  padding: 26px 26px;
+  transform: none;
+  background-color: #7F1F05;
+  color: #ffffff;
+}
+#form-alert div div span {
+  display: block;
+  border-bottom: 3px solid #d8d8d4;
+  font-size: 1.6rem;
+  font-weight: 600;
+  text-align: left;
+}
+#form-alert div div p {
+  text-align: left;
 }
 
 /****** LINK/BUTTON BEHAVIOR ******/
@@ -1551,16 +1598,16 @@ textarea {
 }
 
 #content-ylo {
-  z-index: 600;
+  z-index: 150;
 }
 
 #content-ytc {
-  z-index: 500;
+  z-index: 150;
 }
 
 #content-we {
   overflow: hidden;
-  z-index: 300;
+  z-index: 150;
 }
 
 .content-copy-div {
@@ -1884,9 +1931,9 @@ textarea {
 #sp-search-form .form-field-div {
   margin-bottom: 26px;
 }
-#tte-form-div #input-type-textarea,
-#sp-tte-form-div #input-type-textarea,
-#sp-search-form #input-type-textarea {
+#tte-form-div #input-textarea-message,
+#sp-tte-form-div #input-textarea-message,
+#sp-search-form #input-textarea-message {
   height: 279px;
 }
 #tte-form-div .form-submit,
@@ -2946,7 +2993,7 @@ textarea {
     padding-left: 26px;
     padding-right: 26px;
   }
-  #tte-form-div #input-type-textarea {
+  #tte-form-div #input-textarea-message {
     height: 302px;
   }
 
@@ -3070,7 +3117,7 @@ textarea {
     padding-left: 26px;
   }
 
-  #sp-tte-form-div #input-type-textarea {
+  #sp-tte-form-div #input-textarea-message {
     height: 302px;
   }
 

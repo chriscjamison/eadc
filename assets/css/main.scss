@@ -186,7 +186,7 @@ p,
 .sp-wc-artist-ul li, 
 .sp-wc-credits-h4, 
 .sp-wc-artist-a, 
-input[type=text], 
+.form-input-text, 
 textarea {
   font-family: $century_gothic_regular;
 }
@@ -244,7 +244,7 @@ h4,
 .sp-au-staff_member-span, 
 .sp-wc-artist-ul li, 
 .sp-wc-artist-a, 
-input[type=text], 
+.form-input-text, 
 textarea {
   font-size: $font_sm_4;
 }
@@ -451,7 +451,7 @@ h3,
 .sp-wc-credits-h3, 
 .sp-wc-credits-h4, 
 .sp-wc-artist-ul li, 
-input[type=text], 
+.form-input-text, 
 textarea {
   color: $black_1;
 }
@@ -653,7 +653,7 @@ $border_radius_16px: 16px;
 .sp-we-gallery-video, 
 .homepage-gallery-category-link-a, 
 .sp-gallery-category-link-a, 
-input[type=text], 
+.form-input-text, 
 textarea,  
 .form-submit, 
 #footer-sidebar .sidebar-img,
@@ -680,8 +680,12 @@ textarea,
   border-color: $white_1;
 }
 
-input[type=text], 
+.form-input-text, 
 textarea {
+  border-color: $light_gray_1;
+}
+
+#sp-search-form input[type=text] {
   border-color: $light_gray_1 !important;
 }
 
@@ -807,7 +811,7 @@ label {
   display: block;
 }
 
-input[type=text], 
+.form-input-text, 
 textarea {
   width: 100%;
   padding: $spacer_12px;
@@ -833,6 +837,54 @@ textarea {
 .content-visible {
   display: block !important;
 }
+
+.error-form_field {
+  border-color: #7F1F05 !important;
+  color: #7F1F05 !important ;
+}
+
+.valid-form_field {
+  border-color: #76A557 !important;
+}
+
+#form-alert {
+  width: inherit;
+  height: inherit;
+  display: table;
+  position: absolute;
+  background-color: $light_gray_1;
+  text-align: center;
+  opacity: 0.95;
+  z-index: 800;
+
+  div {
+    display: inline-table;
+    font-family: $century_gothic_regular;
+    font-size: $font_sm_4;
+    transform: translateY(100%);
+
+    div {
+      margin: 0 auto;
+      padding: $spacer_26px $spacer_26px;
+      transform: none;
+      background-color: #7F1F05;
+      color: $white_1;
+
+      span {
+        display: block;
+        border-bottom: 3px solid $light_gray_1;
+        font-size: $font_med_2;
+        font-weight: 600;
+        text-align: left;
+      }
+
+      p {
+        text-align: left;
+      }
+    }
+  }
+}
+
 
 
 /****** LINK/BUTTON BEHAVIOR ******/
@@ -1778,16 +1830,16 @@ textarea {
 }
 
 #content-ylo {
-  z-index: 600;
+  z-index: 150;
 }
 
 #content-ytc {
-  z-index: 500;
+  z-index: 150;
 }
 
 #content-we {
   overflow: hidden;
-  z-index: 300;
+  z-index: 150;
 }
 
 .content-copy-div {
@@ -2153,7 +2205,7 @@ textarea {
     margin-bottom: $spacer_26px;
   }
 
-  #input-type-textarea {
+  #input-textarea-message {
     height: 279px;
   }
 
@@ -3419,7 +3471,7 @@ textarea {
       padding-right: $spacer_26px;
     }
 
-    #input-type-textarea {
+    #input-textarea-message {
       height: 302px;
     }
   }
@@ -3572,7 +3624,7 @@ textarea {
   }
 
   #sp-tte-form-div {
-    #input-type-textarea {
+    #input-textarea-message {
       height: 302px;
     }
   }
