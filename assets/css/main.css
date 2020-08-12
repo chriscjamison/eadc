@@ -47,6 +47,8 @@ label,
 p,
 .ytc-package-per_week-span,
 .ytc-phone_number-a,
+.we-benefit-a,
+.tte-ul li,
 .package-ul li,
 .contact_info-span,
 .contact_info-a,
@@ -54,6 +56,7 @@ p,
 .mobile-nav-span,
 .menu-link-a,
 .sp-accordion-ul li,
+.sp-ylo-accordion-p,
 .sp-testimonials-social_media-a,
 .sp-ytc-credentials-a,
 .sp-ytc-services-ul li,
@@ -86,6 +89,7 @@ label,
 .footer-link-a,
 .menu-link-a,
 .sp-accordion-ul li,
+.sp-ylo-accordion-p,
 .sp-days-description-p,
 .sp-testimonials-social_media-copy-h5,
 .sp-testimonials-social_media-a,
@@ -101,6 +105,7 @@ p,
 .accordion .btn-link h4,
 .homepage-benefit_listing-link-span,
 .homepage-gallery-category-link-a,
+.tte-ul li,
 .sp-gallery-category-link-a,
 .form-submit,
 .footer-h3,
@@ -160,6 +165,7 @@ h2 {
 .ytc-dhss-span,
 .ytc-package-per_week-span,
 .ytc-phone_number-a,
+.tte-ul li,
 .contact_info-span,
 .contact_info-a,
 .footer-link-a,
@@ -183,6 +189,10 @@ h2 {
   font-weight: 400;
 }
 
+.sp-ylo-accordion-p {
+  font-weight: 400 !important;
+}
+
 h2 {
   letter-spacing: -0.6px;
 }
@@ -199,6 +209,7 @@ h1,
 .package-ul li,
 .ytc-insurance-h4,
 .sp-accordion-ul li,
+.sp-ylo-accordion-p,
 .sp-we-services-factoid-ul li {
   letter-spacing: 0.2px;
 }
@@ -239,6 +250,7 @@ h1,
 }
 
 .ytc-phone_number-a,
+.we-benefit-a,
 .contact_info-a,
 .footer-link-a,
 .menu-link-a,
@@ -265,6 +277,7 @@ h1,
 }
 
 .ytc-phone_number-a,
+.we-benefit-a,
 .header-nav-a,
 .contact_info-a,
 .footer-link-a,
@@ -298,6 +311,7 @@ h2,
 
 .content-copy-div p,
 .ytc-dhss-span,
+.tte-ul li,
 .accordion button,
 .package-dollar_amount_container-div,
 h4,
@@ -314,6 +328,7 @@ label,
 .sp-content-section p,
 .sp-accordion button,
 .sp-accordion-ul li,
+.sp-ylo-accordion-p,
 h3,
 .sp-testimonials-social_media-h4,
 .sp-testimonials-social_media-copy-h5,
@@ -807,6 +822,7 @@ textarea {
   cursor: default;
 }
 
+.we-benefit-a,
 .contact_info-a,
 .footer-link-a {
   transition-property: color;
@@ -814,6 +830,7 @@ textarea {
   transition-timing-function: ease-out;
 }
 
+.we-benefit-a:hover,
 .contact_info-a:hover,
 .footer-link-a:hover {
   color: #002599;
@@ -1504,11 +1521,12 @@ textarea {
 }
 
 #cta-homepage {
+  width: 460px;
   left: 127px;
 }
 
 #cta-logo {
-  width: 357px;
+  width: 408px;
   height: auto;
   position: absolute;
   left: 153px;
@@ -1673,8 +1691,13 @@ textarea {
   padding-left: 0;
   padding-right: 0;
 }
+#content-container-we .column-middle-div {
+  padding-left: 26px;
+  padding-right: 0;
+}
 #content-container-we .column-right-div {
-  padding-left: 47px;
+  margin-top: 9px;
+  padding-left: 26px;
   padding-right: 0;
 }
 
@@ -1855,6 +1878,10 @@ textarea {
 #homepage-we-benefits_container-copy-div .homepage-benefit-copy-div {
   display: none;
 }
+#homepage-we-benefits_container-copy-div .homepage-benefit-copy-div img {
+  width: 100%;
+  height: auto;
+}
 #homepage-we-benefits_container-copy-div #homepage-benefit-copy-1 {
   display: block;
 }
@@ -1862,16 +1889,16 @@ textarea {
   display: block;
 }
 #homepage-we-benefits_container-copy-div .homepage-benefit-copy-img {
-  margin: 9px 16px 0 0;
+  margin-top: 9px;
   display: block;
-  float: left;
 }
 #homepage-we-benefits_container-copy-div .homepage-benefit-copy-span {
+  margin-top: 9px;
   display: block;
 }
 
 #homepage-we-benefits_listing_container-div {
-  margin-top: 16px;
+  margin-top: 9px;
 }
 #homepage-we-benefits_listing_container-div .homepage-benefit_listing-button {
   width: 100%;
@@ -1903,8 +1930,8 @@ textarea {
   position: relative;
 }
 #homepage-we-gallery #homepage-we-gallery-category-videos .homepage-we-gallery-video {
-  width: 819px;
-  height: 466px;
+  width: 597px;
+  height: 317px;
 }
 #homepage-we-gallery #homepage-we-gallery-categories {
   position: relative;
@@ -1943,6 +1970,14 @@ textarea {
   padding: 7px 9px;
 }
 
+.tte-ul {
+  margin-top: 16px;
+  padding-left: 17px;
+}
+.tte-ul li {
+  list-style-image: url("/assets/img/common/icons/sp-dot.png");
+}
+
 /* ------ YOUR LOVED ONE ------ */
 .sp-copy-photo-img {
   width: 100%;
@@ -1970,7 +2005,7 @@ textarea {
 }
 
 #sp-ylo-gallery-nav {
-  bottom: 100px;
+  bottom: 55px;
   left: 44px;
 }
 
@@ -2000,7 +2035,7 @@ textarea {
 }
 
 .sp-testimonial-p {
-  margin: 16px 0 0 16px;
+  margin: 9px 0 0 16px;
 }
 
 .sp-testimonials-social_media-container-div {
@@ -2016,7 +2051,7 @@ textarea {
 }
 
 .sp-testimonials-social_media-copy-h5 {
-  margin-bottom: 5px;
+  margin-top: 9px;
 }
 
 .sp-testimonials-social_media-logo-a {
@@ -2024,15 +2059,11 @@ textarea {
 }
 
 #sp-testimonials-social_media-instagram {
-  margin-top: 32px;
+  margin-top: 28px;
 }
 
-#sp-testimonials-social_media-logo-facebook {
-  margin-top: 10px;
-}
-
-#sp-testimonials-social_media-logo-instagram {
-  margin-top: 2px;
+#sp-testimonials-social_media-container-copy-link-instagram {
+  margin-top: 6px;
 }
 
 #sp-ylo-video-iframe,
@@ -2081,6 +2112,9 @@ textarea {
   list-style-image: url("/assets/img/common/icons/sp-dot.png");
 }
 
+#sp-content-ytc-bottom .column-left-div {
+  padding-right: 0;
+}
 #sp-content-ytc-bottom h2 {
   margin-bottom: 26px;
 }
@@ -2092,6 +2126,7 @@ textarea {
 
 #sp-ytc-insurance-span {
   margin-top: 19px;
+  padding-left: 0;
 }
 
 #sp-ytc-insurance-div {
@@ -2284,6 +2319,13 @@ textarea {
 }
 #sp-content-au-middle-2 .column-right-div {
   padding-left: 13px;
+}
+
+#sp-content-au-bottom .sp-h3 {
+  margin-top: 16px;
+}
+#sp-content-au-bottom .column-middle-div {
+  padding-right: 26px;
 }
 
 /* ------ SEARCH ------ */
