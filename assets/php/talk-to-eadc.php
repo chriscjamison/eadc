@@ -90,7 +90,7 @@
 
 <?php
   if ($valid_fields == 4) {
-    $to      = "chris@chriscjamison.com";
+    $to      = "info@myeadc-stl.com";
     $subject = "Message from " . $visitors_first_name . " " . $visitors_last_name . ", sent from myeadc-stl.com";
     $message = 
               "From: " . $visitors_first_name . " " . $visitors_last_name . "\n\n" . 
