@@ -593,7 +593,7 @@ function toggleTabletMenu() {
   container_selector = ".sp-container-main, .carousel, .container, footer";
   body_selector = "body";
   html_selector = "html";
-  logo_selector = ".sp-header-nav #header-nav-link-logo";
+  logo_selector = ".sp-header-nav #header-nav-link-logo, #header-desktop-small-nav-logo";
 
   var nav_visibility_value = "";
 

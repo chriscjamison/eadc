@@ -171,6 +171,7 @@ p,
 .ytc-phone_number-a, 
 .we-benefit-a, 
 .tte-ul li, 
+.tte-phone_number-a, 
 .package-ul li, 
 .contact_info-span, 
 .contact_info-a, 
@@ -229,6 +230,7 @@ h4,
 .homepage-benefit_listing-link-span, 
 .homepage-gallery-category-link-a, 
 .tte-ul li, 
+.tte-phone_number-a, 
 .sp-gallery-category-link-a, 
 .form-submit, 
 .footer-h3, 
@@ -289,6 +291,7 @@ h2 {
 .ytc-package-per_week-span, 
 .ytc-phone_number-a, 
 .tte-ul li, 
+.tte-phone_number-a, 
 .contact_info-span, 
 .contact_info-a, 
 .footer-link-a, 
@@ -304,7 +307,8 @@ h2 {
 .sp-au-certifications-ul li, 
 .sp-au-document-info-span, 
 .sp-wc-artist-ul li, 
-.sp-wc-artist-a {
+.sp-wc-artist-a, 
+.sp-search-p {
   font-weight: 600;
 }
 
@@ -374,6 +378,7 @@ h1,
 
 .ytc-phone_number-a, 
 .we-benefit-a, 
+.tte-phone_number-a, 
 .contact_info-a, 
 .footer-link-a, 
 .menu-link-a, 
@@ -401,6 +406,7 @@ h1,
 
 .ytc-phone_number-a, 
 .we-benefit-a, 
+.tte-phone_number-a, 
 .header-nav-a, 
 .contact_info-a, 
 .footer-link-a, 
@@ -440,7 +446,8 @@ h2,
 h4, 
 .homepage-benefit_listing-link-span, 
 label, 
-.contact_info-span  {
+.contact_info-span, 
+.sp-search-p  {
   color: $black_3;
 }
 
@@ -840,7 +847,8 @@ textarea {
 #tablet-nav-a-menu, 
 .visible-tablet, 
 .visible-tablet-inline,  
-#mobile-nav { 
+#mobile-nav, 
+#header-desktop-small-nav-logo { 
   display: none;
 }
 
@@ -972,6 +980,7 @@ textarea {
 }
 
 .we-benefit-a, 
+.tte-phone_number-a, 
 .contact_info-a, 
 .footer-link-a {
   transition-property: color;
@@ -980,6 +989,7 @@ textarea {
 }
 
 .we-benefit-a:hover, 
+.tte-phone_number-a:hover, 
 .contact_info-a:hover, 
 .footer-link-a:hover {
   color: $dark_blue_6;
@@ -1695,7 +1705,7 @@ textarea {
   }
 
   #header-nav-logo {
-    width: 225px;
+    width: 275px;
     height: auto;
   }
 
@@ -1703,7 +1713,7 @@ textarea {
     height: 50px;
     float: none !important;
     position: relative;
-    top: $spacer_36px;
+    top: 50px;
     right: 76px;
   }
 
@@ -1725,7 +1735,7 @@ textarea {
   padding: $spacer_16px $spacer_26px $spacer_26px $spacer_26px;
   position: absolute;
   left: $spacer_139px;
-  bottom: $spacer_139px;
+  bottom: $spacer_109px;
   z-index: 2;
 
   h1 {
@@ -1773,8 +1783,12 @@ textarea {
   }
 }
 
-#sp-tte-cta-social_media-facebook {
+.sp-tte-cta-social_media-a {
   margin: 0 $spacer_16px 0 $spacer_10px;
+}
+
+#sp-tte-cta-social_media-twitter {
+  margin: 0 0 0 $spacer_10px;
 }
 
 .sp-tte-cta-detail_container-div:last-of-type {
@@ -2473,7 +2487,7 @@ textarea {
 }
 
 .sp-we-gallery-category {
-  height: 355px;
+  height: 416px;
   display: none;
   position: relative;
 }
@@ -2658,6 +2672,11 @@ textarea {
     top: 180px;
   }
 
+  .sp-search-p {
+    position: relative;
+    top: 180px;
+  }
+
   #sp-search-form {
     width: 655px;
     position: relative;
@@ -2678,7 +2697,7 @@ textarea {
 
     .gsc-search-button-v2 {
       width: 76px;
-      height: 53px;
+      height: 51px;
     }
 
     .gsc-control-cse {
@@ -2751,8 +2770,12 @@ textarea {
   }
 }
 
-#contact_info-social_media-facebook {
+.contact_info-social_media-a {
   margin-right: $spacer_13px;
+}
+
+#contact_info-social_media-twitter {
+  margin-right: 0;
 }
 
 #footer-links-container {
@@ -2859,10 +2882,23 @@ textarea {
 
 
 
-@media screen and (min-width: 415px) and (max-width: 1440px) {
+@media screen and (min-width: 415px) and (max-width: 1460px) {
 
+  #header-desktop-small-nav-logo, 
   #tablet-nav-a-menu {
     display: block;
+  }
+
+  #header-desktop-small-nav-logo {
+    position: absolute;
+    top: 59px;
+    left: 67px;
+    z-index: 300;
+  }
+
+  #header-desktop-small-nav-img {
+    width: 275px;
+    height: auto;
   }
 
   .visible-menu-content {
@@ -3034,6 +3070,10 @@ textarea {
   #tablet-nav-a-menu, 
   .visible-tablet {
     display: block;
+  }
+
+  #header-desktop-small-nav-logo {
+    display: none;
   }
 
   .visible-tablet-inline {
@@ -3209,6 +3249,12 @@ textarea {
 
   h2 {
     margin-bottom: $spacer_26px;
+  }
+
+  #sp-content-ylo-top {
+    .column-right-div {
+      margin-left: $spacer_76px;
+    }
   }
 
   #sp-content-ylo-middle-1 {
@@ -3419,7 +3465,8 @@ textarea {
 
   .sp-search-container-main { 
     h2, 
-    #sp-search-form {
+    #sp-search-form, 
+    .sp-search-p {
       padding-left: 54px !important;
       padding-right: 54px;
     }
@@ -3578,21 +3625,30 @@ textarea {
 
   /* ------ YOUR LOVED ONE ------ */
 
+  #sp-content-ylo-top {
+    .column-right-div {
+      margin-left: $spacer_67px;
+    }
+  }
+
   #sp-ylo-photo-services {
     margin-left: $spacer_16px;
-
   }
 
   #sp-content-ylo-middle-1 { 
+    .column-left-div {
+      display: none;
+    }
+
     .column-middle-div {
-      padding-left: $spacer_26px;
+      padding-left: 0;
       float: none;
     }
   }
 
   #sp-ylo-gallery-nav {
-    bottom: 32px;
-    left: 47px;
+    bottom: 62px;
+    left: 32px;
   }
 
   .sp-testimonial-img {
@@ -3621,7 +3677,7 @@ textarea {
   }
 
   #sp-testimonials-social_media-instagram {
-    margin-top: $spacer_32px;
+    margin-top: 27px;
   }
 
   #sp-ylo-video-iframe, 
@@ -3771,7 +3827,7 @@ textarea {
 
   #background-we, 
   #content-we {
-    height: 1732px;
+    height: 1792px;
   } 
 
   #background-tte, 
@@ -3809,7 +3865,7 @@ textarea {
 
     #homepage-we-gallery-photos-nav, 
     #homepage-we-gallery-videos-nav {
-      bottom: 90px;
+      bottom: 32px;
       left: 32px;
     }
 
@@ -3874,12 +3930,8 @@ textarea {
 
   /* ------ WHY EADC? ----- */
 
-  #sp-we-gallery {
-    height: 393px;
-  }
-
   .sp-we-gallery-category {
-    height: auto;
+    height: 456px;
   }
 
   #sp-we-gallery-photos-nav {
@@ -4008,6 +4060,10 @@ textarea {
   #sp-testimonials-social_media-container-copy-link-instagram {
     margin-right: 50px;
   }
+
+  #sp-testimonials-social_media-logo-instagram {
+    margin-left: 14px;
+  }
   
   #sp-ylo-video-iframe, 
   #sp-we-tour-iframe {
@@ -4033,9 +4089,8 @@ textarea {
 
   /* ----- WHY EADC? ------ */
 
-  #sp-we-gallery, 
   .sp-we-gallery-category {
-    height: 377px;
+    height: 435px;
   }
 
   #sp-we-gallery-category-videos {
@@ -4068,7 +4123,8 @@ textarea {
   .visible-desktop-inline, 
   #tablet-nav-a-menu, 
   .visible-tablet, 
-  .visible-tablet-inline {
+  .visible-tablet-inline, 
+  #header-desktop-small-nav-logo {
     display: none;
   }
 
@@ -4570,10 +4626,13 @@ textarea {
     }
   }
 
-  #menu-social_media-facebook {
+  .menu-social_media-a {
     margin-bottom: $spacer_16px;
   }
 
+  #menu-social_media-twitter {
+    margin-bottom: 0;
+  }
 
 
   /****** CAROUSEL ******/
@@ -4810,6 +4869,7 @@ textarea {
   #sp-ytc-insurance-div {
     margin-top: $spacer_16px;
     margin-left: 0;
+    padding-left: 0;
   }
 
   #sp-ytc-insurance-mohealthnet {
@@ -4861,6 +4921,10 @@ textarea {
     display: inline;
   }
 
+  .sp-tte-cta-social_media-a {
+    margin: 0 $spacer_10px;
+  }
+
   #sp-tte-location-map-iframe {
     margin-top: 0;
     position: relative;
@@ -4900,6 +4964,10 @@ textarea {
 
     h2 {
       margin-bottom: $spacer_16px;
+      top: 145px;
+    }
+
+    .sp-search-p {
       top: 145px;
     }
   
@@ -5027,7 +5095,7 @@ textarea {
 
   #background-we, 
   #content-we {
-    height: 1357px;
+    height: 1382px;
   }
 
   #content-tte, 
@@ -5047,10 +5115,8 @@ textarea {
   }
 
   #homepage-we-gallery {
-    height: 251px;
-
     .homepage-we-gallery-category {
-      height: 186px;
+      height: 214px;
     }
     
     #homepage-we-gallery-category-videos {
@@ -5062,7 +5128,7 @@ textarea {
   }
 
   .sp-we-gallery-category {
-    height: 186px;
+    height: 214px;
   }
 
   #sp-we-gallery-category-videos {
@@ -5137,7 +5203,7 @@ textarea {
 
   #background-we, 
   #content-we {
-    height: 1353px;
+    height: 1383px;
   }
 
   #background-tte, 
@@ -5150,10 +5216,8 @@ textarea {
   }
 
   #homepage-we-gallery { 
-    height: 271px;
-
     .homepage-we-gallery-category {
-      height: 209px;
+      height: 240px;
     }
 
     #homepage-we-gallery-category-videos { 
@@ -5170,12 +5234,12 @@ textarea {
     height: 223px;
   }
 
-  #sp-we-gallery {
-    height: 205px;
+  #sp-ytc-insurance-mohealthnet {
+    margin-right: 88px;
   }
 
   .sp-we-gallery-category {
-    height: 205px;
+    height: 240px;
   }
 
   #sp-we-gallery-category-videos {
@@ -5244,7 +5308,7 @@ textarea {
 
   #background-we, 
   #content-we {
-    height: 1362px;
+    height: 1390px;
   }
  
   #background-tte, 
@@ -5256,10 +5320,8 @@ textarea {
   /* ------ COPY ------ */
 
   #homepage-we-gallery {
-    height: 239px;
-
     .homepage-we-gallery-category {
-      height: 180px;
+      height: 204px;
     }
 
     #homepage-we-gallery-category-videos { 
@@ -5274,18 +5336,18 @@ textarea {
     margin-left: 12px;
   }
 
+  #sp-ytc-insurance-mohealthnet {
+    margin-right: 34px;
+  }
+
   #sp-ylo-video-iframe, 
   #sp-we-tour-iframe {
     width: 360px;
     height: 194px;
   }
 
-  #sp-we-gallery {
-    height: 180px;
-  }
-
   .sp-we-gallery-category {
-    height: 176px;
+    height: 204px;
   }
 
   .sp-gallery-categories {

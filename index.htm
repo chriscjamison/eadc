@@ -2,14 +2,23 @@
 <html>
   <head>
     <title>Welcome to Emmanuel Adult Day Center</title>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="Emmanuel Adult Day Center, adult day care, seniors, senior day care, St. Louis, 
+                                   Missouri, MO">
+    <meta name="description" content="We offer care and compassion for the seniors of the St. Louis Metropolitan 
+                                      Area we serve and provide peace of mind for their caretakers.">
+    <meta property="og:title" content="Welcome to Emmanuel Adult Day Center">
+    <meta property="og:image" content="https://myeadc-stl.com/assets/img/common/icons/favicon.png">
+    <meta property="og:url" content="http://myeadc-stl.com">
         
     <!-- BOOTSTRAP 4 REFERENCE -->
     <link href="/assets/css/bootstrap.css" rel="stylesheet">
 
     <!-- STYLESHEET REFERENCE LINK -->
     <link rel="stylesheet" type="text/css" href="/assets/css/main.css">
-    
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     
     <!-- FAVICON REFERENCE -->
     <link rel="icon" href="/assets/img/common/icons/favicon.png" sizes="32x32">
@@ -19,9 +28,15 @@
 <!-- HEADER INCLUDING NAVIGATION -->
     <header class="visible-desktop visible-tablet">
 
+<!-- LOGO -->
+      <a href="/" title="Emmanuel Adult Day Center - Home" id="header-desktop-small-nav-logo"><img src="/assets/img/common/logo/logo.svg" alt="Emmanuel Adult Day Center" id="header-desktop-small-nav-img"></a>
+
 <!-- DESKTOP MAIN NAVIGATION -->
       <a href="javascript:toggleTabletMenu();" title="Menu" class="nav-icon-a" id="tablet-nav-a-menu"><img src="/assets/img/common/icons/menu-desktop.svg" alt="Menu" class="desktop-nav-img" id="tablet-nav-icon-img"></a>
-      <nav class="homepage-desktop-header-nav" id="desktop-header-nav">
+      <nav class="sp-header-nav" id="desktop-header-nav">
+
+<!-- LOGO -->
+        <a href="/" title="Emmanuel Adult Day Center - Home" id="header-nav-link-logo"><img src="/assets/img/common/logo/logo.svg" alt="Emmanuel Adult Day Center" class="visible-desktop" id="header-nav-logo"></a>
         <ul id="header-nav-ul">
           <li>
             <a href="/" title="Home" class="header-nav-a nav-link-bold" id="header-nav-link-home">Home</a>
@@ -57,7 +72,7 @@
         <div class="carousel-item active" id="carousel-item-landing">
 
  <!-- LOGO -->
-          <img src="/assets/img/common/logo/logo.svg" alt="Emmanuel Adult Day Center" class="visible-desktop" id="cta-logo">
+          <!-- <img src="/assets/img/common/logo/logo.svg" alt="Emmanuel Adult Day Center" class="visible-desktop" id="cta-logo"> -->
 
  <!-- CALL TO ACTION -->
           <div class="carousel-cta" id="cta-homepage">
@@ -65,8 +80,8 @@
               Welcome to Emmanuel Adult Day Center!
             </h1>
             <p>
-              We offer care and compassion for the seniors we serve and provide peace of mind 
-              for their caretakers.
+              We offer care and compassion for the seniors of the St. Louis Metropolitan Area we serve 
+              and provide peace of mind for their caretakers.
             </p>
             <a href="#content-tte" class="cta-a" id="cta-action">Talk to EADC about your senior&rsquo;s wellbeing</a>
           </div>
@@ -103,7 +118,8 @@
           </div>
           <div id="menu-social_media">
             <a href="https://facebook.com/Emmanuel-Adult-Day-Center-STL-100416428437189" title="Link to Emmanuel Adult Day Center's Facebook Group Page" target="_blank" class="menu-social_media-a" id="menu-social_media-facebook"><img src="/assets/img/common/social-media/facebook.png"></a>
-            <a href="https://facebook.com/Emmanuel-Adult-Day-Center-STL-100416428437189" title="Link to Emmanuel Adult Day Center's Instagram Page" target="_blank" class="menu-social_media-a" id="menu-social_media-instagram"><img src="/assets/img/common/social-media/instagram.png"></a>
+            <a href="https://instagram.com/emmanuel_adult_day_center_stl" title="Link to Emmanuel Adult Day Center's Instagram Page" target="_blank" class="menu-social_media-a" id="menu-social_media-instagram"><img src="/assets/img/common/social-media/instagram.png"></a>
+            <a href="https://twitter.com/adult_llc" title="Link to Emmanuel Adult Day Center's Twitter Page" target="_blank" class="menu-social_media-a" id="menu-social_media-twitter"><img src="/assets/img/common/social-media/twitter.png"></a>
           </div>
         </div>
       </div>
@@ -144,11 +160,15 @@
           <h2 class="col-lg-6 col-sm-12">Your Loved One</h2>
           <div class="column-left-div col-xl-6 col-lg-7 col-sm-12" id="homepage-ylo-gallery">
             <div class="gallery-nav-div" id="homepage-ylo-gallery-nav">
-              <a href="javascript:swapGalleryContent('homepage-ylo-photo', '1');" class="gallery-nav-a gallery-a-visible">&nbsp;</a>
-              <a href="javascript:swapGalleryContent('homepage-ylo-photo', '2');" class="gallery-nav-a">&nbsp;</a>
+              <a href="javascript:swapGalleryContent('homepage-ylo-photo', '1');" title="Photo #1" class="gallery-nav-a gallery-a-visible">&nbsp;</a>
+              <a href="javascript:swapGalleryContent('homepage-ylo-photo', '2');" title="Photo #2" class="gallery-nav-a">&nbsp;</a>
+              <a href="javascript:swapGalleryContent('homepage-ylo-photo', '3');" title="Photo #3" class="gallery-nav-a">&nbsp;</a>
+              <a href="javascript:swapGalleryContent('homepage-ylo-photo', '4');" title="Photo #4" class="gallery-nav-a">&nbsp;</a>
             </div>
-            <img src="/assets/img/copy/homepage/your-loved-one/ylo-1.jpg" class="homepage-ylo-photo" id="homepage-ylo-photo-1">
-            <img src="/assets/img/copy/homepage/your-loved-one/ylo-2.jpg" class="homepage-ylo-photo" id="homepage-ylo-photo-2">
+            <img src="/assets/img/copy/homepage/your-loved-one/ylo-1.jpg" alt="Your loved one's wellbeing will grow as they attend EADC." class="homepage-ylo-photo" id="homepage-ylo-photo-1">
+            <img src="/assets/img/copy/homepage/your-loved-one/ylo-2.jpg" alt="Your loved one's sense of belonging at EADC will improve their vitality." class="homepage-ylo-photo" id="homepage-ylo-photo-2">
+            <img src="/assets/img/copy/homepage/your-loved-one/ylo-3.jpg" alt="Your loved one is welcome at EADC, five days a week." class="homepage-ylo-photo" id="homepage-ylo-photo-3">
+            <img src="/assets/img/copy/homepage/your-loved-one/ylo-4.jpg" alt="Your loved one's will receive care with compassion." class="homepage-ylo-photo" id="homepage-ylo-photo-4">
           </div>
           <div class="column-right-div col-xl-5 col-lg-4 col-sm-12" id="ylo-copy">
             <p class="copy-first-p">
@@ -238,7 +258,7 @@
           <div class="col-lg-3 col-md-6 col-sm-12 column-right-div">
             <h3>Pricing Information</h3>
             <p>
-              Mirinda Cox is happy to review EADC&rsquo;s pricing options with you. Please call her at  
+              Mirinda Johnson is happy to review EADC&rsquo;s pricing options with you. Please call her at  
               <span class="contact_info-span visible-desktop-inline visible-tablet-inline">(314) 475-5556.</span>
               <a href="tel:(314) 475-5556" title="Phone Number: (314) 475-5556" class="visible-mobile-inline ytc-phone_number-a">(314) 475-5556.</a>
             </p>
@@ -289,11 +309,11 @@
                   families to help aid in their mental health needs. Services include psychological/emotional support 
                   through individual &amp; group sessions. Case management services are also provided on an as 
                   needed basis. Please visit the website of our counselor, Nicole Johnson, to learn more about her 
-                  services - <a href="https://nljcounselingandcoaching.com" class="we-benefit-a">https://nljcounselingandcoaching.com.</a> 
+                  services - <a href="https://nljcounselingandcoaching.com" title="Website of Nicole Johnson" class="we-benefit-a">https://nljcounselingandcoaching.com.</a> 
                 </p>
               </div>
               <div class="homepage-benefit-copy-div" id="homepage-benefit-copy-2">
-                <img src="/assets/img/copy/homepage/why-eadc/thumbnail-1.jpg" class="homepage-benefit-copy-img">
+                <img src="/assets/img/copy/homepage/why-eadc/thumbnail-2.jpg" class="homepage-benefit-copy-img">
                 <p class="homepage-benefit-copy-p">
                   <span class="homepage-benefit-copy-span">Medical care/Health screenings</span>
                   EADC has an in-house RN to provide medical services &amp; health screenings to each 
@@ -304,7 +324,7 @@
                 </p>
               </div>
               <div class="homepage-benefit-copy-div" id="homepage-benefit-copy-3">
-                <img src="/assets/img/copy/homepage/why-eadc/thumbnail-1.jpg" class="homepage-benefit-copy-img">
+                <img src="/assets/img/copy/homepage/why-eadc/thumbnail-3.jpg" class="homepage-benefit-copy-img">
                 <p class="homepage-benefit-copy-p">
                   <span class="homepage-benefit-copy-span">Community</span>
                   EADC creates an optimal environment for community &amp; socialization in our facility. 
@@ -314,7 +334,7 @@
                 </p>
               </div>
               <div class="homepage-benefit-copy-div" id="homepage-benefit-copy-4">
-                <img src="/assets/img/copy/homepage/why-eadc/thumbnail-1.jpg" class="homepage-benefit-copy-img">
+                <img src="/assets/img/copy/homepage/why-eadc/thumbnail-4.jpg" class="homepage-benefit-copy-img">
                 <p class="homepage-benefit-copy-p">
                   <span class="homepage-benefit-copy-span">Transportation/Meals</span>
                   Donec molestie interdum lorem, scelerisque maximus erat suscipit vitae. In pellentesque posuere 
@@ -322,7 +342,7 @@
                 </p>
               </div>
               <div class="homepage-benefit-copy-div" id="homepage-benefit-copy-5">
-                <img src="/assets/img/copy/homepage/why-eadc/thumbnail-1.jpg" class="homepage-benefit-copy-img">
+                <img src="/assets/img/copy/homepage/why-eadc/thumbnail-5.jpg" class="homepage-benefit-copy-img">
                 <p class="homepage-benefit-copy-p">
                   <span class="homepage-benefit-copy-span">Exercise/Recreation</span>
                   Donec molestie interdum lorem, scelerisque maximus erat suscipit vitae. In pellentesque posuere 
@@ -334,12 +354,16 @@
           <div class="column-right-div col-lg-5 col-sm-12" id="homepage-we-gallery">
             <div class="homepage-we-gallery-category content-visible" id="homepage-we-gallery-category-photos">
               <div class="gallery-nav-div" id="homepage-we-gallery-photos-nav">
-                <a href="javascript:swapGalleryContent('homepage-we-gallery-img', '1');" class="gallery-nav-a gallery-a-visible">&nbsp;</a>
-                <a href="javascript:swapGalleryContent('homepage-we-gallery-img', '2');" class="gallery-nav-a">&nbsp;</a>
+                <a href="javascript:swapGalleryContent('homepage-we-gallery-img', '1');" title="Photo #1" class="gallery-nav-a gallery-a-visible">&nbsp;</a>
+                <a href="javascript:swapGalleryContent('homepage-we-gallery-img', '2');" title="Photo #2" class="gallery-nav-a">&nbsp;</a>
+                <a href="javascript:swapGalleryContent('homepage-we-gallery-img', '3');" title="Photo #3" class="gallery-nav-a">&nbsp;</a>
+                <a href="javascript:swapGalleryContent('homepage-we-gallery-img', '4');" title="Photo #4" class="gallery-nav-a">&nbsp;</a>
               </div>
               <div id="homepage-we-gallery-photos">
-                <img src="/assets/img/copy/homepage/why-eadc/photo-1.jpg" class="homepage-we-gallery-img" id="homepage-we-gallery-img-1">
-                <img src="/assets/img/copy/homepage/why-eadc/photo-2.jpg" class="homepage-we-gallery-img" id="homepage-we-gallery-img-2">
+                <img src="/assets/img/copy/homepage/why-eadc/photo-1.jpg" alt="EADC's recreation room includes a TV, pool table, and a mini-basketball hoop." class="homepage-we-gallery-img" id="homepage-we-gallery-img-1">
+                <img src="/assets/img/copy/homepage/why-eadc/photo-2.jpg" alt="EADC's facility includes space for lounging and chatting with other seniors." class="homepage-we-gallery-img" id="homepage-we-gallery-img-2">
+                <img src="/assets/img/copy/homepage/why-eadc/photo-3.jpg" alt="EADC's welcoming lobby." class="homepage-we-gallery-img" id="homepage-we-gallery-img-3">
+                <img src="/assets/img/copy/homepage/why-eadc/photo-4.jpg" alt="EADC's fellowship space holds our community of participants." class="homepage-we-gallery-img" id="homepage-we-gallery-img-4">
               </div>
             </div>
             <div class="homepage-we-gallery-category" id="homepage-we-gallery-category-videos">
@@ -351,8 +375,8 @@
               </div>
             </div>
             <div id="homepage-we-gallery-categories">
-              <a href="javascript:swapGalleryCategories('homepage-we', 'photos');" class="homepage-gallery-category-link-a" id="homepage-we-gallery-category-photos">Photos</a>
-              <a href="javascript:swapGalleryCategories('homepage-we', 'videos');" class="homepage-gallery-category-link-a gallery-category-visible" id="homepage-we-gallery-category-videos">Video</a>
+              <a href="javascript:swapGalleryCategories('homepage-we', 'photos');" title="Photos" class="homepage-gallery-category-link-a" id="homepage-we-gallery-category-photos">Photos</a>
+              <a href="javascript:swapGalleryCategories('homepage-we', 'videos');" title="Video" class="homepage-gallery-category-link-a gallery-category-visible" id="homepage-we-gallery-category-videos">Video</a>
             </div>
           </div> 
         </div>
@@ -376,9 +400,11 @@
             <p>
               Please contact us anytime for any questions that you may have.
             </p>
-            <ul class="tte-ul">
-              <li>
-                Phone Number: (314) 475-5556</li>
+            <ul class="tte-ul visible-desktop visible-tablet">
+              <li>Phone Number: (314) 475-5556</li>
+            </ul>
+            <ul class="tte-ul visible-mobile">
+              <li>Phone Number: <a href="tel:(314) 475-5556" title="Phone Number: (314) 475-5556" class="visible-mobile-inline tte-phone_number-a">(314) 475-5556.</a></li>
             </ul>
           </div>
           <div class="col-lg-7 col-sm-12 column-right-div" id="tte-form-div">
@@ -390,7 +416,7 @@
               }
             </script>
 
-            <form method="post" action="/assets/php/talk-to-eadc.php?v=1.1.4" name="tte-contact_form" id="tte-contact_form">
+            <form method="post" action="/assets/php/talk-to-eadc.php?v=1.1.5" name="tte-contact_form" id="tte-contact_form">
             <div class="form-column-left col-lg-5 col-md-6 col-sm-12">
               <div class="form-field-div" id="field-first_name">
                 <label for="first_name" class="form-label">Type your first name below:</label>
@@ -499,8 +525,9 @@
           </div>
           <div class="contact_info-div" id="contact_info-social_media">
             <h4 class="contact_info-h4">Social Media:</h4>
-            <a href="https://facebook.com/Emmanuel-Adult-Day-Center-STL-100416428437189" title="Link to Emmanuel Adult Day Center's Facebook Group Page" target="_blank" class=contact_info-social_media-a" id="contact_info-social_media-facebook"><img src="/assets/img/common/social-media/facebook.png"></a>
+            <a href="https://facebook.com/Emmanuel-Adult-Day-Center-STL-100416428437189" title="Link to Emmanuel Adult Day Center's Facebook Group Page" target="_blank" class="contact_info-social_media-a" id="contact_info-social_media-facebook"><img src="/assets/img/common/social-media/facebook.png"></a>
             <a href="https://instagram.com/emmanuel_adult_day_center_stl" title="Link to Emmanuel Adult Day Center's Instagram Page" target="_blank" class="contact_info-social_media-a" id="contact_info-social_media-instagram"><img src="/assets/img/common/social-media/instagram.png"></a>
+            <a href="https://twitter.com/adult_llc" title="Link to Emmanuel Adult Day Center's Instagram Page" target="_blank" class="contact_info-social_media-a" id="contact_info-social_media-twitter"><img src="/assets/img/common/social-media/twitter.png"></a>
           </div>
         </div>
         <div class="col-lg-3 col-md-6 col-sm-12 column-middle-div" id="footer-links-container">
