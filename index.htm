@@ -13,6 +13,47 @@
     <meta property="og:title" content="Welcome to Emmanuel Adult Day Center">
     <meta property="og:image" content="https://myeadc-stl.com/assets/img/common/icons/favicon.png">
     <meta property="og:url" content="http://myeadc-stl.com">
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "@id": "https://myeadc-stl.com",
+        "name": "Emmanuel Adult Day Center",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "11726 St. Charles Rock Road, Suites F and G",
+          "addressLocality": "Bridgeton",
+          "addressRegion": "MO",
+          "postalCode": "63044",
+          "addressCountry": "US"
+        },
+        "image": [
+          "https://test.myeadc-stl.com/assets/img/common/logo/desktop.png"
+        ], 
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 38.7445124,
+          "longitude": 90.4181677
+        },
+        "url": "https://test.myeadc-stl.com",
+        "telephone": "+13144755556",
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday", 
+              "Wednesday",
+              "Thursday",
+              "Friday"
+            ],
+            "opens": "7:00",
+            "closes": "18:00"
+          }
+        ]
+      }
+    </script>
         
     <!-- BOOTSTRAP 4 REFERENCE -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
@@ -71,9 +112,6 @@
       <div class="carousel-inner" role="listbox">
         <div class="carousel-item active" id="carousel-item-landing">
 
- <!-- LOGO -->
-          <!-- <img src="/assets/img/common/logo/logo.svg" alt="Emmanuel Adult Day Center" class="visible-desktop" id="cta-logo"> -->
-
  <!-- CALL TO ACTION -->
           <div class="carousel-cta" id="cta-homepage">
             <h1>
@@ -85,9 +123,7 @@
             </p>
             <a href="#content-tte" class="cta-a" id="cta-action">Talk to EADC about your senior&rsquo;s wellbeing</a>
           </div>
-          <img class="img-fluid visible-desktop" src="/assets/img/copy/homepage/hero/hero.jpg" alt="Welcome to Emmanuel Adult Care Center!">
-          <img class="img-fluid visible-mobile" src="/assets/img/copy/homepage/hero/hero-mobile.jpg" alt="Welcome to Emmanuel Adult Care Center!">
-          <img class="img-fluid visible-tablet" src="/assets/img/copy/homepage/hero/hero-tablet.jpg" alt="Welcome to Emmanuel Adult Care Center!">
+          <img class="img-fluid" src="/assets/img/copy/homepage/hero/hero.jpg" alt="Welcome to Emmanuel Adult Care Center!" id="carousel-cta-hero">
         </div>
       </div>
     </div>
