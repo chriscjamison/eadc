@@ -58,7 +58,7 @@ $black_3: #020000;
 
 /****** FONTS ******/
 
-@import url("http://fast.fonts.net/t/1.css?apiType=css&projectid=081e16cc-76ce-4f91-a436-abc2e1fc02bc");
+@import url("https://fast.fonts.net/t/1.css?apiType=css&projectid=081e16cc-76ce-4f91-a436-abc2e1fc02bc");
 
 @font-face{
   font-family: "Century Gothic WGL W01 Regular";
@@ -2145,6 +2145,10 @@ textarea {
 
 #ytc-insurance-mohealthnet {
   margin-right: $spacer_36px;
+}
+
+#ytc-insurance-tricare {
+  height: 55px;
 }
 
 #homepage-we-benefits_container-copy-div {

@@ -141,7 +141,7 @@
 
 <?php if ($url_string != ""): ?>
 
-<html>
+<html lang="en">
   <script>window.location.href = "<?php echo $url_string; ?>";</script>
 </html>
 

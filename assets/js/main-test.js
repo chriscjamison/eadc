@@ -153,7 +153,7 @@ function adjustBackground() {
     var footer_selector = "";
 
     // Object variables that will contain the jQuery objects that 
-    // refer to the 'background circles' above the footer, the <html> 
+    // refer to the 'background circles' above the footer, the <html lang="en"> 
     // DOM element and the footer are initialized.
     var background_circles_element = {};
     var html_element = {};
