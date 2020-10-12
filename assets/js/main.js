@@ -1183,7 +1183,6 @@ function loadHeroImage() {
       browserType = "desktop";
     }
     
-    
     // A String that will hold the URL of the current webpageis initialized.
     var urlPathname = window.location.pathname;
 

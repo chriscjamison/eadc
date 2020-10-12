@@ -2645,17 +2645,7 @@ textarea {
   margin-bottom: 0;
 }
 
-#sp-content-au-middle-2 {
-  .sp-h3 {
-    margin-top: 0;
-  }
-
-  .column-right-div {
-    padding-left: $spacer_13px;
-  }
-}
-
-#sp-content-au-bottom {
+#sp-content-au-middle {
   .sp-h3 {
     margin-top: $spacer_16px;
   }
@@ -2664,6 +2654,14 @@ textarea {
     padding-right: $spacer_26px;
   }
 }
+
+#sp-content-au-bottom {
+  .sp-h3 {
+    margin-top: 0;
+  }
+}
+
+
 
 
 /* ------ SEARCH ------ */
@@ -4948,13 +4946,15 @@ textarea {
     margin-bottom: 0;
   }
 
+  #sp-content-au-middle, 
   #sp-content-au-bottom { 
     .column-middle-div {
       margin-top: 0 !important;
     }
 
     .sp-h3 {
-      margin-top: $spacer_6px;
+      margin-top: 0;
+      margin-bottom: $spacer_10px;
     }
   }
 

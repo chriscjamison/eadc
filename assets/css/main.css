@@ -2332,18 +2332,15 @@ textarea {
   margin-bottom: 0;
 }
 
-#sp-content-au-middle-2 .sp-h3 {
-  margin-top: 0;
+#sp-content-au-middle .sp-h3 {
+  margin-top: 16px;
 }
-#sp-content-au-middle-2 .column-right-div {
-  padding-left: 13px;
+#sp-content-au-middle .column-middle-div {
+  padding-right: 26px;
 }
 
 #sp-content-au-bottom .sp-h3 {
-  margin-top: 16px;
-}
-#sp-content-au-bottom .column-middle-div {
-  padding-right: 26px;
+  margin-top: 0;
 }
 
 /* ------ SEARCH ------ */
@@ -4196,11 +4193,14 @@ h2 {
     margin-bottom: 0;
   }
 
-  #sp-content-au-bottom .column-middle-div {
+  #sp-content-au-middle .column-middle-div,
+#sp-content-au-bottom .column-middle-div {
     margin-top: 0 !important;
   }
-  #sp-content-au-bottom .sp-h3 {
-    margin-top: 6px;
+  #sp-content-au-middle .sp-h3,
+#sp-content-au-bottom .sp-h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
   }
 
   /* ------ SEARCH ------ */
