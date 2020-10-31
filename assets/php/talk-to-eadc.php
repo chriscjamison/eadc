@@ -94,9 +94,10 @@
     $subject = "Message from " . $visitors_first_name . " " . $visitors_last_name . ", sent from myeadc-stl.com";
     $message = 
               "From: " . $visitors_first_name . " " . $visitors_last_name . "\n\n" . 
-              "Email Address: " . $visitors_email_address . "\n" . 
+              "Email Address: " . $visitors_email_address . "\n\n" . 
               "Message: " . "\n" . $visitors_message;
-    $headers = "From: no_reply@myeadc-stl.com" . "\r\n" . 
+    $headers = 
+              "From: info@myeadc-stl.com" . "\r\n" . 
               "Reply-To: no_reply@myeadc-stl.com" . "\r\n" .
               "X-Mailer: PHP/" . phpversion();
 
@@ -111,9 +112,10 @@
               "I look forward to talking to you soon. \n\n" .
               "Mirinda Johnson \n" . 
               "Director of Operations";
-    $headers = "From: no_reply@myeadc-stl.com" . "\r\n" . 
-              "Reply-To: no_reply@myeadc-stl.com" . "\r\n" .
-              "X-Mailer: PHP/" . phpversion(); 
+    $headers = 
+                "From: info@myeadc-stl.com" . "\r\n" . 
+                "Reply-To: no_reply@myeadc-stl.com" . "\r\n" . 
+                "X-Mailer: PHP/" . phpversion(); 
 
     mail($to, $subject, $message, $headers);
 
