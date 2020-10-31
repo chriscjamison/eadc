@@ -1159,9 +1159,13 @@ function loadHeroImage() {
   
   **************************************************************** */
 
-  // A String that will hold the CSS selector that refers to the 
-  // <img> that holds the hero image.
-  var heroSelector = "#carousel-cta-hero";
+  // A String that will hold the CSS selector for the Bootstrap 
+  // 'container' is initialized.
+  var heroSelector = "";
+
+  // The CSS selector that refers to the Bootstrap 'container' is 
+  // passed on.
+  heroSelector = ".carousel-cta";
 
   // IF statement that completes the execution of the function only 
   // if the current webpage contains a hero image.
@@ -1211,10 +1215,44 @@ function loadHeroImage() {
     // The value of 'filename' will have the suffix of the filename removed.
     filename = filename.slice(0, filename.indexOf(searchChar));
 
+    // A String that will hold the CSS selector that refers to the 
+    // <div> that preceedes the hero image is initialized.
+    var ctaSelector = "";
+
+    // SWITCH statement that will define the value of 'ctaSelector' so 
+    // that it matches the CSS selector of the CTA <div> element for 
+    // the current webpage.
+    switch (filename)  {
+      case "about-us":
+        ctaSelector = "#cta-au"; 
+      break;
+
+      case "blog":
+        ctaSelector = "#cta-blog"; 
+      break;
+
+      case "talk-to-eadc":
+        ctaSelector = "#cta-tte"; 
+      break;
+
+      case "why-eadc": 
+        ctaSelector = "#cta-we"; 
+      break;
+
+      case "you-the-caretaker":
+        ctaSelector = "#cta-ytc"; 
+      break;
+
+      case "your-loved-one":
+        ctaSelector = "#cta-ylo"; 
+      break;
+    }
+
     // IF statement that will set the match the value of 'filename'
     // to correspond with the homepage if the current webpage is the homepage.
     if (filename === "" || filename === "index")  {
       filename = "homepage/hero";
+      ctaSelector = "#cta-homepage";
     }
 
     // A String that will hold the filename of the hero image to be loaded 
@@ -1248,12 +1286,14 @@ function loadHeroImage() {
       heroImageClassName = heroImageClassName + "desktop";
     }
 
-    // The path that will hold the hero image for the current webpage 
-    // is passed on.
-    $(heroSelector).attr("src", imgPath);
+    // A String that will hold the HTML that will defines the <img> tag 
+    // containing the hero image is initialized.
+    var heroImageHTML = "";
+
+    heroImageHTML = "<img class=\"img-fluid\" src=\"" + imgPath + "\" alt=\"Emmanuel Adult Day Center strives to care for your loved one like they are family\" " + heroImageClassName + " id=\"carousel-cta-hero\">";
 
     // A CSS class name that will determine the layout of the hero image 
     // is passed on.
-    $(heroSelector).addClass(heroImageClassName);
+    $(ctaSelector).after(heroImageHTML);
   }
 } // END of loadHeroImage
