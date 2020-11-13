@@ -119,7 +119,7 @@
 
     mail($to, $subject, $message, $headers);
 
-    $url_string = "http://test.myeadc-stl.com" . $current_page . "?first_name=" . $visitors_first_name;
+    $url_string = "http://myeadc-stl.com" . $current_page . "?first_name=" . $visitors_first_name;
   } else {
     reset($form_is_valid_Array);
 
@@ -135,7 +135,7 @@
       } 
     }
 
-    $url_string = "http://test.myeadc-stl.com" . $current_page . "?fields_in_error=" . $fields_in_error . "&first_name=" . $_POST['first_name'] . "&last_name=" . $_POST['last_name'] . "&email_address=" . $_POST['email_address'] . "&message=" . $_POST['message'];
+    $url_string = "http://myeadc-stl.com" . $current_page . "?fields_in_error=" . $fields_in_error . "&first_name=" . $_POST['first_name'] . "&last_name=" . $_POST['last_name'] . "&email_address=" . $_POST['email_address'] . "&message=" . $_POST['message'];
   }
 
   $url_string = $url_string . "#" . $url_hash;

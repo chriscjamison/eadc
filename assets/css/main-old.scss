@@ -27,7 +27,6 @@ $light_brown_3: #fff7cd;
 $light_brown_4: #e9d9b0;
 $light_brown_5: #dae5c7;
 $light_brown_6: #cdd8ba;
-$light_brown_7: #faf8ea;
 
 $dark_brown_1: #ccc073;
 $dark_brown_2: #c3bb93;
@@ -94,7 +93,6 @@ $spacer_19px: 19px;
 
 $spacer_20px: 20px;
 $spacer_21px: 21px;
-$spacer_24px: 24px;
 $spacer_26px: 26px;
 $spacer_28px: 28px;
 $spacer_29px: 29px;
@@ -107,7 +105,6 @@ $spacer_47px: 47px;
 
 $spacer_54px: 54px;
 
-$spacer_64px: 64px;
 $spacer_67px: 67px;
 
 $spacer_71px: 71px;
@@ -213,7 +210,6 @@ label,
 .contact_info-span, 
 .contact_info-a, 
 .footer-link-a, 
-.copyright-h4, 
 .menu-link-a, 
 .sp-accordion-ul li, 
 .sp-ylo-accordion-p, 
@@ -239,6 +235,7 @@ h4,
 .form-submit, 
 .footer-h3, 
 .contact_info-h4,
+.copyright-h4, 
 .menu-h3, 
 .sp-days-description-h4, 
 .sp-testimonials-social_media-h4, 
@@ -493,10 +490,6 @@ textarea {
 
 /****** COLOR STYLING ******/
 
-.carousel {
-  background-color: $light_brown_7;
-}
-
 #header-nav-ul {
   background-color: $white_2;
 }
@@ -514,13 +507,17 @@ textarea {
   background-color: $dark_blue_5;
 }
 
+.circle-xxl-filled.circle-light_purple-1 {
+  background-color: $light_purple_1;
+}
+
 .carousel-cta, 
 .gallery-nav-a.gallery-a-visible {
   background-color: $light_purple_2;
 }
 
-.circle-xl-filled.circle-dark_brown-1 {
-  background-color: $dark_brown_2;
+.circle-xl-filled.circle-dark_purple-1 {
+  background-color: $light_purple_3;
 }
 
 .gallery-nav-a {
@@ -537,10 +534,13 @@ textarea {
 .homepage-benefit_listing-visible {
   background-color: $dark_purple_2 !important;
 }
-/* 
- {
+
+.accordion > .card > .card-header, 
+.homepage-benefit_listing-button {
   background-color: $light_green_1;
-} */
+}
+
+
 
 .sp-container-main, 
 #sp-search-body, 
@@ -548,12 +548,9 @@ textarea {
   background-color: $light_brown_1;
 }
 
-.sp-accordion > .card > .card-header, 
-.accordion > .card > .card-header, 
-.homepage-benefit_listing-button {
+.sp-accordion > .card > .card-header {
   background-color: $light_brown_3;
 }
-
 /* 
 #sp-ylo-accordion-community {
   background-color: $dark_brown_1;
@@ -568,7 +565,7 @@ textarea {
 
 }
 
-.sp-circle-sm.circle-light_brown-1 {
+.circle-light_brown-1 {
   background-color: $light_brown_3;
 }
 
@@ -583,7 +580,7 @@ textarea {
 
 /****** BORDERS ******/
 
-$border_radius_5px: 5px;
+$border_radius_8px: 8px;
 $border_radius_10px: 10px;
 $border_radius_14px: 14px;
 $border_radius_16px: 16px;
@@ -593,7 +590,7 @@ $border_radius_16px: 16px;
 }
 
 .gallery-nav-a {
-  border-radius: $border_radius_5px;
+  border-radius: $border_radius_8px $border_radius_8px 0 $border_radius_8px;
 }
 
 .cta-a, 
@@ -604,11 +601,11 @@ $border_radius_16px: 16px;
 #sidebar-images-div .sidebar-img, 
 .sp-copy-photo-img, 
 .sp-we-gallery-img {
-  border-radius: $border_radius_5px;
+  border-radius: $border_radius_10px $border_radius_10px 0 $border_radius_10px;
 }
 
 #header-nav-ul {
-  border-radius: $border_radius_5px;
+  border-radius: $border_radius_10px;
 }
 
 .carousel-cta, 
@@ -621,18 +618,18 @@ $border_radius_16px: 16px;
 .sp-testimonials-social_media-h4, 
 .sp-we-services-factoid_container-div, 
 #sp-tte-location-map-iframe {
-  border-radius: $border_radius_5px;
+  border-radius: $border_radius_14px $border_radius_14px 0 $border_radius_14px;
 }
 
 .accordion > .card:first-of-type, 
 #homepage-we-benefits_listing_container-div > .homepage-benefit_listing-button:first-of-type {
-  border-radius: $border_radius_5px;
+  border-radius: $border_radius_14px $border_radius_14px 0 0;
 }
 
-/* .accordion > .card:last-of-type, 
+.accordion > .card:last-of-type, 
 #homepage-we-benefits_listing_container-div > .homepage-benefit_listing-button:last-of-type {
   border-radius: 0 0 0 $border_radius_14px;
-} */
+}
 
 #sp-testimonial-social_media-img-instagram {
   border-radius: $border_radius_16px;
@@ -696,9 +693,7 @@ textarea,
   border: 61px solid;
 }
 
-#circles-we .circle-xl-1, 
-.circle-xxl-filled.circle-light_brown-1, 
-#circles-ytc #ytc-circle-upper-right  {
+#circles-we .circle-xl-1 {
   border: 97px solid;
 }
 
@@ -769,15 +764,13 @@ textarea {
 }
 
 #circles-we .circle-xl-1 {
-  border-color: $light_brown_4;
+  border-color: $light_purple_1;
 }
 
-.package-dollar_amount_container-div  {
+.circles-purple-div div div, 
+.package-dollar_amount_container-div, 
+#circles-we .circle-xl-1.circle-dark_purple-1  {
   border-color: $light_purple_3;
-}
-
-#circles-we .circle-xl-1.circle-dark_brown-1  {
-  border-color: $light_brown_4;
 }
 
 .sp-accordion .package-dollar_amount_container-div {
@@ -788,9 +781,8 @@ textarea {
   border-color: $dark_purple_1;
 }
 
-.circle-light_brown-1, 
-.circle-xxl-filled.circle-light_brown-1 {
-  border-color: $light_brown_4 !important;
+.circle-light_green-1 {
+  border-color: $light_green_3 !important;
 }
 
 .circle-dark_brown-1 {
@@ -1023,24 +1015,24 @@ textarea {
 
 #background-ylo {
   height: 935px;
-  background-color: $light_brown_7;
+  background-color: $light_green_2;
   z-index: 130;
 }
 
 #background-ytc {
   height: 935px;
-  background-color: $light_brown_7;
+  background-color: $light_brown_5;
 }
 
 #background-we {
   height: 935px;
-  background-color: $light_brown_7;
+  background-color: $light_purple_2;
   z-index: 330;
 }
 
 #background-tte {
   height: 935px;
-  background-color: $light_brown_7;
+  background-color: $white_2;
   z-index: 150;
 }
 
@@ -1074,6 +1066,7 @@ textarea {
   width: 100%;
   height: 100%;
   position: absolute;
+  overflow: hidden;
 }
 
 .background-circles-div {
@@ -1351,13 +1344,18 @@ textarea {
   }
 
   #ytc-circle-upper-left {
-    top: -110px;
-    left: -90px;
+    top: -8%;
+    left: 8%;
+  }
+
+  #ytc-circle-lower-left {
+    top: 22%;
+    left: -2%;
   }
 
   #ytc-circle-upper-right {
-    top: -430px;
-    right: -230px;
+    top: -24%;
+    right: -12%;
   }
 }
 
@@ -1369,8 +1367,8 @@ textarea {
   }
 
   .circle-xl-filled {
-    width: 929px;
-    height: 929px;
+    width: 658px;
+    height: 658px;
   }
 
   .circle-xl-1 {
@@ -1379,31 +1377,31 @@ textarea {
   }
 
   .circle-xxl-filled {
-    width: 929px;
-    height: 929px;
+    width: 1326px;
+    height: 1326px;
   }
 
   #we-circle-upper-left-1 {
-    top: -462px;
-    left: -462px;
+    top: -369px;
+    left: -369px;
     z-index: 330;
   }
 
   #we-circle-upper-left-2 {
-    top: -102px;
+    top: -462px;
     left: -462px;
     z-index: 320;
   }
 
   #we-circle-lower-right-1 {
-    bottom: 567px;
-    right: -643px;
+    bottom: -605px;
+    right: -605px;
     z-index: 310;
   }
 
   #we-circle-lower-right-2 {
-    bottom: -813px;
-    right: -553px;
+    bottom: -853px;
+    right: -853px;
     z-index: 300;
   }
 }
@@ -1726,16 +1724,10 @@ textarea {
 /****** CAROUSEL ******/
 
 .carousel {
-  height: 100%;
-
   img {
     width: 100%;
     height: auto;
   }
-}
-
-.carousel-inner {
-  height: 100vh;
 }
 
 .carousel-cta {
@@ -1760,7 +1752,7 @@ textarea {
 }
 
 #cta-homepage {
-  width: 492px;
+  width: 460px;
   left: 127px;
 }
 
@@ -1773,7 +1765,7 @@ textarea {
 }
 
 .cta-a {
-  width: 440px;
+  width: 285px;
   padding: $spacer_7px $spacer_9px;
   display: block;
 }
@@ -1881,6 +1873,7 @@ textarea {
 }
 
 #content-we {
+  overflow: hidden;
   z-index: 150;
 }
 
@@ -2071,7 +2064,6 @@ textarea {
 }
 
 .ytc-testimonial:last-of-type {
-  margin-top: 22px;
   margin-bottom: 0;
 }
 
@@ -2183,8 +2175,7 @@ textarea {
   }
 
   .homepage-benefit-copy-span {
-    margin-top: $spacer_16px;
-    margin-bottom: $spacer_9px;
+    margin-top: $spacer_9px;
     display: block;
   }
 }
@@ -2265,7 +2256,7 @@ textarea {
   }
 
   #input-textarea-message {
-    height: 284px;
+    height: 279px;
   }
 
   .form-submit {
@@ -2481,7 +2472,7 @@ textarea {
 }
 
 #sp-we-gallery-photos-nav {
-  bottom: 26px;
+  bottom: 22px;
   left: 32px;
 }
 
@@ -2790,12 +2781,12 @@ textarea {
 }
 
 #footer-links-container {
-  margin-top: 127px; 
+  margin-top: 187px;  
   padding-right: 0;
 
   .footer-link-a {
     display: block;
-    margin-bottom: $spacer_36px;
+    margin-bottom: $spacer_26px;
   }
 
   .footer-link-a:last-of-type {
@@ -2816,7 +2807,7 @@ textarea {
 }
 
 #footer-sidebar {
-  margin-top: 132px;
+  margin-top: 221px;
 
   .sidebar-img {
     display: block;
@@ -2824,7 +2815,7 @@ textarea {
   }
 
   .sidebar-img:first-of-type {
-    margin-bottom: $spacer_64px;
+    margin-bottom: $spacer_54px;
   }
 }
 
@@ -2841,11 +2832,7 @@ textarea {
     bottom: 210px;
   }
 
-  #cta-homepage {
-    bottom: 170px;
-  }
-
-  /* #homepage-we-gallery { 
+    /* #homepage-we-gallery { 
     .homepage-we-gallery-img {
       width: 820px;
     }
@@ -2882,15 +2869,6 @@ textarea {
 
 @media screen and (min-width: 1366px) and (max-width: 1600px) {
 
-  /****** BORDERS ******/
-
-  #circles-ytc {
-    #ytc-circle-upper-right {
-      border-width: 67px;
-    }
-  }
-
-  
   /* ------ BACKGROUNDS ------ */
 
   #background-we, 
@@ -2901,30 +2879,6 @@ textarea {
   #background-tte, 
   #content-tte {
     height: 730px;
-  }
-
-  #circles-ytc {
-    #ytc-circle-upper-right {
-      width: 628px;
-      height: 628px;
-      top: -350px;
-      right: -290px;
-    }
-  }
-
-  #circles-we {
-    #we-circle-upper-left-2 {
-      top: 68px;
-      left: -692px;
-    }
-
-    #we-circle-lower-right-1 {
-      right: -513px;
-    }
-
-    #we-circle-lower-right-2 {
-      bottom: -662px;
-    }
   }
 }
 
@@ -3080,26 +3034,6 @@ textarea {
     height: 841px;
   }
 
-  #circles-ytc {
-    #ytc-circle-upper-left {
-      top: -40px;
-    }
-
-    #ytc-circle-upper-right {
-      display: none;
-    }
-  }
-
-  #circles-we { 
-    #we-circle-lower-right-2 {
-      bottom: -595px;
-    }
-
-    #we-circle-upper-left-2 {
-      display: none;
-    }
-  }
-
   .content-copy-div {
     padding-top: $spacer_76px;
     padding-left: $spacer_76px;
@@ -3117,20 +3051,6 @@ textarea {
     #homepage-we-gallery-videos-nav {
       bottom: 32px;
     }
-  }
-
-  .carousel-cta {
-    bottom: 26px;
-  }
-
-  .sp-search-container-main {
-    h2 {
-      margin-top: $spacer_26px;
-    }
-  }
-
-  #sp-search-background-hero {
-    top: calc(100vh - 251px);
   }
 }
 
@@ -3172,35 +3092,6 @@ textarea {
     height: 752px;
   }
 
-  #circles-ytc, 
-  #circles-we {
-    overflow-x: hidden;
-  }
-
-  #circles-ytc {
-    #ytc-circle-upper-left {
-      top: 0px;
-      left: -90px;
-    }
-
-    #ytc-circle-upper-right {
-      top: 370px;
-      right: -360px;
-    }
-  }
-
-  #circles-we {
-    #we-circle-upper-left-2 {
-      top: 8px;
-      left: -462px;
-    }
-
-    #we-circle-lower-right-1, 
-    #we-circle-lower-right-2 {
-      display: none;
-    }
-  }
-
   #circles-ylo, 
   #circles-tte, 
   #circles-footer {
@@ -3221,10 +3112,6 @@ textarea {
     width: 337px;
     left: 29px;
     bottom: 54px;
-  }
-
-  .cta-a {
-    width: 284px;
   }
 
   #cta-logo {
@@ -3379,7 +3266,7 @@ textarea {
   }
 
   #sp-ylo-gallery-nav {
-    bottom: 60px;
+    bottom: 84px;
     left: 26px;
   }
 
@@ -3556,13 +3443,7 @@ textarea {
     margin-bottom: 0;
   }
 
-  #sp-content-au-middle {
-    .column-middle-div {
-      padding-right: 0;
-    }
-  }
-
-  /* #sp-content-au-middle-1 {
+  #sp-content-au-middle-1 {
     .column-middle-div {
       margin-top: 0;
     }
@@ -3573,7 +3454,7 @@ textarea {
     .col-md-5 {
       margin-top: 0;
     }
-  } */
+  }
 
   #sp-content-au-bottom {
     .column-middle-div {
@@ -3938,7 +3819,7 @@ textarea {
 
   #background-ylo, 
   #content-ylo {
-    height: 976px;
+    height: 929px;
   }
   
   #background-ytc, 
@@ -3948,22 +3829,13 @@ textarea {
 
   #background-we, 
   #content-we {
-    height: 1752px;
+    height: 1792px;
   } 
 
   #background-tte, 
   #content-tte {
     height: 780px;
   }
-
-
-
-  /****** CAROUSEL ******/
-
-  .carousel-inner {
-    height: calc(100vh - 220px);
-  }
-
 
 
   /****** COPY ******/
@@ -4104,18 +3976,12 @@ textarea {
 /* ------ iPAD (768x1024) ------- */
 @media screen and (min-width: 415px) and (max-width: 768px) {
 
-  /****** CAROUSEL ******/
-
-  .cta-a {
-    width: 284px;
-  }
-
-  
+ 
   /****** BACKGROUNDS ******/
 
   #background-ylo, 
   #content-ylo {
-    height: 930px;
+    height: 860px;
   }
 
   #background-ytc, 
@@ -4130,7 +3996,13 @@ textarea {
 
   #background-tte, 
   #content-tte {
-    height: 770px;
+    height: 897px;
+  }
+  
+  #circles-ytc { 
+    #ytc-circle-upper-right {
+      top: 57%;
+    }
   }
 
 
@@ -4140,7 +4012,7 @@ textarea {
   /* ------ HOMEPAGE ------ */
 
   #homepage-ylo-gallery {
-    height: 440px;
+    height: 404px;
   }
 
   #content-container-ytc { 
@@ -4336,16 +4208,6 @@ textarea {
     font-size: $font_sm_3;
   }
 
-  #cta-homepage {
-    p {
-      font-size: 0.9rem;
-    }
-
-    .cta-a {
-      font-size: 0.8rem;
-    }
-  }
-
   .copy-first-p::first-line {
     font-size: $font_med_1;
   }
@@ -4449,34 +4311,6 @@ textarea {
           left: 71%;
         }
       }
-    }
-  }
-
-  #circles-ytc, 
-  #circles-we {
-    overflow-x: hidden;
-  }
-
-  #circles-ytc { 
-    #ytc-circle-upper-left {
-      top: 10px;
-      left: -90px;
-    }
-
-    #ytc-circle-upper-right {
-      display: none;
-    }
-  }
-
-  #circles-we { 
-    #we-circle-upper-left-2 {
-      top: -2px;
-      left: -462px;
-    }
-
-    #we-circle-lower-right-1,
-    #we-circle-lower-right-2 {
-      display: none;
     }
   }
 
@@ -5197,16 +5031,12 @@ textarea {
   #footer-links-container {
     margin-top: 0;
 
-    #footer-links {
-      padding-top: $spacer_20px;
+   .footer-link-a:last-of-type {
+      margin-bottom: $spacer_26px;
     }
 
-    .footer-link-a {
-      margin-bottom: $spacer_24px;
-    }
-    
-    .footer-link-a:last-of-type {
-      margin-bottom: $spacer_26px;
+    #footer-links {
+      padding-top: $spacer_20px;
     }
   }
 
@@ -5244,7 +5074,7 @@ textarea {
 
   #background-ylo, 
   #content-ylo {
-    height: 809px;
+    height: 719px;
   }
   
   #background-ytc, 
@@ -5253,9 +5083,9 @@ textarea {
   }
 
   #circles-ytc {
-    /* #ytc-circle-upper-left {
+    #ytc-circle-upper-left {
       top: -18%;
-    } */
+    }
 
     #ytc-circle-lower-left  {
       top: 4%;
@@ -5367,7 +5197,7 @@ textarea {
    
   #background-ylo, 
   #content-ylo {
-    height: 816px;
+    height: 701px;
   }
 
   #background-ytc, 
@@ -5472,12 +5302,12 @@ textarea {
 
   #background-ylo, 
   #content-ylo {
-    height: 810px;
+    height: 718px;
   }
   
   #background-ytc, 
   #content-ytc {
-    height: 1168px;
+    height: 1184px;
   }
 
   #background-we, 

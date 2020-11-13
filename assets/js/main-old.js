@@ -4,6 +4,8 @@ $(document).ready(
   function ()   {
     discoverURLVariables();
     
+    loadHeroImage();
+
     setTimeout(
       function () {
         adjustBackground();
@@ -153,7 +155,7 @@ function adjustBackground() {
     var footer_selector = "";
 
     // Object variables that will contain the jQuery objects that 
-    // refer to the 'background circles' above the footer, the <html lang="en"> 
+    // refer to the 'background circles' above the footer, the <html> 
     // DOM element and the footer are initialized.
     var background_circles_element = {};
     var html_element = {};
@@ -910,11 +912,6 @@ function displayMessageContent(get_data_variables_Array) {
 
     $(form_container_selector).html(copy_for_message);  
   }
-  
-  
-
-  
-
 } // END of displayMessageContent
 
 
@@ -1150,3 +1147,153 @@ function resetData(input_element, default_value_string) {
 
   $(input_element).val(default_value_string);	
 }
+
+
+
+function loadHeroImage() {
+  /* @params ********************************************************
+     Name:      loadHeroImage
+
+     Purpose:   Loads the hero image that corresponds with the 
+                webpage's URL. 
+  
+  **************************************************************** */
+
+  // A String that will hold the CSS selector for the Bootstrap 
+  // 'container' is initialized.
+  var heroSelector = "";
+
+  // The CSS selector that refers to the Bootstrap 'container' is 
+  // passed on.
+  heroSelector = ".carousel-cta";
+
+  // IF statement that completes the execution of the function only 
+  // if the current webpage contains a hero image.
+  if ($(heroSelector))  {
+    // A Number that will hold the width of the browser.
+    var windowWidth = $(window).width();
+
+    // A String that will hold the type of browser currently used - mobile, 
+    // tablet, or desktop.
+    var browserType = "";
+
+    // IF/ELSE statement that will determine the type of browser currently 
+    // used.
+    if (windowWidth <= 414) {
+      browserType = "mobile";
+    } else if (windowWidth > 414 && windowWidth <= 1024)  {
+      browserType = "tablet";
+    } else {
+      browserType = "desktop";
+    }
+    
+    // A String that will hold the URL of the current webpageis initialized.
+    var urlPathname = window.location.pathname;
+
+    // An Array that will hold segments of 'urlString' after 'urlString' 
+    // has been 'split'is initialized.
+    var urlContent_Array = [];
+
+    // A String that will hold the character that will be searched for 
+    // within the value of 'urlString'. The character serves as the 
+    // seperation point within the value of 'urlString'.
+    var searchChar = "/";
+
+    // The value of 'urlString' will be broken up into two segments, 
+    // the domain and the filename.
+    urlContent_Array = urlPathname.split(searchChar);
+
+    // A String that will hold the filename of the current webpage 
+    // is initialized.
+    var filename = urlContent_Array[1];
+
+    // This character will be searched for within 'filename'. The place 
+    // within 'filename' that the character is found will be the seperation 
+    // point within 'filename'.
+    searchChar = ".";
+
+    // The value of 'filename' will have the suffix of the filename removed.
+    filename = filename.slice(0, filename.indexOf(searchChar));
+
+    // A String that will hold the CSS selector that refers to the 
+    // <div> that preceedes the hero image is initialized.
+    var ctaSelector = "";
+
+    // SWITCH statement that will define the value of 'ctaSelector' so 
+    // that it matches the CSS selector of the CTA <div> element for 
+    // the current webpage.
+    switch (filename)  {
+      case "about-us":
+        ctaSelector = "#cta-au"; 
+      break;
+
+      case "blog":
+        ctaSelector = "#cta-blog"; 
+      break;
+
+      case "talk-to-eadc":
+        ctaSelector = "#cta-tte"; 
+      break;
+
+      case "why-eadc": 
+        ctaSelector = "#cta-we"; 
+      break;
+
+      case "you-the-caretaker":
+        ctaSelector = "#cta-ytc"; 
+      break;
+
+      case "your-loved-one":
+        ctaSelector = "#cta-ylo"; 
+      break;
+    }
+
+    // IF statement that will set the match the value of 'filename'
+    // to correspond with the homepage if the current webpage is the homepage.
+    if (filename === "" || filename === "index")  {
+      filename = "homepage/hero";
+      ctaSelector = "#cta-homepage";
+    }
+
+    // A String that will hold the filename of the hero image to be loaded 
+    // is initialized.
+    var imgFilename = "";
+
+    // IF statement that will append the value of 'filename' if the browser 
+    // used is a mobile or a tablet browser.
+    if (browserType === "mobile") {
+      imgFilename = "hero-mobile.jpg";
+    } else if (browserType === "tablet") {
+      imgFilename = "hero-tablet.jpg";
+    } else {
+      imgFilename = "hero.jpg";
+    }
+
+    // A String that will hold the path to the hero image is initialized.
+    var imgPath = "/assets/img/copy/" + filename + "/" + imgFilename;
+
+    // A String that will hold a CSS class name that will be added to 
+    // the <img> reference that holds the hero image.
+    var heroImageClassName = "visible-";
+
+    // IF/ELSE statement that will determine the CSS class name that 
+    // corresponds to the type of browser used.
+    if (browserType === "mobile") {
+      heroImageClassName = heroImageClassName + "mobile";
+    } else if (browserType === "tablet")  {
+      heroImageClassName = heroImageClassName + "tablet";
+    } else {
+      heroImageClassName = heroImageClassName + "desktop";
+    }
+
+    // A String that will hold the HTML that will defines the <img> tag 
+    // containing the hero image is initialized.
+    var heroImageHTML = "";
+
+    heroImageHTML = "<img class=\"img-fluid\" src=\"" + imgPath + "\" alt=\"Emmanuel Adult Day Center strives to care for your loved one like they are family\" " + heroImageClassName + " id=\"carousel-cta-hero\">";
+
+    // A CSS class name that will determine the layout of the hero image 
+    // is passed on.
+    $(ctaSelector).after(heroImageHTML);
+  }
+} // END of loadHeroImage

@@ -1250,7 +1250,7 @@ function loadHeroImage() {
 
     // IF statement that will set the match the value of 'filename'
     // to correspond with the homepage if the current webpage is the homepage.
-    if (filename === "" || filename === "index")  {
+    if (filename === "" || filename === "index" || filename === "index-test")  {
       filename = "homepage/hero";
       ctaSelector = "#cta-homepage";
     }
