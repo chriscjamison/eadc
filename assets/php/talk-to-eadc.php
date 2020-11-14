@@ -109,7 +109,7 @@
               "I will read your message and get back to you no later than one business day from today. \n\n" . 
               "A copy of the message you sent to me is below.\n\n" . 
               "\"" . $visitors_message . "\"\n\n\n" . 
-              "I look forward to talking to you soon. \n\n" .
+              "I look forward to talk to you soon. \n\n" .
               "Mirinda Johnson \n" . 
               "Director of Operations";
     $headers = 
