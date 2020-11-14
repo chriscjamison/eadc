@@ -880,37 +880,43 @@ function displayMessageContent(get_data_variables_Array) {
       $(form_container_selector).html(copy_for_message);
     } 
   } else {
-    var first_name_value = get_data_variables_Array[0];
+    var search_string_value = "fbclid";
 
-    copy_for_message = "<p>" + 
-                    "  Hello " + first_name_value + "," + 
-                    "  <br><br>" + 
-                    "  Thank you for your interest in Emmanuel Adult Day Center's services." + 
-                    "  <br>" + 
-                    "  I will read your message and get back to you no later than one business day from today." + 
-                    "  <br><br>" + 
-                    "  I look forward to talking to you soon." + 
-                    "  <br><br>" + 
-                    "  Mirinda Johnson" + 
-                    "  <br>" + 
-                    "  Director of Operations" + 
-                    "</p>";
+    search_string_location = url_string.indexOf(search_string_value);
 
-    form_container_selector = "tte-form-div";
+    if (search_string_location === -1)  {
+      var first_name_value = get_data_variables_Array[0];
 
-    search_string_value = ""
+      copy_for_message = "<p>" + 
+                      "  Hello " + first_name_value + "," + 
+                      "  <br><br>" + 
+                      "  Thank you for your interest in Emmanuel Adult Day Center's services." + 
+                      "  <br>" + 
+                      "  I will read your message and get back to you no later than one business day from today." + 
+                      "  <br><br>" + 
+                      "  I look forward to talking to you soon." + 
+                      "  <br><br>" + 
+                      "  Mirinda Johnson" + 
+                      "  <br>" + 
+                      "  Director of Operations" + 
+                      "</p>";
 
-    search_string_value = "talk-to-eadc.htm";
+      form_container_selector = "tte-form-div";
 
-    var search_string_location = url_string.indexOf(search_string_value);
+      search_string_value = ""
 
-    if (search_string_location >= 0)  {
-      form_container_selector = "#sp-" + form_container_selector;
-    } else {
-      form_container_selector = "#" + form_container_selector;
+      search_string_value = "talk-to-eadc.htm";
+
+      var search_string_location = url_string.indexOf(search_string_value);
+
+      if (search_string_location >= 0)  {
+        form_container_selector = "#sp-" + form_container_selector;
+      } else {
+        form_container_selector = "#" + form_container_selector;
+      }
+
+      $(form_container_selector).html(copy_for_message); 
     }
-
-    $(form_container_selector).html(copy_for_message);  
   }
 } // END of displayMessageContent
 
