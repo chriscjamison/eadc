@@ -16,6 +16,8 @@ $(document).ready(
 
 $(window).resize(
   function () {
+    resizeInnerCarousel();
+
     setTimeout(
       function () {
         adjustBackground();
@@ -1192,6 +1194,11 @@ function loadHeroImage() {
     } else {
       browserType = "desktop";
     }
+
+    // IF statement that will resize the HTML element holding the hero image.
+    if (browserType === "desktop")  {
+      resizeInnerCarousel();
+    }
     
     // A String that will hold the URL of the current webpageis initialized.
     var urlPathname = window.location.pathname;
@@ -1303,3 +1310,32 @@ function loadHeroImage() {
     $(ctaSelector).after(heroImageHTML);
   }
 } // END of loadHeroImage
+
+
+
+function resizeInnerCarousel() {
+  /* @params ********************************************************
+     Name:      resizeInnerCarousel
+
+     Purpose:   Resizes the HTML element holding the hero image. 
+  
+  **************************************************************** */
+
+  // A Number that will hold the width of the browser.
+  var windowWidth = $(window).width();
+
+  // A Number that will hold the width:height ratio that the 'carousel' will 
+  // be resized is initialized.
+  var heroImageRatio = 0.562;
+
+  // A Number that will hold the new height of the 'carousel' is initialized.
+  var innerCarouselHeight = Math.ceil(windowWidth * heroImageRatio);
+
+  // A String that will hold the CSS selector for the HTML element holding 
+  // the hero image is initialized.
+  var innerCarouselSelector = ".carousel-inner";
+
+  // The new height of the 'carousel' is passed on.
+  $(innerCarouselSelector).css("height", innerCarouselHeight);
+
+} // END of resizeInnerCarousel
