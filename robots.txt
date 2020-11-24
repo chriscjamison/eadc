@@ -2,4 +2,4 @@
 User-agent: *
 Disallow: /assets
 
-Sitemap: http://test.myeadc-stl.com/sitemap.txt
+Sitemap: http://myeadc-stl.com/sitemap.txt

@@ -1,8 +1,8 @@
 <?php 
-  $visitors_first_name = $_POST['first_name'];
-  $visitors_last_name = $_POST['last_name'];
-  $visitors_email_address = $_POST['email_address'];
-  $visitors_message = $_POST['message'];
+  $visitors_first_name = strip_tags($_POST['first_name']);
+  $visitors_last_name = strip_tags($_POST['last_name']);
+  $visitors_email_address = strip_tags($_POST['email_address']);
+  $visitors_message = strip_tags($_POST['message']);
 
   $visitors_first_name_length = strlen($visitors_first_name);
   $visitors_last_name_length = strlen($visitors_last_name);
@@ -79,7 +79,7 @@
   }
 
 
-  $current_page = $_POST['referrer'];
+  $current_page = strip_tags($_POST['referrer']);
 
   if ($current_page == "/") {
     $url_hash = "content-tte";
@@ -135,7 +135,7 @@
       } 
     }
 
-    $url_string = "http://myeadc-stl.com" . $current_page . "?fields_in_error=" . $fields_in_error . "&first_name=" . $_POST['first_name'] . "&last_name=" . $_POST['last_name'] . "&email_address=" . $_POST['email_address'] . "&message=" . $_POST['message'];
+    $url_string = "http://myeadc-stl.com" . $current_page . "?fields_in_error=" . $fields_in_error . "&first_name=" . htmlentities($_POST['first_name'], ENT_QUOTES, 'UTF-8') . "&last_name=" . htmlentities($_POST['last_name'], ENT_QUOTES, 'UTF-8') . "&email_address=" . htmlentities($_POST['email_address'], ENT_QUOTES, 'UTF-8') . "&message=" . htmlentities($_POST['message'], ENT_QUOTES, 'UTF-8');
   }
 
   $url_string = $url_string . "#" . $url_hash;
@@ -144,7 +144,7 @@
 <?php if ($url_string != ""): ?>
 
 <html lang="en">
-  <script>window.location.href = "<?php echo $url_string; ?>";</script>
+  <script>window.location.href = "<?php echo htmlentities($url_string, ENT_QUOTES, 'UTF-8'); ?>";</script>
 </html>
 
 <?php endif; ?>

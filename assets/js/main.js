@@ -894,7 +894,7 @@ function displayMessageContent(get_data_variables_Array) {
                       "  <br>" + 
                       "  I will read your message and get back to you no later than one business day from today." + 
                       "  <br><br>" + 
-                      "  I look forward to talking to you soon." + 
+                      "  I look forward to talk with you soon." + 
                       "  <br><br>" + 
                       "  Mirinda Johnson" + 
                       "  <br>" + 
